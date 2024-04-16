@@ -1,10 +1,10 @@
 import sys
-from pkg_resources import resource_filename
+from importlib.resources import files
 sys.path.extend(['.', '..'])
 
 from pycparser import parse_file, c_generator, preprocess_file
 
-fake_libc_path = resource_filename('pycparser', 'utils/fake_libc_include')
+fake_libc_path = files('pycparser').joinpath('utils/fake_libc_include')
 
 
 def translate_to_c(filename):
