@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
     char last_name[22];
+    char greetings[] = "Hello World!";
     printf ("Enter your last name: ");
     
     scanf ("%21s", last_name);
