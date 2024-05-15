@@ -25,8 +25,10 @@ def check_scanf(node, declared_vars, current_function):
             return 
         
         max_chars_str = ''.join(filter(str.isdigit, part))
+        format_str = ''.join(filter(str.isalpha, part))
+        print('format str:', format_str)
         if(len(max_chars_str) == 0):
-            print(f'Warning in {current_function}: no max length specified on argument %{part} at index: {index}')
+            print(f'Problem when using scanf in {current_function}(): no max length specified on argument %{part} at index: {index}')
             print("Modifying to correct max size")
             node.args.exprs[index] = c_ast.Constant(type='string', value=f'"%{array_size - 1}{part}"')
         else:
@@ -35,7 +37,11 @@ def check_scanf(node, declared_vars, current_function):
             # the size can be at most size -1 of the buffer. This is because there needs to be one byte reserved for the null terminator
             
             if(format_max_size == array_size):
-                print(f'Warning in {current_function}(): Format string size %{part} should account for null terminator byte (max size = buf_size - 1 = {array_size - 1})')
+                print(f'Warning in {current_function}(): Format string size %{part} should account for null terminator byte (max size = {array_size - 1})')
             elif(format_max_size > array_size):
-                print(f'Warning in {current_function}(): Format string size %{part} is bigger than max allowed size of array {current_arg}(size - 1 = {array_size})')
+                print(f'Warning in {current_function}(): Format string size %{part} is bigger than max allowed size of array {current_arg}(max size = {array_size - 1})')
+            else:
+                return
+            print("Modifying to correct max size")
+            node.args.exprs[index] = c_ast.Constant(type='string', value=f'"%{array_size - 1}{format_str}"') 
     
