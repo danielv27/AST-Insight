@@ -9,8 +9,6 @@ if __name__ == "__main__":
         ast = filename_to_ast(sys.argv[1])
         bo_visitor = BufferOverflowVisitor()
         bo_visitor.visit(ast)
-        
-        # ast_to_c(ast)
 
     else:
         print("Please provide a filename as argument")
