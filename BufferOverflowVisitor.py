@@ -14,9 +14,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.current_function = None
         self.declared_vars = {}    
 
-    def visit_If(self, node):
-        pass
-
     def visit_FuncCall(self, node):
         check_unsafe_write_function_calls(node, self.declared_vars, self.current_function)
         self.generic_visit(node)
