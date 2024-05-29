@@ -4,7 +4,7 @@ int main(){
     char greetings[] = "Hello World!";
     printf ("Enter your last name: ");
     
-    scanf ("%18s", last_name);
+    scanf ("%s", last_name);
     if(strlen(last_name) > 20){
         printf("caught you hacker");
         return -1;

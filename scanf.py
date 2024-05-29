@@ -34,7 +34,6 @@ def check_scanf(node, declared_vars, current_function):
         else:
             
             format_max_size = int(max_chars_str)
-            # the size can be at most size -1 of the buffer. This is because there needs to be one byte reserved for the null terminator
             
             if(format_max_size == array_size):
                 print(f'Warning in {current_function}(): Format string size %{part} should account for null terminator byte (max size = {array_size - 1})')
