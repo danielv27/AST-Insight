@@ -1,6 +1,6 @@
 import sys
 from parse_ast import path_to_ast, ast_to_c_file
-from BufferOverflowVisitor import BufferOverflowVisitor
+from stack_overflow_visitor.StackOverflowVisitor import StackOverflowVisitor
 
 sys.path.extend(['.', '..'])
 
@@ -10,8 +10,8 @@ if __name__ == "__main__":
         file_path = sys.argv[1]
 
         ast = path_to_ast(file_path)
-        bo_visitor = BufferOverflowVisitor()
-        bo_visitor.visit(ast)
+        so_visitor = StackOverflowVisitor()
+        so_visitor.visit(ast)
 
         ast_to_c_file(ast, file_path)
 

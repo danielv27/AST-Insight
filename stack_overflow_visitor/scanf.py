@@ -1,8 +1,6 @@
 from pycparser import c_ast
 
 def check_scanf(node, declared_vars, current_function):
-    if node.name.name != 'scanf':
-        return
     if len(node.args.exprs) < 2:
         print(f"Error in {current_function}(): scanf call with insufficient arguments")
         return
@@ -26,10 +24,10 @@ def check_scanf(node, declared_vars, current_function):
         
         max_chars_str = ''.join(filter(str.isdigit, part))
         format_str = ''.join(filter(str.isalpha, part))
-        print('format str:', format_str)
         if(len(max_chars_str) == 0):
-            print(f'Problem when using scanf in {current_function}(): no max length specified on argument %{part} at index: {index}')
-            print("Modifying to correct max size")
+            print(f'Found potential vulnerability in {current_function}():')
+            print(f'\tNo max length specified in scanf() for argument `{current_arg}` at index: {index}')
+            print("\tModifying to correct max size")
             node.args.exprs[index] = c_ast.Constant(type='string', value=f'"%{array_size - 1}{part}"')
         else:
             

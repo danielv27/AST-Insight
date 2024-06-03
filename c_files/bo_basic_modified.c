@@ -203,15 +203,9 @@ typedef enum memory_order
 } memory_order;
 int main()
 {
-  char last_name[18];
-  char greetings[] = "Hello World!";
-  printf("Enter your last name: ");
-  scanf("%17s", last_name);
-  if (strlen(last_name) > 20)
-  {
-    printf("caught you hacker");
-    return -1;
-  }
+  char name[18];
+  printf("Enter your name: ");
+  scanf("%17s", name);
   return 0;
 }
 
