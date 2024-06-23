@@ -9,11 +9,6 @@ def check_gets(node, array_decls):
         print('in gets')
 
 
-def check_unsafe_write_function_calls(node, declared_vars, allocated_sizes, current_function):
+def check_unsafe_write_function_calls(node, declared_arrays):
     if(node.name.name == 'scanf'):
-        check_scanf(node, declared_vars, current_function)
-    elif node.name.name in ['strcpy', 'memcpy']:
-        check_heap_overflow(node, allocated_sizes, current_function)
-
-def check_heap_overflow(node, allocated_sizes, current_function):
-    pass
+        check_scanf(node, declared_arrays)

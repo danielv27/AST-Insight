@@ -2,71 +2,72 @@
 
 from pycparser import c_ast
 from stack_overflow_visitor.unsafe_functions import check_unsafe_write_function_calls
+from print_utils.log import log
 
-def getFunctionsFromCompound(self, node):
-    result = {}
-    for item in node.block_items:
-        function_name = None
-        function_node = None
+# Keep track of current context (scope). space allocated on the stack is (in most cases) only relevant on the current function's level
+def track_current_scope(self, node):
+    self.current_function = node.decl.name
+    self.generic_visit(node)
+    self.current_function = None
+    self.declared_arrays = {} 
 
-        if(isinstance(item, c_ast.Decl) and item.init):
-            function_name = item.name
-            function_node = item.init
-        elif(isinstance(item, c_ast.Assignment)):
-            function_name = item.lvalue.expr.name
-            function_node = item.rvalue
-        else:
-            continue
-        if(isinstance(function_node, c_ast.FuncCall)):
-            result[function_name] = function_node
-    return result
+
+def track_array_allocations(self, node):
+    array_name = node.type.declname
+    array_size = int(node.dim.value) if node.dim is not None else None
+    array_type = node.type.type.names[0]
+
+    array_info = {
+        'size': array_size,
+        'type': array_type,
+        'node': node
+    }
+    self.declared_arrays[array_name] = array_info
+    self.generic_visit(node)
+
+
+
+def handle_array_assignment(self, node):
+    if isinstance(node.lvalue, c_ast.ArrayRef):
+        array_name = node.lvalue.name.name
+        if array_name in self.declared_arrays:
+            array_info = self.declared_arrays[array_name]
+            array_size = array_info['size']
+            index = node.lvalue.subscript
+
+            if isinstance(index, c_ast.Constant):
+                index_value = int(index.value)
+                is_error = False
+                if index_value < 0:
+                    log(node.lvalue, "Array access with negative value", "warning")
+                    is_error = True
+                elif index_value >= array_size:
+                    log(node.lvalue, f"Array access '{array_name}[{index_value}]' out of bounds. Array size is {array_size}", "error", True, False)
+                    is_error = True
+                
+                if is_error:
+                    log(array_info['node'], f"{array_name}[{array_size}] decleration location", "info", False, True)
+
+
+    self.generic_visit(node)
+
+def handle_unsafe_functions(self, node):
+    check_unsafe_write_function_calls(node, self.declared_arrays)
+    self.generic_visit(node)
+
 
 
 class StackOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self):
         self.current_function = None
-        self.declared_vars = {}
-        self.allocated_sizes = {}
+        self.declared_arrays = {}
+        self.modified_code = False
+        
 
-    def visit_FuncDef(self, node):
-        self.current_function = node.decl.name
-        self.generic_visit(node)
-        self.current_function = None
-        self.declared_vars = {}    
-
-    def visit_Compound(self, node):
-
-        print(getFunctionsFromCompound(self, node))
-        self.generic_visit(node)
-        # print(isinstance(node.block_items.type, c_ast.PtrDecl))
-
-    def visit_FuncCall(self, node):
-        check_unsafe_write_function_calls(node, self.declared_vars, self.allocated_sizes, self.current_function)
-        self.generic_visit(node)
-
-    def visit_ArrayDecl(self, node):
-
-        array_name = node.type.declname
-        array_size = int(node.dim.value) if node.dim is not None else None
-        array_type = node.type.type.names[0]
-
-        array_info = {
-            'size': array_size,
-            'type': array_type
-        }
-
-        self.declared_vars[array_name] = array_info
+    # def visit_Compound(self, node): print(node)
     
-    # def visit_Assignment(self, node):
-    #     print(node)
-    #     if isinstance(node.rvalue, c_ast.FuncCall):
-    #         func_name = node.rvalue.name.name
-    #         if func_name in ['malloc', 'calloc', 'realloc']:
-    #             var_name = node.lvalue.name
-    #             size_expr = node.rvalue.args.exprs[0]
-    #             # Simplified size calculation (you may need to handle more complex cases)
-    #             size = int(size_expr.value)
-    #             self.allocated_sizes[var_name] = size
-        
-        
 
+    def visit_FuncDef(self, node): track_current_scope(self, node)
+    def visit_ArrayDecl(self, node): track_array_allocations(self, node)
+    def visit_Assignment(self, node): handle_array_assignment(self, node)
+    def visit_FuncCall(self, node): handle_unsafe_functions(self, node)
