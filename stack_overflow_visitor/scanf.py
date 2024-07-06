@@ -21,9 +21,6 @@ def validate_arg_amount(node, format_parts, additional_args):
 def check_scanf(node, declared_arrays):
 
     log(node, "Checking usage of scanf", "info", True, False)
-
-
-
     modified = False
     
     format_string = node.args.exprs[0]

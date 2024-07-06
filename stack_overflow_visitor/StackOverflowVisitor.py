@@ -55,8 +55,6 @@ def handle_unsafe_functions(self, node):
     check_unsafe_write_function_calls(node, self.declared_arrays)
     self.generic_visit(node)
 
-
-
 class StackOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self):
         self.current_function = None

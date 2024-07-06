@@ -7,7 +7,7 @@ sys.path.extend(['.', '..'])
 fake_libc_path = files('pycparser').joinpath('utils/fake_libc_include')
 
 # https://github.com/eliben/pycparser/blob/main/examples/explore_ast.py
-def path_to_ast(filename):
+def parse_ast(filename):
     return parse_file(
         filename,
         use_cpp=True,
