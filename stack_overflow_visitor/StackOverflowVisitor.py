@@ -9,22 +9,6 @@ def track_current_scope(self, node):
     self.current_function = node.decl.name
     self.generic_visit(node)
     self.current_function = None
-    self.declared_arrays = {} 
-
-
-def track_array_allocations(self, node):
-    array_name = node.type.declname
-    array_size = int(node.dim.value) if node.dim is not None else None
-    array_type = node.type.type.names[0]
-
-    array_info = {
-        'size': array_size,
-        'type': array_type,
-        'node': node
-    }
-    self.declared_arrays[array_name] = array_info
-    self.generic_visit(node)
-
 
 
 def handle_array_assignment(self, node):
@@ -56,16 +40,41 @@ def handle_unsafe_functions(self, node):
     self.generic_visit(node)
 
 class StackOverflowVisitor(c_ast.NodeVisitor):
-    def __init__(self):
+    def __init__(self, buffer_overflows):
+        self.buffer_overflows = buffer_overflows
         self.current_function = None
-        self.declared_arrays = {}
         self.modified_code = False
+
+    def visit_FuncDef(self, node):
+        track_current_scope(self, node)
+
+
+    def visit_Assignment(self, node): 
+        handle_array_assignment(self, node)
+
         
+    def visit_FuncCall(self, node):
+        handle_unsafe_functions(self, node)
 
-    # def visit_Compound(self, node): print(node)
-    
+    def visit_Assignment(self, node):
+        relevant_overflows = [overflow for overflow in self.buffer_overflows if overflow['procedure'] == self.current_function and overflow['line'] == node.coord.line]
+        if relevant_overflows:
+            for overflow in relevant_overflows:
+                self.correct_array_access(node, overflow)
+        
+        
+    def correct_array_access(self, node, overflow):
+        if isinstance(node.lvalue, c_ast.ArrayRef):
+        
+            array_name = node.lvalue.name.name
+            index = node.lvalue.subscript
 
-    def visit_FuncDef(self, node): track_current_scope(self, node)
-    def visit_ArrayDecl(self, node): track_array_allocations(self, node)
-    def visit_Assignment(self, node): handle_array_assignment(self, node)
-    def visit_FuncCall(self, node): handle_unsafe_functions(self, node)
+            if isinstance(index, c_ast.Constant):
+                index_value = int(index.value)
+                array_size = overflow['size']
+
+                # Apply correction
+                correction_code = f'{array_size}'
+                node.lvalue.subscript.value = correction_code
+                log(node.lvalue, f"Correction applied to array '{array_name}' access at index {index_value}", "info", True, True)
+                self.modified_code = True
