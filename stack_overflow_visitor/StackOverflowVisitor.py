@@ -28,15 +28,10 @@ def handle_array_assignment(self, node):
                 elif index_value >= array_size:
                     log(node.lvalue, f"Array access '{array_name}[{index_value}]' out of bounds. Array size is {array_size}", "error", True, False)
                     is_error = True
-                
                 if is_error:
                     log(array_info['node'], f"{array_name}[{array_size}] decleration location", "info", False, True)
 
 
-    self.generic_visit(node)
-
-def handle_unsafe_functions(self, node):
-    check_unsafe_write_function_calls(node, self.declared_arrays)
     self.generic_visit(node)
 
 class StackOverflowVisitor(c_ast.NodeVisitor):
@@ -52,9 +47,6 @@ class StackOverflowVisitor(c_ast.NodeVisitor):
     def visit_Assignment(self, node): 
         handle_array_assignment(self, node)
 
-        
-    def visit_FuncCall(self, node):
-        handle_unsafe_functions(self, node)
 
     def visit_Assignment(self, node):
         relevant_overflows = [overflow for overflow in self.buffer_overflows if overflow['procedure'] == self.current_function and overflow['line'] == node.coord.line]
@@ -72,9 +64,17 @@ class StackOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(index, c_ast.Constant):
                 index_value = int(index.value)
                 array_size = overflow['size']
+                
+                response = ''
+                while response.lower() != 'y' and response.lower() != 'n':
+                    log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], \nwould you like to auto correct to last index({array_size -1})? y/n')
+                    response = input()
+                    print(response)
 
-                # Apply correction
-                correction_code = f'{array_size}'
-                node.lvalue.subscript.value = correction_code
-                log(node.lvalue, f"Correction applied to array '{array_name}' access at index {index_value}", "info", True, True)
-                self.modified_code = True
+                if response == 'y':
+                    node.lvalue.subscript.value = str(array_size - 1)
+                    log(node.lvalue, f"Correction applied to array '{array_name}' access at index {index_value}", "info", True, True)
+                    self.modified_code = True
+                
+
+                
