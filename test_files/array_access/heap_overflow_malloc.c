@@ -6,10 +6,10 @@ void vulnerable_function(const char *input) {
     // Allocate memory for a 16-byte buffer on the heap
     char *buffer = (char *)malloc(16);
 
-    buffer[19] = 'b';
+    // buffer[19] = 'b';
 
     for(int i = 0; i < 30; i++){
-        buffer[i] = 'b';
+        buffer[i - 3] = 'b';
     }
 
     if (buffer == NULL) {

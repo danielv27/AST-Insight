@@ -42,16 +42,24 @@ def run_infer(file_path):
 def extract_buffer_overflows(json_output):
     buffer_overflows = []
     for issue in json_output:
-        match = re.search(r'Offset:\s*(\d+)\s*Size:\s*(\d+)', issue['qualifier'])
-        if match:
-            offset = int(match.group(1))
-            size = int(match.group(2))
-        else:
-            offset = None
-            size = None
+        bug_type = issue['bug_type']
+        offset = None
+        size = None
 
-        print(offset, size)
-        if issue['bug_type'] == 'BUFFER_OVERRUN_L1':
+        if bug_type == 'BUFFER_OVERRUN_L1':
+            match = re.search(r'Offset:\s*(\d+)\s*Size:\s*(\d+)', issue['qualifier'])
+            if match:
+                offset = int(match.group(1))
+                size = int(match.group(2))
+
+        if bug_type == 'BUFFER_OVERRUN_L2':
+            match = re.search(r'Offset:\s*\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]\s*Size:\s*(\d+)', issue['qualifier'])
+            if match:
+                offset = {'start': int(match.group(1)), 'end': int(match.group(2))}
+                size = int(match.group(3))
+
+
+        if issue['bug_type'] == 'BUFFER_OVERRUN_L1' or issue['bug_type'] == 'BUFFER_OVERRUN_L2':
             details = {
                 'file': issue['file'],
                 'line': issue['line'],

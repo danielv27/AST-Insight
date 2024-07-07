@@ -11,7 +11,10 @@ if __name__ == "__main__":
 
         file_path = sys.argv[1]
         infer_output = run_infer(file_path)
+
         buffer_overflows = extract_buffer_overflows(infer_output)
+
+
         
         ast = parse_ast(file_path)
         StackOverflowVisitor(buffer_overflows).visit(ast)

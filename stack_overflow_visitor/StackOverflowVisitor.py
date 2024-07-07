@@ -53,6 +53,7 @@ class StackOverflowVisitor(c_ast.NodeVisitor):
         if relevant_overflows:
             for overflow in relevant_overflows:
                 self.correct_array_access(node, overflow)
+
         
         
     def correct_array_access(self, node, overflow):
@@ -64,10 +65,11 @@ class StackOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(index, c_ast.Constant):
                 index_value = int(index.value)
                 array_size = overflow['size']
+                print(overflow)
                 
                 response = ''
                 while response.lower() != 'y' and response.lower() != 'n':
-                    log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], \nwould you like to auto correct to last index({array_size -1})? y/n')
+                    log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], \nwould you like to auto correct to last index({array_size -1})? y/n', 'warning')
                     response = input()
                     print(response)
 
@@ -75,6 +77,10 @@ class StackOverflowVisitor(c_ast.NodeVisitor):
                     node.lvalue.subscript.value = str(array_size - 1)
                     log(node.lvalue, f"Correction applied to array '{array_name}' access at index {index_value}", "info", True, True)
                     self.modified_code = True
+            else:
+                log(node.lvalue, f'index value range {overflow["index"]["start"]} and {overflow["index"]["end"]}', 'warning')
+                # TODO: correct wrapping for loop
+
                 
 
                 
