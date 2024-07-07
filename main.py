@@ -16,7 +16,6 @@ if __name__ == "__main__":
 
         ast = parse_ast(file_path)
         BufferOverflowVisitor(buffer_overflows).visit(ast)
-
         ast_to_c_file(ast, file_path)
 
     else:

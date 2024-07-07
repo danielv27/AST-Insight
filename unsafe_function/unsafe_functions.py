@@ -1,4 +1,4 @@
-from stack_overflow_visitor.scanf import check_scanf
+from unsafe_function.scanf import check_scanf
 
 def check_memcpy(node, array_decls):
     if node.name.name == 'memcpy':
