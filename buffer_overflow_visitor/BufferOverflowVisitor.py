@@ -1,7 +1,6 @@
 # Correlates to: https://cwe.mitre.org/data/definitions/787.html
 
 from pycparser import c_ast
-from stack_overflow_visitor.unsafe_functions import check_unsafe_write_function_calls
 from print_utils.log import log
 
 # Keep track of current context (scope). space allocated on the stack is (in most cases) only relevant on the current function's level
@@ -34,7 +33,7 @@ def handle_array_assignment(self, node):
 
     self.generic_visit(node)
 
-class StackOverflowVisitor(c_ast.NodeVisitor):
+class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self, buffer_overflows):
         self.buffer_overflows = buffer_overflows
         self.current_function = None
