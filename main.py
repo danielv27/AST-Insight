@@ -19,6 +19,10 @@ if __name__ == "__main__":
         visitor = BufferOverflowVisitor(buffer_overflows)
         visitor.visit(ast)
 
+        for sug in visitor.suggestions:
+            print(sug['description'])
+            print(sug['code'])
+
         if visitor.modified_code:
             ast_to_c_file(ast, file_path)
 
