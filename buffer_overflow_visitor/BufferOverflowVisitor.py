@@ -104,8 +104,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             visitor = IdentifierVisitor()
             visitor.visit(subscript)
 
-            print(visitor.variables)
-
             if len(visitor.variables) == 0:
                 log(node, 'Unexpected evaluaution of subscript'),
                 return
@@ -121,6 +119,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             loop_node.init.decls[0].init.value = str(0 - start_offset)
 
             log(loop_node, 'Corrected wrapping loop', 'fixed')
+            self.modified_code = True
 
         
     def correct_array_access(self, node, overflow):

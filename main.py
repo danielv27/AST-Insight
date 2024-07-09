@@ -15,8 +15,12 @@ if __name__ == "__main__":
         buffer_overflows = extract_buffer_overflows(infer_output)
 
         ast = parse_ast(file_path)
-        BufferOverflowVisitor(buffer_overflows).visit(ast)
-        ast_to_c_file(ast, file_path)
+        
+        visitor = BufferOverflowVisitor(buffer_overflows)
+        visitor.visit(ast)
+
+        if visitor.modified_code:
+            ast_to_c_file(ast, file_path)
 
     else:
         print("Please provide a filename as argument")
