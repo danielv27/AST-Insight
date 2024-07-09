@@ -21,7 +21,7 @@ def log(node, message, level="error", top_seperator=True, bottom_seperator=True)
     coord_str = f"{Fore.CYAN}{node.coord}{Style.RESET_ALL}" if node.coord else ""
     
     message = f"{level_str} {coord_str}: {message}"
-    seperator = '-' * (len(message.replace('\n', '')) - 22)
+    seperator = '-' * (len(message) - 40)
     
     if top_seperator:
         print(seperator)
