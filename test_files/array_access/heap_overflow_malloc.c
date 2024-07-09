@@ -4,7 +4,7 @@
 
 void vulnerable_function(const char *input) {
     // Allocate memory for a 16-byte buffer on the heap
-    char *buffer = (char *)malloc(5);
+    char *buffer = (char *)malloc(12);
 
     // buffer[19] = 'b';
 

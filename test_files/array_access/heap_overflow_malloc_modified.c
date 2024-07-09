@@ -203,8 +203,8 @@ typedef enum memory_order
 } memory_order;
 void vulnerable_function(const char *input)
 {
-  char *buffer = (char *) malloc(5);
-  for (int i = 5; i < 10; i++)
+  char *buffer = (char *) malloc(12);
+  for (int i = 5; i < 17; i++)
   {
     buffer[i - 5] = 'b';
   }

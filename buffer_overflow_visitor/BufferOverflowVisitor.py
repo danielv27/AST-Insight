@@ -63,7 +63,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return isinstance(subscript, c_ast.ID)
         
         response = ''
-        while response.lower() != 'y' and response.lower() != 'n':
+        while response != 'y' and response != 'n':
             if is_constant():
                 log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], \nwould you like to auto correct to last index({array_size -1})? y/n')
                 response = input()
@@ -87,26 +87,40 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             
 
     def correct_array_access_by_range(self, node, overflow):
-        print('correct_array_access_by_range')
 
-        visitor = IdentifierVisitor()
-        visitor.visit(node.lvalue.subscript)
+        array_name = node.lvalue.name.name
+        subscript = node.lvalue.subscript
 
-        print(visitor.variables)
-
-        if len(visitor.variables) == 0:
-            log(node, 'Unexpected evaluaution of subscript'),
-            return
-        
-        if len(visitor.variables) > 1:
-            log(node, 'Current implementation supports at most 1 variable as an index', 'warning')
-
-        # var_name = node.lvalue.subscript.name
-        size = overflow['size']
         start_offset = overflow['index']['start']
-        loop_node = self.current_loops[visitor.variables[0]]
-        loop_node.cond.right.value = size - start_offset
-        loop_node.init.decls[0].init.value = str(0 - start_offset)
+        end_offset = overflow['index']['end']
+
+        response = ''
+        while response != 'y' and response != 'n':
+            log(node.lvalue, f'Access out of bounds `{array_name}` in a loop, Offset [{start_offset}, {end_offset}]\n Correct wrapping loop to correct range? y/n')
+            response = input()
+
+        if response == 'y':
+
+            visitor = IdentifierVisitor()
+            visitor.visit(subscript)
+
+            print(visitor.variables)
+
+            if len(visitor.variables) == 0:
+                log(node, 'Unexpected evaluaution of subscript'),
+                return
+            
+            if len(visitor.variables) > 1:
+                log(node, 'Current implementation supports at most 1 variable as an index', 'warning')
+
+            # var_name = node.lvalue.subscript.name
+            size = overflow['size']
+            start_offset = overflow['index']['start']
+            loop_node = self.current_loops[visitor.variables[0]]
+            loop_node.cond.right.value = size - start_offset
+            loop_node.init.decls[0].init.value = str(0 - start_offset)
+
+            log(loop_node, 'Corrected wrapping loop', 'fixed')
 
         
     def correct_array_access(self, node, overflow):
