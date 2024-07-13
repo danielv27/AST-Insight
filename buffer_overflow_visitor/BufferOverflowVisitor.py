@@ -2,6 +2,7 @@ from numbers import Number
 from pycparser import c_ast, c_generator
 from print_utils.log import log
 
+# Extracts Identifiers from subscripts
 class IdentifierVisitor(c_ast.NodeVisitor):
     def __init__(self):
         self.variables = []
@@ -14,13 +15,19 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.suggestions = []
         self.current_function = None
         self.current_loops = {}
-        self.modified_code = False
+        self.variable_declarations = {}
 
     def visit_FuncDef(self, node): 
         self.track_current_function(node)
 
     def visit_For(self, node):
         self.track_current_loop(node)
+
+    def visit_Decl(self, node):
+        if isinstance(node.type, c_ast.TypeDecl):
+            var_name = node.name
+            self.variable_declarations[var_name] = node.init
+        self.generic_visit(node)
 
     def visit_Assignment(self, node):
         self.handle_assignment(node)
@@ -69,8 +76,24 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             self.generate_suggestion(f"At {node.coord}, Correct array access '{array_name}[{index_value}]' to last index access '{array_name}[{array_size - 1}]'")
             node.lvalue.subscript.value = original_subscript
     
+        else:
+            visitor = IdentifierVisitor()
+            visitor.visit(subscript)
+
+            var_name = visitor.variables[0]
+            var_node = self.variable_declarations[var_name]
+
+            original_value = var_node.value
+
+            var_node.value = str(overflow['size'] - 1)
+            self.generate_suggestion(f'At {var_node.coord} Change variable {var_name} to a valid index (between 0 and {overflow["size"] - 1}) e.g. 31')
+            var_node.value = original_value
+
+            print(self.variable_declarations)
+            
 
     def correct_array_access_by_range(self, node, overflow):
+        print(overflow)
         array_name = node.lvalue.name.name
         subscript = node.lvalue.subscript
         start_offset = overflow['index']['start']

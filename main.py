@@ -23,9 +23,6 @@ if __name__ == "__main__":
             print(sug['description'])
             print(sug['code'])
 
-        if visitor.modified_code:
-            ast_to_c_file(ast, file_path)
-
     else:
         print("Please provide a filename as argument")
 
