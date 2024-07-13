@@ -1,5 +1,6 @@
 # Ignore all directories starting with 'infer'
 infer*/
-
 # Ignore the 'juliet' directory
 juliet/
+*.pyc
+*.o

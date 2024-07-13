@@ -155,7 +155,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def correct_array_access(self, node, overflow):
         if isinstance(node.lvalue, c_ast.ArrayRef):
             if isinstance(overflow['index'], Number): 
-                print('by value')
                 self.correct_array_access_by_value(node, overflow)
             else: 
                 self.correct_array_access_by_range(node, overflow)
