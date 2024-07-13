@@ -18,6 +18,9 @@ void vulnerable_function()
         buffer2[j - 5] = 'b';
         j++;
     }
+
+    buffer = calloc(24, 1);
+
 }
 
 int main(int argc, char *argv[]) {

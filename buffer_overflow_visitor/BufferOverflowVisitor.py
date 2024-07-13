@@ -27,7 +27,12 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.track_current_loop(node)
 
     def visit_Decl(self, node):
-        
+        if isinstance(node.type, c_ast.PtrDecl):
+            # TODO: if a pointer decl then check if init is malloc, calloc or realloc, if so add to declared arrays
+            print('ptr decl', node)
+        if isinstance(node.type, c_ast.ArrayDecl):
+            # TODO: Simpler, just add the array to the list
+            print('array decl', node)
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
             self.variable_declarations[var_name] = node.init
@@ -63,6 +68,10 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             del self.current_loops[var_name]
 
     def handle_assignment(self, node):
+        if isinstance(node.rvalue, c_ast.FuncCall) and node.rvalue.name.name in ['malloc', 'calloc', 'realloc']:
+            # TODO: add this to defined vars (export to method for easier readability). Try to combine this with the ptr decl
+            print('heap allocation assignment', node)
+            return
         relevant_overflows = [overflow for overflow in self.buffer_overflows if overflow['procedure'] == self.current_function_name() and overflow['line'] == node.coord.line]
         if relevant_overflows:
             for overflow in relevant_overflows:
