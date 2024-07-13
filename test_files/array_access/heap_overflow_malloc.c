@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void vulnerable_function(const char *input) 
+void vulnerable_function() 
 {
-    char *buffer = (char *)malloc(12);
+    char *buffer = malloc(12);
     
     for(int i = 0; i < 30; i++)
     {
@@ -12,7 +12,7 @@ void vulnerable_function(const char *input)
     }
 
 
-    char *buffer2 = (char *)malloc(15);
+    char *buffer2[16];
     int j = 0;
     while(j < 45){
         buffer2[j - 5] = 'b';

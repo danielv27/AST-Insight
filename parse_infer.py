@@ -53,7 +53,6 @@ def extract_buffer_overflows(json_output):
             if match:
                 offset = int(match.group(1))
                 size = int(match.group(2))
-                print(offset, size)
 
         if bug_type == 'BUFFER_OVERRUN_L2':
             implemented = True

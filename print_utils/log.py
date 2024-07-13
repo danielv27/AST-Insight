@@ -5,7 +5,7 @@ import re
 # Initialize colorama
 init(autoreset=True)
 
-def log(node, message, level="error", top_seperator=True, bottom_seperator=True):
+def log(node, message, level="error"):
     if level == "error":
         level_str = f"{Fore.RED}{Style.BRIGHT}Error:{Style.RESET_ALL}"
     elif level == "warning":
@@ -21,12 +21,5 @@ def log(node, message, level="error", top_seperator=True, bottom_seperator=True)
     coord_str = f"{Fore.CYAN}{node.coord}{Style.RESET_ALL}" if node.coord else ""
     
     message = f"{level_str} {coord_str}: {message}"
-    seperator = '-' * (len(message) - 40)
-    
-    if top_seperator:
-        print(seperator)
-    
     print(message)
     
-    if bottom_seperator:
-        print(seperator)

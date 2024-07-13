@@ -27,6 +27,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.track_current_loop(node)
 
     def visit_Decl(self, node):
+        
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
             self.variable_declarations[var_name] = node.init
@@ -75,41 +76,83 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             'code': suggestion_code
         })
 
-    def correct_array_access_by_value(self, node, overflow):
-        array_size = overflow['size']
-        index_value = overflow['index']
+    def suggest_constant_adjustment(self, node, overflow):
         array_name = node.lvalue.name.name
+        index_value = overflow['index']
+        array_size = overflow['size']
         subscript = node.lvalue.subscript
+        log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], suggesting correction to last index ({array_size -1})')
+        original_subscript = subscript.value
+        node.lvalue.subscript.value = str(array_size - 1)
+        self.generate_suggestion(f"At {node.coord}, Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]")
+        node.lvalue.subscript.value = original_subscript  
 
-        if isinstance(subscript, c_ast.Constant):
-            log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], suggesting correction to last index ({array_size -1})')
-            original_subscript = subscript.value
-            node.lvalue.subscript.value = str(array_size - 1)
-            self.generate_suggestion(f"At {node.coord}, Correct array access '{array_name}[{index_value}]' to last index access '{array_name}[{array_size - 1}]'")
-            node.lvalue.subscript.value = original_subscript
-    
+    def suggest_variable_adjustment(self, node, overflow):
+        subscript = node.lvalue.subscript
+        visitor = IdentifierVisitor()
+        visitor.visit(subscript)
+
+        var_name = visitor.variables[0]
+        var_node = self.variable_declarations[var_name]
+
+        original_value = var_node.value
+
+        var_node.value = str(overflow['size'] - 1)
+        self.generate_suggestion(f'At {var_node.coord} Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. 31')
+        var_node.value = original_value   
+
+    def suggest_buffer_allocation_adjustment(self, node, overflow):
+        print(node)
+        print(overflow)
+        pass 
+
+    def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
+        size = overflow['size']
+        start_offset = overflow['index']['start']
+        original_cond_value = loop_node.cond.right.value
+        original_init_value = loop_node.init.decls[0].init.value
+
+        loop_node.cond.right.value = str(size - start_offset)
+        loop_node.init.decls[0].init.value = str(0 - start_offset)
+
+        self.generate_suggestion(f"At {node.coord} Correct wrapping for loop to ensure '{var_name}' stays within bounds")
+        loop_node.cond.right.value = original_cond_value
+        loop_node.init.decls[0].init.value = original_init_value
+        pass
+
+    def suggest_while_loop_adjustment(self, node, loop_node, overflow, var_name):
+            var_decleration = self.variable_declarations[var_name]
+            size = overflow['size']
+            start_offset = overflow['index']['start']
+
+            original_var_value = var_decleration.value
+
+            var_decleration.value = str(0 - start_offset)
+
+            original_cond_value = loop_node.cond.right.value
+            loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
+
+            self.generate_suggestion(f"At {node.coord} Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
+            var_decleration.value = original_var_value
+            loop_node.cond.right = original_cond_value
+
+
+    # When the index of a buffer is a value it means that is is accessed with a single value (variable or constant)
+    def correct_array_access_by_value(self, node, overflow):
+        if isinstance(node.lvalue.subscript, c_ast.Constant):
+            self.suggest_constant_adjustment(node, overflow)
         else:
-            visitor = IdentifierVisitor()
-            visitor.visit(subscript)
+            self.suggest_variable_adjustment(node, overflow)
 
-            var_name = visitor.variables[0]
-            var_node = self.variable_declarations[var_name]
 
-            original_value = var_node.value
-
-            var_node.value = str(overflow['size'] - 1)
-            self.generate_suggestion(f'At {var_node.coord} Change variable {var_name} to a valid index (between 0 and {overflow["size"] - 1}) e.g. 31')
-            var_node.value = original_value
-
-            print(self.variable_declarations)
-
+    # When the index of a buffer is a range it means it is accessed in a loop 
     def correct_array_access_by_range(self, node, overflow):
         array_name = node.lvalue.name.name
         subscript = node.lvalue.subscript
         start_offset = overflow['index']['start']
         end_offset = overflow['index']['end']
 
-        log(node.lvalue, f'Access out of bounds `{array_name}` in a loop, Offset [{start_offset}, {end_offset}]\n Suggesting wrapping loop to correct range')
+        log(node.lvalue, f'Access out of bounds `{array_name}` in a loop, Offset [{start_offset}, {end_offset}]')
 
         visitor = IdentifierVisitor()
         visitor.visit(subscript)
@@ -123,36 +166,17 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return
 
         var_name = visitor.variables[0]
-        size = overflow['size']
         loop_node = self.current_loops[var_name]
 
         if isinstance(loop_node, c_ast.For):
-            original_cond_value = loop_node.cond.right.value
-            original_init_value = loop_node.init.decls[0].init.value
-
-            loop_node.cond.right.value = str(size - start_offset)
-            loop_node.init.decls[0].init.value = str(0 - start_offset)
-
-            self.generate_suggestion(f"At {node.coord} Correct wrapping for loop to ensure '{var_name}' stays within bounds")
-            loop_node.cond.right.value = original_cond_value
-            loop_node.init.decls[0].init.value = original_init_value
-
+            self.suggest_for_loop_adjustment(node, loop_node, overflow, var_name)
+            
         elif isinstance(loop_node, c_ast.While):
+            self.suggest_while_loop_adjustment(node, loop_node, overflow, var_name)
 
-            var_decleration = self.variable_declarations[var_name]
-
-            original_var_value = var_decleration.value
-
-            var_decleration.value = str(0 - start_offset)
-
-            original_cond_value = loop_node.cond.right.value
-            loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
-
-            self.generate_suggestion(f"At {node.coord} Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
-            var_decleration.value = original_var_value
-            loop_node.cond.right = original_cond_value
 
     def correct_array_access(self, node, overflow):
+        self.suggest_buffer_allocation_adjustment(node, overflow)
         if isinstance(node.lvalue, c_ast.ArrayRef):
             if isinstance(overflow['index'], Number): 
                 self.correct_array_access_by_value(node, overflow)
