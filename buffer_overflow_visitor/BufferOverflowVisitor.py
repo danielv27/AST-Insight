@@ -23,11 +23,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_For(self, node):
         self.track_current_loop(node)
 
+    def visit_While(self, node):
+        self.track_current_loop(node)
+
     def visit_Decl(self, node):
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
             self.variable_declarations[var_name] = node.init
-        self.generic_visit(node)
+            self.generic_visit(node)
 
     def visit_Assignment(self, node):
         self.handle_assignment(node)
@@ -43,11 +46,20 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.current_function = None
 
     def track_current_loop(self, node):
-        var_name = node.init.decls[0].name
-
-        self.current_loops[var_name] = node
+        var_name = None
+        if isinstance(node, c_ast.For):
+            var_name = node.init.decls[0].name
+            self.current_loops[var_name] = node
+            
+        elif isinstance(node, c_ast.While):
+            if isinstance(node.cond.left, c_ast.ID):
+                var_name = node.cond.left.name
+                self.current_loops[var_name] = node
+        
         self.generic_visit(node)
-        del self.current_loops[var_name]
+        # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
+        if var_name is not None:
+            del self.current_loops[var_name]
 
     def handle_assignment(self, node):
         relevant_overflows = [overflow for overflow in self.buffer_overflows if overflow['procedure'] == self.current_function_name() and overflow['line'] == node.coord.line]
@@ -90,10 +102,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             var_node.value = original_value
 
             print(self.variable_declarations)
-            
 
     def correct_array_access_by_range(self, node, overflow):
-        print(overflow)
         array_name = node.lvalue.name.name
         subscript = node.lvalue.subscript
         start_offset = overflow['index']['start']
@@ -116,15 +126,31 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         size = overflow['size']
         loop_node = self.current_loops[var_name]
 
-        original_cond_value = loop_node.cond.right.value
-        original_init_value = loop_node.init.decls[0].init.value
+        if isinstance(loop_node, c_ast.For):
+            original_cond_value = loop_node.cond.right.value
+            original_init_value = loop_node.init.decls[0].init.value
 
-        loop_node.cond.right.value = str(size - start_offset)
-        loop_node.init.decls[0].init.value = str(0 - start_offset)
+            loop_node.cond.right.value = str(size - start_offset)
+            loop_node.init.decls[0].init.value = str(0 - start_offset)
 
-        self.generate_suggestion(f"At {node.coord} Correct wrapping loop to ensure '{var_name}' stays within bounds")
-        loop_node.cond.right.value = original_cond_value
-        loop_node.init.decls[0].init.value = original_init_value
+            self.generate_suggestion(f"At {node.coord} Correct wrapping for loop to ensure '{var_name}' stays within bounds")
+            loop_node.cond.right.value = original_cond_value
+            loop_node.init.decls[0].init.value = original_init_value
+
+        elif isinstance(loop_node, c_ast.While):
+
+            var_decleration = self.variable_declarations[var_name]
+
+            original_var_value = var_decleration.value
+
+            var_decleration.value = str(0 - start_offset)
+
+            original_cond_value = loop_node.cond.right.value
+            loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
+
+            self.generate_suggestion(f"At {node.coord} Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
+            var_decleration.value = original_var_value
+            loop_node.cond.right = original_cond_value
 
     def correct_array_access(self, node, overflow):
         if isinstance(node.lvalue, c_ast.ArrayRef):
@@ -133,3 +159,4 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.correct_array_access_by_value(node, overflow)
             else: 
                 self.correct_array_access_by_range(node, overflow)
+
