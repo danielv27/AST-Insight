@@ -1,30 +1,39 @@
 import sys
+import os
 from parse_infer import run_infer, extract_buffer_overflows
 from parse_ast import parse_ast, ast_to_c_file
 from buffer_overflow_visitor.BufferOverflowVisitor import BufferOverflowVisitor
-
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from tempfile import NamedTemporaryFile
 
 sys.path.extend(['.', '..'])
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
+app = Flask(__name__)
+CORS(app, resources={r"/analyze": {"origins": "*"}})
 
-        file_path = sys.argv[1]
-        infer_output = run_infer(file_path)
+@app.route('/analyze', methods=["POST"])
+def analyze():
+    code = request.json['code']
 
-        # print(infer_output)
+    with NamedTemporaryFile(delete=False, suffix='.c') as temp_file:
+        temp_file.write(code.encode('utf-8'))
+        temp_file_path = temp_file.name
+
+    try:
+        infer_output = run_infer(temp_file_path)
 
         buffer_overflows = extract_buffer_overflows(infer_output)
 
-        ast = parse_ast(file_path)
-        
+        ast = parse_ast(temp_file_path)
         visitor = BufferOverflowVisitor(buffer_overflows)
         visitor.visit(ast)
 
-        for sug in visitor.suggestions:
-            print(sug['description'])
-            print(sug['code'])
+    finally:
+        # Clean up the temporary file
+        os.remove(temp_file_path)
+        
+    return jsonify(visitor.suggestions)
 
-    else:
-        print("Please provide a filename as argument")
-
+if __name__ == "__main__":
+    app.run(debug=True)
