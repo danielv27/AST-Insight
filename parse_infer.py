@@ -13,7 +13,7 @@ def run_infer(file_path):
         print(f"Infer analysis encountered an error: {analysis_err.decode('UTF-8')}")
         sys.exit(analysis_errcode)
 
-    
+    analysis_process.wait()
 
     report_process = subprocess.Popen('sudo infer-arm64/bin/infer report --format json', shell=True,
                                       stdout=subprocess.PIPE,
@@ -21,7 +21,8 @@ def run_infer(file_path):
     report_out, report_err = report_process.communicate()
     report_errcode = report_process.returncode
 
-    analysis_process.wait()
+
+    
     report_process.wait()
 
     if report_errcode != 0:

@@ -16,6 +16,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.current_function = None
         self.current_loops = {}
         self.variable_declarations = {}
+        self.array_declerations = {}
 
     def visit_FuncDef(self, node): 
         self.track_current_function(node)
@@ -30,9 +31,21 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.type, c_ast.PtrDecl):
             # TODO: if a pointer decl then check if init is malloc, calloc or realloc, if so add to declared arrays
             print('ptr decl', node)
+            if isinstance(node.init, c_ast.FuncCall) and node.init.name.name == 'malloc':
+                print('call to malloc')
+                array_name = node.name
+                size_node = node.init.args.exprs[0]
+                self.array_declerations[array_name] = size_node
+
         if isinstance(node.type, c_ast.ArrayDecl):
             # TODO: Simpler, just add the array to the list
-            print('array decl', node)
+            array_name = node.name
+            size_node = node.type.dim
+
+            self.array_declerations[array_name] = size_node
+
+            # print('array decl', node)
+            pass
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
             self.variable_declarations[var_name] = node.init
@@ -111,9 +124,19 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         var_node.value = original_value   
 
     def suggest_buffer_allocation_adjustment(self, node, overflow):
+        print('\nsuggest buffer allocation adjustment\n')
         print(node)
         print(overflow)
-        pass 
+        if isinstance(overflow['index'], Number):
+            array_name = node.lvalue.name.name
+            array_size_node = self.array_declerations[array_name]
+            
+            original_size = array_size_node.value
+            array_size_node.value = str(overflow['index'] + 1)
+            self.generate_suggestion(f"At {array_size_node.coord} adjust array size to be big enough for index access") 
+            array_size_node.value = original_size
+            pass
+        
 
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
         size = overflow['size']

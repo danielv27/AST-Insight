@@ -1,9 +1,7 @@
-int main(){
-
-    int i = 80;
-
+int main()
+{
     int buf[32];
-    // buf[32] = 6;
+    int i = 45;
 
     buf[i] = 9;
 }
