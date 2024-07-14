@@ -55,7 +55,7 @@ def extract_buffer_overflows(json_output):
                 offset = int(match.group(1))
                 size = int(match.group(2))
 
-        if bug_type == 'BUFFER_OVERRUN_L2':
+        if bug_type in ['BUFFER_OVERRUN_L2', 'BUFFER_OVERRUN_L3']:
             implemented = True
             match = re.search(r'Offset:\s*\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]\s*Size:\s*(\d+)', issue['qualifier'])
             if match:

@@ -12,14 +12,12 @@ void vulnerable_function()
     }
 
 
-    // char *buffer2[16];
-    // int j = 0;
-    // while(j < 45){
-    //     buffer2[j - 5] = 'b';
-    //     j++;
-    // }
-
-    // buffer = calloc(24, 1);
+    char *buffer2[16];
+    int j = 0;
+    while(j < 45){
+        buffer2[j - 5] = 'b';
+        j++;
+    }
 
 }
 
