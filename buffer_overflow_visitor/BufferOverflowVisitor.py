@@ -119,7 +119,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         original_value = var_node.value
 
         var_node.value = str(overflow['size'] - 1)
-        self.generate_suggestion(f'At {var_node.coord} Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. 31')
+        self.generate_suggestion(f'Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. 31')
         var_node.value = original_value   
 
     def suggest_buffer_allocation_adjustment(self, node, overflow):
@@ -138,7 +138,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             
             original_size = array_size_node.value
             array_size_node.value = str(minimal_size)
-            self.generate_suggestion(f"At {array_size_node.coord} adjust array size to be big enough for index access, minimal size: {minimal_size}") 
+            self.generate_suggestion(f"Increase array size to account for index access, atleast {minimal_size}") 
             array_size_node.value = original_size
         else:
             array_name = node.lvalue.name.name
@@ -150,8 +150,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 return
 
             original_size = array_size_node.value
-            array_size_node.value = str(overflow['index']['end'] + 1)
-            self.generate_suggestion(f"At {array_size_node.coord} adjust array size to be big enough for index access") 
+            array_size_node.value = str(minimal_size)
+            self.generate_suggestion(f"Increase array size to account for index access, atleast {minimal_size}") 
             array_size_node.value = original_size
 
         
@@ -165,7 +165,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         loop_node.cond.right.value = str(size - start_offset)
         loop_node.init.decls[0].init.value = str(0 - start_offset)
 
-        self.generate_suggestion(f"At {node.coord} Correct wrapping for loop to ensure '{var_name}' stays within bounds")
+        self.generate_suggestion(f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
         loop_node.cond.right.value = original_cond_value
         loop_node.init.decls[0].init.value = original_init_value
         pass
@@ -182,7 +182,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             original_cond_value = loop_node.cond.right.value
             loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
 
-            self.generate_suggestion(f"At {node.coord} Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
+            self.generate_suggestion(f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
             var_decleration.value = original_var_value
             loop_node.cond.right = original_cond_value
 
@@ -197,12 +197,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     # When the index of a buffer is a range it means it is accessed in a loop 
     def correct_array_access_by_range(self, node, overflow):
-        array_name = node.lvalue.name.name
         subscript = node.lvalue.subscript
-        start_offset = overflow['index']['start']
-        end_offset = overflow['index']['end']
-
-        log(node.lvalue, f'Access out of bounds `{array_name}` in a loop, Offset [{start_offset}, {end_offset}]')
 
         visitor = IdentifierVisitor()
         visitor.visit(subscript)

@@ -21,7 +21,10 @@ def analyze():
         temp_file_path = temp_file.name
 
     try:
-        infer_output = run_infer(temp_file_path)
+        infer_output, error = run_infer(temp_file_path)
+
+        if error:
+            return jsonify({'error': error}), 406
 
         buffer_overflows = extract_buffer_overflows(infer_output)
 
@@ -30,10 +33,9 @@ def analyze():
         visitor.visit(ast)
 
     finally:
-        # Clean up the temporary file
         os.remove(temp_file_path)
         
-    return jsonify(visitor.suggestions)
+    return jsonify(visitor.suggestions), 200
 
 if __name__ == "__main__":
     app.run(debug=True)

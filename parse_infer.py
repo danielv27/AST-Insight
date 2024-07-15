@@ -2,43 +2,47 @@ import sys, os, subprocess, json, re
 sys.path.extend(['.', '..'])
 
 
+import json
+
 def run_infer(file_path):
-    analysis_process = subprocess.Popen(f'sudo infer-arm64/bin/infer run --bufferoverrun -- clang -c {file_path}', shell=True,
-                                        stdout=subprocess.PIPE,
-                                        stderr=subprocess.PIPE)
-    analysis_out, analysis_err = analysis_process.communicate()
-    analysis_errcode = analysis_process.returncode
+    try:
+        analysis_process = subprocess.Popen(f'sudo infer-arm64/bin/infer run --bufferoverrun -- clang -c {file_path}', shell=True,
+                                            stdout=subprocess.PIPE,
+                                            stderr=subprocess.PIPE)
+        analysis_out, analysis_err = analysis_process.communicate()
+        analysis_errcode = analysis_process.returncode
 
-    if analysis_errcode != 0:
-        print(f"Infer analysis encountered an error: {analysis_err.decode('UTF-8')}")
-        sys.exit(analysis_errcode)
+        if analysis_errcode != 0:
+            error_message = f"Infer analysis encountered an error: {analysis_err.decode('UTF-8')}"
+            return None, error_message
 
-    analysis_process.wait()
+        analysis_process.wait()
 
-    report_process = subprocess.Popen('sudo infer-arm64/bin/infer report --format json', shell=True,
-                                      stdout=subprocess.PIPE,
-                                      stderr=subprocess.PIPE)
-    report_out, report_err = report_process.communicate()
-    report_errcode = report_process.returncode
+        report_process = subprocess.Popen('sudo infer-arm64/bin/infer report --format json', shell=True,
+                                          stdout=subprocess.PIPE,
+                                          stderr=subprocess.PIPE)
+        report_out, report_err = report_process.communicate()
+        report_errcode = report_process.returncode
 
+        report_process.wait()
 
-    
-    report_process.wait()
+        if report_errcode != 0:
+            error_message = f"Infer report encountered an error: {report_err.decode('UTF-8')}"
+            return None, error_message
 
-    if report_errcode != 0:
-        print(f"Infer report encountered an error: {report_err.decode('UTF-8')}")
-        sys.exit(report_errcode)
+        # Check if report.json exists and read it
+        report_file = 'infer-out/report.json'
+        if not os.path.exists(report_file):
+            error_message = f"Infer report encountered an error: Failed to generate report file."
+            return None, error_message
 
-    # Check if report.json exists and read it
-    report_file = 'infer-out/report.json'
-    if not os.path.exists(report_file):
-        print(f"Report file {report_file} does not exist.")
-        sys.exit(1)
+        # Parse JSON output
+        with open(report_file, 'r') as f:
+            infer_output = json.load(f)
+        return infer_output, None
+    except Exception as e:
+        return None, str(e)
 
-    # Parse JSON output
-    with open(report_file, 'r') as f:
-        infer_output = json.load(f)
-    return infer_output
 
 def extract_buffer_overflows(json_output):
     buffer_overflows = []
