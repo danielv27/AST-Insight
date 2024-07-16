@@ -1,5 +1,5 @@
 from pycparser import c_ast
-from print_utils.log import log
+from utils.log import log
 
 def validate_arg_amount(node, format_parts, additional_args):
     if len(node.args.exprs) < 2:

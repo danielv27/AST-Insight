@@ -1,6 +1,6 @@
 from numbers import Number
 from pycparser import c_ast, c_generator
-from print_utils.log import log
+from utils.log import log
 
 # Extracts Identifiers from subscripts
 class IdentifierVisitor(c_ast.NodeVisitor):
