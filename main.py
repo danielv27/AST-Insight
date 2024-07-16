@@ -12,6 +12,7 @@ sys.path.extend(['.', '..'])
 app = Flask(__name__)
 CORS(app, resources={r"/analyze": {"origins": "*"}})
 
+
 @app.route('/analyze', methods=["POST"])
 def analyze():
     code = request.json['code']
