@@ -1,8 +1,18 @@
 import sys, os, subprocess, json, re
 sys.path.extend(['.', '..'])
-
-
+from tempfile import mkdtemp, NamedTemporaryFile
 import json
+import shutil
+
+JULIET_DEPENDENCY_PATH = "/Users/danielverner/Programming/MSc_Thesis/python_c_ast/juliet/C/testcasesupport"
+
+def setup_juliet_temp_dir():
+    temp_dir = mkdtemp()
+    for filename in os.listdir(JULIET_DEPENDENCY_PATH):
+        full_file_name = os.path.join(JULIET_DEPENDENCY_PATH, filename)
+        if os.path.isfile(full_file_name):
+            shutil.copy(full_file_name, temp_dir)
+    return temp_dir
 
 def run_infer(file_path):
     try:

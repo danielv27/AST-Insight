@@ -65,6 +65,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def track_current_loop(self, node):
         var_name = None
         if isinstance(node, c_ast.For):
+            if isinstance(node.init, c_ast.Assignment):
+                print('TODO: implement for loop init is assignment (i is initialized before for loop)')
             var_name = node.init.decls[0].name
             self.current_loops[var_name] = node
             

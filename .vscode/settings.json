@@ -1,3 +1,11 @@
 {
-    "codeQL.createQuery.qlPackLocation": "/home/daniel/python_c_ast"
+    "codeQL.createQuery.qlPackLocation": "/home/daniel/python_c_ast",
+    "files.associations": {
+        "std_testcase.h": "c",
+        "std_testcase_io.h": "c",
+        "cwchar": "c",
+        "__string": "c",
+        "*.def": "c",
+        "wchar.h": "c"
+    }
 }
