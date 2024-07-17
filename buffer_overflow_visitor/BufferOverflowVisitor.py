@@ -107,7 +107,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], suggesting correction to last index ({array_size -1})')
         original_subscript = subscript.value
         node.lvalue.subscript.value = str(array_size - 1)
-        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]", node.coord.line)
+        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]")
         node.lvalue.subscript.value = original_subscript  
 
     def suggest_variable_adjustment(self, node, overflow):
