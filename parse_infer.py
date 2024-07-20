@@ -1,18 +1,7 @@
 import sys, os, subprocess, json, re
 sys.path.extend(['.', '..'])
-from tempfile import mkdtemp, NamedTemporaryFile
 import json
-import shutil
 
-JULIET_DEPENDENCY_PATH = "/Users/danielverner/Programming/MSc_Thesis/python_c_ast/juliet/C/testcasesupport"
-
-def setup_juliet_temp_dir():
-    temp_dir = mkdtemp()
-    for filename in os.listdir(JULIET_DEPENDENCY_PATH):
-        full_file_name = os.path.join(JULIET_DEPENDENCY_PATH, filename)
-        if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, temp_dir)
-    return temp_dir
 
 def run_infer(file_path):
     try:
@@ -64,16 +53,16 @@ def extract_buffer_overflows(json_output):
 
         if bug_type == 'BUFFER_OVERRUN_L1':
             implemented = True
-            match = re.search(r'Offset:\s*(-?\d+)\s*Size:\s*(\d+)', issue['qualifier'])
+            match = re.search(r'Offset(\s*added)?:\s*(-?\d+)\s*Size:\s*(\d+)', issue['qualifier'])
             if match:
-                offset = int(match.group(1))
-                size = int(match.group(2))
+                offset = int(match.group(2))
+                size = int(match.group(3))
 
         if bug_type in ['BUFFER_OVERRUN_L2', 'BUFFER_OVERRUN_L3']:
             implemented = True
-            match = re.search(r'Offset:\s*\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]\s*Size:\s*(\d+)', issue['qualifier'])
+            match = re.search(r'Offset(\s*added)?:\s*\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]\s*Size:\s*(\d+)', issue['qualifier'])
             if match:
-                offset = {'start': int(match.group(1)), 'end': int(match.group(2))}
+                offset = {'start': int(match.group(2)), 'end': int(match.group(3))}
                 size = int(match.group(3))
 
 
