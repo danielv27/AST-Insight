@@ -6,7 +6,7 @@ from node_visitors.buffer_overflow_visitor import BufferOverflowVisitor
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from tempfile import NamedTemporaryFile, mkdtemp
-from utils.format import adjust_code_formatting
+from utils.format import preprocess_code
 from utils.env import setup_juliet_temp_dir
 
 sys.path.extend(['.', '..'])
@@ -26,7 +26,7 @@ def load_request_to_file(code: str, juliet: bool):
 
 @app.route('/analyze', methods=["POST"])
 def analyze():
-    code = adjust_code_formatting(request.json['code'])
+    code = preprocess_code(request.json['code'])
     juliet = request.json['juliet']
 
     try:

@@ -1,4 +1,8 @@
-def adjust_code_formatting(code: str):
+def preprocess_code(code: str):
+
+    code = code.replace('alloca', 'malloc')
+    code = code.replace('ALLOCA', 'malloc')
+
     lines = code.splitlines()
     adjusted_lines = []
     add_empty_line_next = False
