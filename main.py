@@ -42,8 +42,6 @@ def analyze():
         visitor = BufferOverflowVisitor(buffer_overflows)
         visitor.visit(ast)
 
-        print(visitor.suggestions)
-
     finally:
         os.remove(temp_file_path)
         
