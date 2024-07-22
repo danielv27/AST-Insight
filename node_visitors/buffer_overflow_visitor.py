@@ -4,6 +4,7 @@ from node_visitors.identifier_extractor import IdentifierExtractor
 from node_visitors.size_allocation_extractor import HeapAllocationSizeExtractor
 from node_visitors.value_simplifier import ValueSimplifier
 from utils.log import log
+from math import ceil
         
 class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self, buffer_overflows):
@@ -32,43 +33,33 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_Decl(self, node: c_ast.Decl):
 
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            size_extractor = HeapAllocationSizeExtractor(self.array_declarations, self.variable_declarations)
+            size_extractor = HeapAllocationSizeExtractor()
             size_extractor.visit(node.init)
-
-            array_name = node.name
-            size_node = size_extractor.size_node
-            print('multiplier: ',size_extractor.multiplier)
-            self.array_declarations[array_name] = size_node
-
+            self.set_array_state(node.name, size_extractor.size_node, size_extractor.multiplier)
 
         if isinstance(node.type, c_ast.ArrayDecl):
-            # TODO: Simpler, just add the array to the list
-
             # Simplifies consant expressions
             visitor = ValueSimplifier()
             visitor.visit(node)
+            self.set_array_state(node.name, node.type.dim, 1)
 
-            array_name = node.name
-            size_node = node.type.dim
-
-            self.array_declarations[array_name] = size_node
-
-            # print('array decl', node)
-            pass
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
             self.variable_declarations[var_name] = node.init
             self.generic_visit(node)
 
     def visit_Assignment(self, node):
-        print(node)
-        if isinstance(node.rvalue, c_ast.FuncCall) and node.rvalue.name.name in ['malloc', 'calloc', 'realloc']:
-            # TODO: add this to defined vars (export to method for easier readability). Try to combine this with the ptr decl
-            print('heap allocation assignment', node)
-            return
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
+        
+        size_extractor = HeapAllocationSizeExtractor()
+        size_extractor.visit(node.rvalue)
+
+        # Heap allocation extractor will only set a size node when there is a heap allocation inside the node
+        if size_extractor.size_node is not None:
+            self.set_array_state(node.lvalue.name, size_extractor.size_node, size_extractor.multiplier)
+
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
             for overflow in relevant_overflows:
@@ -108,6 +99,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if var_name is not None:
             del self.current_loops[var_name]
 
+    def set_array_state(self, name, size_node, multiplier):
+        self.array_declarations[name] = {'size_node': size_node, 'multiplier': multiplier}
+
+    
+    def get_array_state(self, name):
+        array_state = self.array_declarations[name]
+        return array_state['size_node'], array_state['multiplier']
+
 
     def generate_suggestion(self, node, description, overflow):
         overflow['handled'] = True
@@ -146,35 +145,26 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def suggest_buffer_allocation_adjustment(self, node, overflow):
 
+        array_name = node.lvalue.name.name
+        array_size_node, multiplier = self.get_array_state(array_name)
+        array_size = int(array_size_node.value) * multiplier
+
         if isinstance(overflow['index'], Number):
-
-            array_name = node.lvalue.name.name
-            array_size_node = self.array_declarations[array_name]
-
             minimal_size = overflow['index'] + 1
-
-            if int(array_size_node.value) >= minimal_size:
-                return
-            
-            original_size = array_size_node.value
-            array_size_node.value = str(minimal_size)
-            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}", overflow) 
-            array_size_node.value = original_size
         else:
-            array_name = node.lvalue.name.name
-            array_size_node = self.array_declarations[array_name]
-
-            print(overflow)
-
             minimal_size = overflow['index']['end'] + 1
+        
+        if array_size >= minimal_size:
+            return
+            
+        original_size = array_size_node.value
 
-            if int(array_size_node.value) >= minimal_size:
-                return
+        result = ceil(minimal_size / multiplier)
 
-            original_size = array_size_node.value
-            array_size_node.value = str(minimal_size)
-            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}", overflow) 
-            array_size_node.value = original_size
+        array_size_node.value = str(ceil(minimal_size / multiplier))
+        self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow) 
+        array_size_node.value = original_size
+
         
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
 

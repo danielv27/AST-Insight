@@ -9,9 +9,7 @@ from utils.sizeof import node_is_sizeof, resolve_sizeof_node
 # Arrays might have different strucutures when initialized or assigned . This needs to be handled Via a node visitor.
 # e.g. for expression *buffer = (char *)malloc((10)*sizeof(char)); we only care about the malloc node (not the (char *) cast)
 class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
-    def __init__(self, array_declarations, variable_declarations):
-        self.array_declarations = array_declarations
-        self.variable_declarations = variable_declarations
+    def __init__(self):
         self.size_node = None
         self.multiplier = 1
 
