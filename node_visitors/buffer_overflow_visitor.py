@@ -65,7 +65,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             print('heap allocation assignment', node)
             return
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
-            
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
         relevant_overflows = self.getRelevantOverflows(node)
