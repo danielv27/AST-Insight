@@ -1,42 +1,10 @@
 from numbers import Number
 from pycparser import c_ast, c_generator
+from node_visitors.identifier_extractor import IdentifierExtractor
+from node_visitors.size_allocation_extractor import SizeAllocationExtractor
+from node_visitors.value_simplifier import ValueSimplifier
 from utils.log import log
-
-# Extracts Identifiers from subscripts
-class IdentifierVisitor(c_ast.NodeVisitor):
-    def __init__(self):
-        self.variables = []
-    def visit_ID(self, node):
-        self.variables.append(node.name)
-
-# Used to simplify binary operations (e.g. If defined as buf[10+1], converted to buf[11])
-class ValueVisitor(c_ast.NodeVisitor):
-    def is_int(self, node):
-        return isinstance(node, c_ast.Constant) and node.type == 'int'
-
-    def visit_BinaryOp(self, node):
-        if self.is_int(node.left) and self.is_int(node.right):
-            left_value = int(node.left.value)
-            right_value = int(node.right.value)
-            if node.op == '+':
-                result = left_value + right_value
-            elif node.op == '-':
-                result = left_value - right_value
-            elif node.op == '*':
-                result = left_value * right_value
-            elif node.op == '/':
-                if right_value == 0:
-                    log(node, 'Division by zero in constant expression', 'warning')
-                    return
-                result = left_value // right_value  # Integer division
-            else:
-                return
-
-            # Replace the BinaryOp node with a Constant node
-            constant_node = c_ast.Constant(type='int', value=str(result))
-            node = constant_node
-
-
+        
 class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self, buffer_overflows):
         self.buffer_overflows = buffer_overflows
@@ -44,7 +12,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.current_function = None
         self.current_loops = {}
         self.variable_declarations = {}
-        self.array_declerations = {}
+        self.array_declarations = {}
 
     def visit_FuncDef(self, node: c_ast.FuncDef): 
         self.track_current_function(node)
@@ -53,7 +21,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
             for overflow in relevant_overflows:
-                self.correct_function_call(node, overflow)
+                self.handle_memory_function(node, overflow)
 
     def visit_For(self, node: c_ast.For):
         self.track_current_loop(node)
@@ -62,23 +30,26 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.track_current_loop(node)
 
     def visit_Decl(self, node: c_ast.Decl):
-        if isinstance(node.type, c_ast.PtrDecl):
-            # TODO: if a pointer decl then check if init is malloc, calloc or realloc, if so add to declared arrays
-            if isinstance(node.init, c_ast.FuncCall) and node.init.name.name == 'malloc':
-                array_name = node.name
-                size_node = node.init.args.exprs[0]
-                self.array_declerations[array_name] = size_node
+
+        # Simplifies consant expressions
+        visitor = ValueSimplifier()
+        visitor.visit(node)
+
+        if isinstance(node.type, c_ast.PtrDecl) and node.init:
+            size_extractor = SizeAllocationExtractor()
+            size_extractor.visit(node.init)
+
+            array_name = node.name
+            size_node = size_extractor.size_node
+            self.array_declarations[array_name] = size_node
 
         if isinstance(node.type, c_ast.ArrayDecl):
             # TODO: Simpler, just add the array to the list
+
             array_name = node.name
             size_node = node.type.dim
 
-            visitor = ValueVisitor()
-            visitor.visit(size_node)
-
-
-            self.array_declerations[array_name] = size_node
+            self.array_declarations[array_name] = size_node
 
             # print('array decl', node)
             pass
@@ -88,12 +59,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             self.generic_visit(node)
 
     def visit_Assignment(self, node):
+        print(node)
         if isinstance(node.rvalue, c_ast.FuncCall) and node.rvalue.name.name in ['malloc', 'calloc', 'realloc']:
             # TODO: add this to defined vars (export to method for easier readability). Try to combine this with the ptr decl
             print('heap allocation assignment', node)
             return
-        if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declerations[node.rvalue.name]:
-            self.array_declerations[node.lvalue.name] = self.array_declerations[node.rvalue.name]
+        if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
+            
+            self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
@@ -119,10 +92,10 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         var_name = None
         if isinstance(node, c_ast.For):
             if isinstance(node.init, c_ast.Assignment):
-                print('TODO: implement for loop init is assignment (i is initialized before for loop)')
+                var_name = node.init.lvalue.name
             else:
                 var_name = node.init.decls[0].name
-                self.current_loops[var_name] = node
+            self.current_loops[var_name] = node
             
         elif isinstance(node, c_ast.While):
             if isinstance(node.cond.left, c_ast.ID):
@@ -157,7 +130,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def suggest_variable_adjustment(self, node, overflow):
         subscript = node.lvalue.subscript
-        visitor = IdentifierVisitor()
+        visitor = IdentifierExtractor()
         visitor.visit(subscript)
 
         var_name = visitor.variables[0]
@@ -174,7 +147,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(overflow['index'], Number):
 
             array_name = node.lvalue.name.name
-            array_size_node = self.array_declerations[array_name]
+            array_size_node = self.array_declarations[array_name]
 
             minimal_size = overflow['index'] + 1
 
@@ -187,7 +160,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             array_size_node.value = original_size
         else:
             array_name = node.lvalue.name.name
-            array_size_node = self.array_declerations[array_name]
+            array_size_node = self.array_declarations[array_name]
 
             print(overflow)
 
@@ -202,18 +175,24 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             array_size_node.value = original_size
         
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
+
+        print(loop_node)
+
         size = overflow['size']
         start_offset = overflow['index']['start']
-        original_cond_value = loop_node.cond.right.value
-        original_init_value = loop_node.init.decls[0].init.value
 
-        loop_node.cond.right.value = str(size - start_offset)
-        loop_node.init.decls[0].init.value = str(0 - start_offset)
+        if isinstance(loop_node.cond.right, c_ast.Constant):
+            original_cond_value = loop_node.cond.right.value
+            loop_node.cond.right.value = str(size - start_offset)
 
-        self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
-        loop_node.cond.right.value = original_cond_value
-        loop_node.init.decls[0].init.value = original_init_value
-        pass
+            original_init_value = loop_node.init.decls[0].init.value
+
+            loop_node.init.decls[0].init.value = str(0 - start_offset)
+
+            self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
+            loop_node.cond.right.value = original_cond_value
+            loop_node.init.decls[0].init.value = original_init_value
+        
 
     def suggest_while_loop_adjustment(self, node, loop_node, overflow, var_name):
             var_decleration = self.variable_declarations[var_name]
@@ -244,7 +223,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def correct_array_access_by_range(self, node, overflow):
         subscript = node.lvalue.subscript
 
-        visitor = IdentifierVisitor()
+        visitor = IdentifierExtractor()
         visitor.visit(subscript)
 
         if len(visitor.variables) == 0:
@@ -264,9 +243,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         elif isinstance(loop_node, c_ast.While):
             self.suggest_while_loop_adjustment(node, loop_node, overflow, var_name)
 
-    def correct_function_call(self, node, overflow):
-        print(self.array_declerations)
-        
+
 
     def correct_array_access(self, node, overflow):
         self.suggest_buffer_allocation_adjustment(node, overflow)
@@ -276,3 +253,20 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             else: 
                 self.correct_array_access_by_range(node, overflow)
 
+
+    # Can handle functions with the mapping (dest, source, size) or (dest, source) 
+    def handle_memory_function(self, node, overflow):
+        func_name = node.name.name
+        if func_name in ['memset', 'memmove', 'strcpy']:
+            dest = node.args.exprs[0]
+            source = node.args.exprs[1] if len(node.args.exprs) > 1 else None
+            size = node.args.exprs[2] if len(node.args.exprs) > 2 else c_ast.Constant('int', str(len(node.args.exprs[1].value) + 1)) if source else None
+
+            if isinstance(dest, c_ast.ID) and dest.name in self.array_declarations:
+                dest_size_node = self.array_declarations[dest.name]
+                dest_size = int(dest_size_node.value)
+
+                if source and isinstance(source, c_ast.ID) and source.name in self.array_declarations:
+                    source_size_node = self.array_declarations[source.name]
+                    if int(source_size_node.value) > dest_size:
+                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest.name}' to be at least {source_size_node.value}")

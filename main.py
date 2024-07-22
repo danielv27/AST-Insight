@@ -2,7 +2,7 @@ import sys
 import os
 from parse_infer import run_infer, extract_buffer_overflows
 from parse_ast import parse_ast
-from buffer_overflow_visitor.BufferOverflowVisitor import BufferOverflowVisitor
+from node_visitors.buffer_overflow_visitor import BufferOverflowVisitor
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from tempfile import NamedTemporaryFile, mkdtemp
@@ -41,6 +41,8 @@ def analyze():
         ast = parse_ast(temp_file_path)
         visitor = BufferOverflowVisitor(buffer_overflows)
         visitor.visit(ast)
+
+        print(visitor.suggestions)
 
     finally:
         os.remove(temp_file_path)
