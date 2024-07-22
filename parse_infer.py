@@ -74,7 +74,8 @@ def extract_buffer_overflows(json_output):
                 'index': offset,
                 'size': size,
                 'procedure': issue['procedure'],
-                'procedure_start_line': issue['procedure_start_line']
+                'procedure_start_line': issue['procedure_start_line'],
+                'handled': False,
             }
             buffer_overflows.append(details)
     return buffer_overflows

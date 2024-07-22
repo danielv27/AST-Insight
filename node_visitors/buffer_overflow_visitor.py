@@ -108,7 +108,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             del self.current_loops[var_name]
 
 
-    def generate_suggestion(self, node, description):
+    def generate_suggestion(self, node, description, overflow):
+        overflow['handled'] = True
         generator = c_generator.CGenerator()
         suggestion_code = generator.visit(self.current_function)
         self.suggestions.append({
@@ -125,7 +126,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], suggesting correction to last index ({array_size -1})')
         original_subscript = subscript.value
         node.lvalue.subscript.value = str(array_size - 1)
-        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]")
+        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]", overflow)
         node.lvalue.subscript.value = original_subscript  
 
     def suggest_variable_adjustment(self, node, overflow):
@@ -139,7 +140,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         original_value = var_node.value
 
         var_node.value = str(overflow['size'] - 1)
-        self.generate_suggestion(var_node, f'Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. {overflow["size"] - 1}')
+        self.generate_suggestion(var_node, f'Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. {overflow["size"] - 1}', overflow)
         var_node.value = original_value   
 
     def suggest_buffer_allocation_adjustment(self, node, overflow):
@@ -156,7 +157,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             
             original_size = array_size_node.value
             array_size_node.value = str(minimal_size)
-            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}") 
+            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}", overflow) 
             array_size_node.value = original_size
         else:
             array_name = node.lvalue.name.name
@@ -171,7 +172,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
             original_size = array_size_node.value
             array_size_node.value = str(minimal_size)
-            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}") 
+            self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access, atleast {minimal_size}", overflow) 
             array_size_node.value = original_size
         
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
@@ -189,7 +190,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
             loop_node.init.decls[0].init.value = str(0 - start_offset)
 
-            self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
+            self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds", overflow)
             loop_node.cond.right.value = original_cond_value
             loop_node.init.decls[0].init.value = original_init_value
         
@@ -206,7 +207,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             original_cond_value = loop_node.cond.right.value
             loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
 
-            self.generate_suggestion(loop_node, f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
+            self.generate_suggestion(loop_node, f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds", overflow)
             var_decleration.value = original_var_value
             loop_node.cond.right = original_cond_value
 
@@ -269,4 +270,4 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 if source and isinstance(source, c_ast.ID) and source.name in self.array_declarations:
                     source_size_node = self.array_declarations[source.name]
                     if int(source_size_node.value) > dest_size:
-                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest.name}' to be at least {source_size_node.value}")
+                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest.name}' to be at least {source_size_node.value}", overflow)
