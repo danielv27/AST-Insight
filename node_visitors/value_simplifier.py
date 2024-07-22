@@ -2,11 +2,7 @@ from pycparser import c_ast
 from utils.log import log
 
 
-# Source: https://os.mbed.com/handbook/C-Data-Types#integer-data-types
-sizeof_is_1 = ['char', 'signed char']
-sizeof_is_2 = ['short', 'unsigned short']
-sizeof_is_4 = ['int', 'unsigned int', 'long', 'unsigned long']
-sizeof_is_8 = ['unsigned long long', 'long long']
+
 
 # NodeVisitor used to simplify binary operations (e.g. If defined as buf[10+1], converted to buf[11])
 # Currently only simplifies subscripts or arrays and expression lists (found in functions) but can be applied to all node types

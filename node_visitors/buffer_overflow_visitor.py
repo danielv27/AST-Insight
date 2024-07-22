@@ -1,7 +1,7 @@
 from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.identifier_extractor import IdentifierExtractor
-from node_visitors.size_allocation_extractor import SizeAllocationExtractor
+from node_visitors.size_allocation_extractor import HeapAllocationSizeExtractor
 from node_visitors.value_simplifier import ValueSimplifier
 from utils.log import log
         
@@ -31,20 +31,22 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def visit_Decl(self, node: c_ast.Decl):
 
-        # Simplifies consant expressions
-        visitor = ValueSimplifier()
-        visitor.visit(node)
-
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            size_extractor = SizeAllocationExtractor()
+            size_extractor = HeapAllocationSizeExtractor(self.array_declarations, self.variable_declarations)
             size_extractor.visit(node.init)
 
             array_name = node.name
             size_node = size_extractor.size_node
+            print('multiplier: ',size_extractor.multiplier)
             self.array_declarations[array_name] = size_node
+
 
         if isinstance(node.type, c_ast.ArrayDecl):
             # TODO: Simpler, just add the array to the list
+
+            # Simplifies consant expressions
+            visitor = ValueSimplifier()
+            visitor.visit(node)
 
             array_name = node.name
             size_node = node.type.dim
