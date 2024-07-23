@@ -2,7 +2,7 @@ from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.identifier_extractor import IdentifierExtractor
 from node_visitors.size_allocation_extractor import HeapAllocationSizeExtractor
-from node_visitors.value_simplifier import ConstantEvaluator
+from node_visitors.constant_evaluator import ConstantEvaluator
 from utils.log import log
 from math import ceil
 
@@ -35,9 +35,12 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_Decl(self, node):
 
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            size_extractor = HeapAllocationSizeExtractor()
+            size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
             size_extractor.visit(node.init)
-            self.set_array_state(node.name, size_extractor.size_node, size_extractor.multiplier)
+
+            size_node, multiplier = size_extractor.get_result()
+
+            self.set_array_state(node.name, size_node, multiplier)
 
         if isinstance(node.type, c_ast.ArrayDecl):
             # Simplifies consant expressions
@@ -63,12 +66,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(node.rvalue, c_ast.FuncCall):
                 self.variable_declarations[node.lvalue.name] = find_array_decl_of_strlen(node.rvalue, self.array_declarations)
         
-        size_extractor = HeapAllocationSizeExtractor()
+        size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)
 
+        size_node, multiplier = size_extractor.get_result()
+
         # Heap allocation extractor will only set a size node when there is a heap allocation inside the node
-        if size_extractor.size_node is not None:
-            self.set_array_state(node.lvalue.name, size_extractor.size_node, size_extractor.multiplier)
+        if size_node is not None:
+            self.set_array_state(node.lvalue.name, size_node, multiplier)
 
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
@@ -263,19 +268,36 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.correct_array_access_by_range(node, overflow)
 
 
-    # Can handle functions with the mapping (dest, source, size) or (dest, source) 
     def handle_memory_function(self, node, overflow):
         func_name = node.name.name
-        if func_name in ['memset', 'memmove', 'strcpy']:
-            dest = node.args.exprs[0]
-            source = node.args.exprs[1] if len(node.args.exprs) > 1 else None
-            size = node.args.exprs[2] if len(node.args.exprs) > 2 else c_ast.Constant('int', str(len(node.args.exprs[1].value) + 1)) if source else None
+        if func_name in ['memset', 'memmove', 'memcpy', 'strcpy']:
+            dest_node = node.args.exprs[0]
+            source_node = node.args.exprs[1] if len(node.args.exprs) > 1 else None
+            size_node = node.args.exprs[2] if len(node.args.exprs) > 2 else None
 
-            if isinstance(dest, c_ast.ID) and dest.name in self.array_declarations:
-                dest_size_node = self.array_declarations[dest.name]
-                dest_size = int(dest_size_node.value)
+            if isinstance(dest_node, c_ast.ID) and dest_node.name in self.array_declarations:
+                dest_size_node, dest_multiplier = self.get_array_state(dest_node.name)
+                dest_size = int(dest_size_node.value) * dest_multiplier
 
-                if source and isinstance(source, c_ast.ID) and source.name in self.array_declarations:
-                    source_size_node = self.array_declarations[source.name]
-                    if int(source_size_node.value) > dest_size:
-                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest.name}' to be at least {source_size_node.value}", overflow)
+                if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
+                    source_size_node, source_multiplier = self.get_array_state(source_node.name)
+                    source_size = int(source_size_node.value) * source_multiplier
+
+                    if source_size > dest_size:
+                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest_node.name}' to be at least {source_size}", overflow)
+
+                if size_node:
+                    size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
+                    size_extractor.visit(node)
+
+                    size_node, multiplier = size_extractor.get_result()
+
+                    print('result', size_node, multiplier)
+
+                    copy_size = int(size_node.value) * multiplier
+
+                    if copy_size > dest_size:
+                        self.generate_suggestion(size_node, f"Adjust the size of the copy operation to be at most the size of the destination buffer '{dest_node.name}'", overflow)
+
+                    if source_node and source_size < copy_size:
+                        self.generate_suggestion(source_size_node, f"Adjust the size of the source buffer '{source_node.name}' to be at least {copy_size}", overflow)
