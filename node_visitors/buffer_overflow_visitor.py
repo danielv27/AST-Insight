@@ -2,9 +2,11 @@ from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.identifier_extractor import IdentifierExtractor
 from node_visitors.size_allocation_extractor import HeapAllocationSizeExtractor
-from node_visitors.value_simplifier import ValueSimplifier
+from node_visitors.value_simplifier import ConstantEvaluator
 from utils.log import log
 from math import ceil
+
+from utils.strlen import find_array_decl_of_strlen
         
 class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self, buffer_overflows):
@@ -15,22 +17,22 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.variable_declarations = {}
         self.array_declarations = {}
 
-    def visit_FuncDef(self, node: c_ast.FuncDef): 
+    def visit_FuncDef(self, node):
         self.track_current_function(node)
 
-    def visit_FuncCall(self, node: c_ast.FuncCall):
+    def visit_For(self, node):
+        self.track_current_loop(node)
+
+    def visit_While(self, node):
+        self.track_current_loop(node)
+
+    def visit_FuncCall(self, node):
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
             for overflow in relevant_overflows:
                 self.handle_memory_function(node, overflow)
 
-    def visit_For(self, node: c_ast.For):
-        self.track_current_loop(node)
-
-    def visit_While(self, node: c_ast.While):
-        self.track_current_loop(node)
-
-    def visit_Decl(self, node: c_ast.Decl):
+    def visit_Decl(self, node):
 
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
             size_extractor = HeapAllocationSizeExtractor()
@@ -39,19 +41,27 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         if isinstance(node.type, c_ast.ArrayDecl):
             # Simplifies consant expressions
-            visitor = ValueSimplifier()
-            visitor.visit(node)
+            const_evaluator = ConstantEvaluator()
+            const_evaluator.visit(node)
             self.set_array_state(node.name, node.type.dim, 1)
 
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
-            self.variable_declarations[var_name] = node.init
-            self.generic_visit(node)
+            if isinstance(node.init, c_ast.FuncCall):
+                if node.init.name.name == 'strlen':
+                    self.variable_declarations[var_name] = find_array_decl_of_strlen(node.init, self.array_declarations)
+            else:
+                self.variable_declarations[var_name] = node.init
+        
 
     def visit_Assignment(self, node):
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
+        
+        if isinstance(node.lvalue, c_ast.ID):
+            if isinstance(node.rvalue, c_ast.FuncCall):
+                self.variable_declarations[node.lvalue.name] = find_array_decl_of_strlen(node.rvalue, self.array_declarations)
         
         size_extractor = HeapAllocationSizeExtractor()
         size_extractor.visit(node.rvalue)
@@ -165,13 +175,18 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow) 
         array_size_node.value = original_size
 
-        
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
 
-        print(loop_node)
+        print('for loop adjustment', loop_node.cond)
 
         size = overflow['size']
         start_offset = overflow['index']['start']
+
+        print('overflow for loop:', overflow)
+
+        if isinstance(loop_node.cond.right, c_ast.ID):
+            print("if for loop is with ID")
+            pass
 
         if isinstance(loop_node.cond.right, c_ast.Constant):
             original_cond_value = loop_node.cond.right.value
@@ -241,8 +256,10 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.suggest_buffer_allocation_adjustment(node, overflow)
         if isinstance(node.lvalue, c_ast.ArrayRef):
             if isinstance(overflow['index'], Number): 
+                print('by value')
                 self.correct_array_access_by_value(node, overflow)
             else: 
+                print('by range')
                 self.correct_array_access_by_range(node, overflow)
 
 

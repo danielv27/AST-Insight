@@ -39,6 +39,7 @@ def analyze():
         buffer_overflows = extract_buffer_overflows(infer_output)
 
         ast = parse_ast(temp_file_path)
+
         visitor = BufferOverflowVisitor(buffer_overflows)
         visitor.visit(ast)
 

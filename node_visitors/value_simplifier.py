@@ -4,11 +4,11 @@ from utils.log import log
 
 
 
-# NodeVisitor used to simplify binary operations (e.g. If defined as buf[10+1], converted to buf[11])
+# NodeVisitor used to evalute binary operations and convert them to constants if possible (e.g. If defined as buf[10+1], converted to buf[11])
 # Currently only simplifies subscripts or arrays and expression lists (found in functions) but can be applied to all node types
-# NOTE: For the changes to modift the AST the parent node needs to be modified (dont modify the expression itself as it will be assigned to a new object,
+# NOTE: For the changes to modify the AST, the parent node needs to be modified (dont modify the expression itself as it will be assigned to a new object,
 # not modify the AST)
-class ValueSimplifier(c_ast.NodeVisitor):
+class ConstantEvaluator(c_ast.NodeVisitor):
 
     def visit_ArrayDecl(self, node):
         if isinstance(node.dim, c_ast.BinaryOp):

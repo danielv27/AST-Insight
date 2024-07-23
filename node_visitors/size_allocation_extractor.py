@@ -1,6 +1,6 @@
 from pycparser import c_ast
 
-from node_visitors.value_simplifier import ValueSimplifier
+from node_visitors.value_simplifier import ConstantEvaluator
 from utils.sizeof import node_is_sizeof, resolve_sizeof_node
 
 
@@ -15,7 +15,7 @@ class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
 
     def visit_FuncCall(self, node):
         if node.name.name == 'malloc':
-            value_simplifer = ValueSimplifier()
+            value_simplifer = ConstantEvaluator()
             value_simplifer.visit(node)
             
             first_expr = node.args.exprs[0]
