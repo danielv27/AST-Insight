@@ -14,8 +14,6 @@ class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
 
         func_name = node.name.name
 
-        print(func_name)
-
         if func_name in ['malloc', 'calloc']:
             value_simplifer = ConstantEvaluator()
             value_simplifer.visit(node)
