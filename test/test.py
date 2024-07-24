@@ -1,4 +1,5 @@
 import os
+from analyze import analyze_from_file
 
 # Paths to the test directories
 JULIET_TESTCASES_DIR = "./juliet-test-suite-c/testcases/"
@@ -17,13 +18,7 @@ def run_test_suite(test_dir):
                 test_path = os.path.join(root, file)
                 print(f"Running test: {test_path}")
                 
-                # Run your tool on the test file
                 
-                
-                # Save result
-                results[test_path] = {
-                    "stdout": result.stdout,
-                    "stderr": result.stderr,
-                    "returncode": result.returncode
-                }
     return results
+
+

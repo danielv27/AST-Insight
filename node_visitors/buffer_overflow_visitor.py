@@ -182,12 +182,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
 
-        print('for loop adjustment', loop_node.cond)
-
         size = overflow['size']
         start_offset = overflow['index']['start']
-
-        print('overflow for loop:', overflow)
 
         if isinstance(loop_node.cond.right, c_ast.ID):
             print("if for loop is with ID")
