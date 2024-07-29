@@ -8,21 +8,8 @@ from utils.env import load_code_to_juliet
 import shutil
 
 def analyze_from_file(file_path):
-    infer_output, error = run_infer(file_path)
-
-    if error:
-        # This error rarely occurs when running files so we let the function retry until in succeeeds
-        if 'sigsegv' in error:
-            analyze_from_file(file_path)
-            return
-        return {'error': error}, 406
-
-    buffer_overflows = extract_buffer_overflows(infer_output)
-    if not buffer_overflows:
-        return {'info': 'Infer analysis detected no errors'}, 200
     ast = parse_ast(file_path)
-
-    visitor = BufferOverflowVisitor(buffer_overflows)
+    visitor = BufferOverflowVisitor()
     visitor.visit(ast)
     return visitor.suggestions, 200
 

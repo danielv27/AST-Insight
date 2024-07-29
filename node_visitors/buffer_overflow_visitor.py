@@ -10,8 +10,7 @@ from utils.strlen import find_array_decl_of_strlen
 
         
 class BufferOverflowVisitor(c_ast.NodeVisitor):
-    def __init__(self, buffer_overflows):
-        self.buffer_overflows = buffer_overflows
+    def __init__(self):
         self.suggestions = []
         self.current_function = None
         self.current_loops = {}
@@ -77,21 +76,12 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.lvalue, c_ast.ArrayRef):
             self.check_array_access(node)
 
-        relevant_overflows = self.getRelevantOverflows(node)
-        if relevant_overflows:
-            for overflow in relevant_overflows:
-                self.correct_array_access(node, overflow)
-
 
     def current_function_name(self):
         if self.current_function is None:
             return None
         return self.current_function.decl.name
-
-    def getRelevantOverflows(self, node):
-       return [overflow for overflow in self.buffer_overflows if overflow['procedure'] == self.current_function_name() and overflow['line'] == node.coord.line]
-
-
+    
     def track_current_function(self, node):
         self.current_function = node
         self.generic_visit(node)
@@ -277,51 +267,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             self.generate_suggestion(loop_node, f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
             var_decleration.value = original_var_value
             loop_node.cond.right = original_cond_value
-
-
-    def suggest_loop_adjustment(self, loop_identifier, buffer_access_node):
-        start_node, end_node = self.get_loop_state(loop_identifier)
-        # TODO
-
-
-    # When the index of a buffer is a value it means that is is accessed with a single value (variable or constant)
-    def correct_array_access_by_value(self, node, overflow):
-        if isinstance(node.lvalue.subscript, c_ast.Constant):
-            self.suggest_constant_adjustment(node, overflow)
-        else:
-            self.suggest_variable_adjustment(node, overflow)
-
-
-    # When the index of a buffer is a range it means it is accessed in a loop 
-    def correct_array_access_by_range(self, node, overflow):
-        subscript = node.lvalue.subscript
-
-        visitor = IdentifierExtractor()
-        visitor.visit(subscript)
-
-        if len(visitor.variables) == 0:
-            log(node, 'Unexpected evaluation of subscript', 'warning')
-            return
-        
-        if len(visitor.variables) > 1:
-            log(node, 'Current implementation supports at most 1 variable as an index', 'warning')
-            return
-
-        var_name = visitor.variables[0]
-        self.suggest_loop_adjustment(var_name, node)
-
-
-
-    def correct_array_access(self, node, overflow):
-        self.suggest_buffer_allocation_adjustment(node, overflow)
-        if isinstance(node.lvalue, c_ast.ArrayRef):
-            if isinstance(overflow['index'], Number): 
-                print('by value')
-                self.correct_array_access_by_value(node, overflow)
-            else: 
-                print('by range')
-                self.correct_array_access_by_range(node, overflow)
-
 
     def handle_memory_function(self, node):
 

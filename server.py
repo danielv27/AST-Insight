@@ -15,7 +15,7 @@ CORS(app, resources={r"/analyze": {"origins": "*"}})
 @app.route('/analyze', methods=["POST"])
 def analyze():
     try:
-        code = preprocess_code(request.json['code'])
+        code = request.json['code']
         juliet = request.json['juliet']
         result, response_code = analyze_from_code(code, juliet)
         return jsonify(result), response_code
