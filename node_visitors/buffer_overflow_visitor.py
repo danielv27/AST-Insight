@@ -168,6 +168,17 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
                 self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node.value})')
 
+
+        elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
+            variable_name = subscript_node.name
+            variable_size_node = self.variable_declarations[variable_name]
+            access_value = int(variable_size_node.value)
+            print('access value', access_value)
+            if access_value > array_size:
+                self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
+                self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {access_value + 1} units of 1 bytes)')
+            # pass
+
         
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
