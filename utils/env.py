@@ -11,10 +11,16 @@ def setup_juliet_temp_dir():
             shutil.copy(file_path, temp_dir)
     return temp_dir
 
+def load_existing_file_to_juliet(file_path: str, juliet: bool):
+    temp_dir_path = setup_juliet_temp_dir() if juliet else tempfile.mkdtemp()
+    temp_file_path = os.path.join(temp_dir_path, os.path.basename(file_path))
+    shutil.copy(file_path, temp_file_path)
+    return temp_file_path, temp_dir_path
 
-def load_request_to_file(code: str, juliet: bool):
+
+def load_code_to_juliet(code: str, juliet: bool):
     temp_dir_path = setup_juliet_temp_dir() if juliet else mkdtemp()
     temp_file_path = os.path.join(temp_dir_path, "temp_test_file.c")
     with open(temp_file_path, 'w') as temp_file:
         temp_file.write(code)
-    return temp_file_path
+    return temp_file_path, temp_dir_path

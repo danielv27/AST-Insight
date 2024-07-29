@@ -16,6 +16,7 @@ sizeof_mapping = {
     'unsigned long': 4,
     'unsigned long long': 8,
     'long long': 8,
+    'int64_t': 8
 }
 
 

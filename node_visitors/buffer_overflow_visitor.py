@@ -265,6 +265,10 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def handle_memory_function(self, node, overflow):
+        if isinstance(overflow['index'], Number):
+            minimal_size = overflow['index'] + 1
+        else:
+            minimal_size = overflow['index']['end'] + 1
         func_name = node.name.name
         if func_name in ['memset', 'memmove', 'memcpy', 'strcpy']:
             dest_node = node.args.exprs[0]
@@ -274,6 +278,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(dest_node, c_ast.ID) and dest_node.name in self.array_declarations:
                 dest_size_node, dest_multiplier = self.get_array_state(dest_node.name)
                 dest_size = int(dest_size_node.value) * dest_multiplier
+
+                print(dest_size_node, dest_multiplier)
 
                 if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
                     source_size_node, source_multiplier = self.get_array_state(source_node.name)
@@ -288,12 +294,15 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
                     size_node, multiplier = size_extractor.get_result()
 
-                    print('result', size_node, multiplier)
 
                     copy_size = int(size_node.value) * multiplier
+
+                    result = ceil(minimal_size / multiplier)
+
+                    print(copy_size, dest_size)
 
                     if copy_size > dest_size:
                         self.generate_suggestion(size_node, f"Adjust the size of the copy operation to be at most the size of the destination buffer '{dest_node.name}'", overflow)
 
                     if source_node and source_size < copy_size:
-                        self.generate_suggestion(source_size_node, f"Adjust the size of the source buffer '{source_node.name}' to be at least {copy_size}", overflow)
+                        self.generate_suggestion(dest_size_node, f"Increase size of `{dest_node.name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow)
