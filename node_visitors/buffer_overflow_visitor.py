@@ -93,13 +93,32 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.generic_visit(node)
         self.current_function = None
 
+
+    def get_loop_state(self, var_name):
+        return self.current_loops['node'], self.current_loops['start'], self.current_loops['end']
+        
+
+    def set_loop_state(self, var_name, node, start, end):
+        self.current_loops[var_name] = {
+            'node': node,
+            'start': start,
+            'end': end
+        }
+
     def track_current_loop(self, node):
         var_name = None
         if isinstance(node, c_ast.For):
             if isinstance(node.init, c_ast.Assignment):
                 var_name = node.init.lvalue.name
+                start = int(node.init.rvalue.value)
             else:
                 var_name = node.init.decls[0].name
+                start = int(node.init.decls[0].init.value)
+
+
+            print(node)
+            print('start is:', start)
+            
             self.current_loops[var_name] = node
             
         elif isinstance(node, c_ast.While):
@@ -190,13 +209,21 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             original_cond_value = loop_node.cond.right.value
             loop_node.cond.right.value = str(size - start_offset)
 
-            original_init_value = loop_node.init.decls[0].init.value
+            if isinstance(loop_node.init, c_ast.Assignment):
+                original_init_value = loop_node.init.rvalue.value
+                loop_node.init.rvalue.value = str(0 - start_offset)
+            else:
+                original_init_value = loop_node.init.decls[0].init.value
+                loop_node.init.decls[0].init.value = str(0 - start_offset)
 
-            loop_node.init.decls[0].init.value = str(0 - start_offset)
 
             self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
             loop_node.cond.right.value = original_cond_value
-            loop_node.init.decls[0].init.value = original_init_value
+
+            if isinstance(loop_node.init, c_ast.Assignment):
+                loop_node.init.rvalue.value = original_init_value
+            else:
+                loop_node.init.decls[0].init.value = original_init_value
         
 
     def suggest_while_loop_adjustment(self, node, loop_node, overflow, var_name):
