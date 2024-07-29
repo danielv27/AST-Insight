@@ -7,6 +7,7 @@ from utils.log import log
 from math import ceil
 
 from utils.strlen import find_array_decl_of_strlen
+
         
 class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self, buffer_overflows):
@@ -26,7 +27,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_While(self, node):
         self.track_current_loop(node)
 
-    # TODO: should be pretty easy to remove overflows from here
     def visit_FuncCall(self, node):
         self.handle_memory_function(node)
         self.generic_visit(node)
@@ -69,9 +69,13 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         size_node, multiplier = size_extractor.get_result()
 
-        # Heap allocation extractor will only set a size node when there is a heap allocation inside the node
+        # SizeNodeAndMultiplierExtractor will only set a size node when there is a size allocation inside the node
         if size_node is not None:
             self.set_array_state(node.lvalue.name, size_node, multiplier)
+
+
+        if isinstance(node.lvalue, c_ast.ArrayRef):
+            self.check_array_access(node)
 
         relevant_overflows = self.getRelevantOverflows(node)
         if relevant_overflows:
@@ -95,14 +99,13 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def get_loop_state(self, var_name):
-        return self.current_loops['node'], self.current_loops['start'], self.current_loops['end']
+        return self.current_loops[var_name]['start_node'], self.current_loops[var_name]['end_node']
         
 
-    def set_loop_state(self, var_name, node, start, end):
+    def set_loop_state(self, var_name, start_node, end_node):
         self.current_loops[var_name] = {
-            'node': node,
-            'start': start,
-            'end': end
+            'start_node': start_node,
+            'end_node': end_node
         }
 
     def track_current_loop(self, node):
@@ -110,21 +113,34 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node, c_ast.For):
             if isinstance(node.init, c_ast.Assignment):
                 var_name = node.init.lvalue.name
-                start = int(node.init.rvalue.value)
+                start_node = node.init.rvalue
             else:
                 var_name = node.init.decls[0].name
-                start = int(node.init.decls[0].init.value)
+                start_node = node.init.decls[0].init
 
-
-            print(node)
-            print('start is:', start)
-            
-            self.current_loops[var_name] = node
+            end_node = node.cond.right
             
         elif isinstance(node, c_ast.While):
-            if isinstance(node.cond.left, c_ast.ID):
+            if isinstance(node.cond.left, c_ast.ID) and isinstance(node.cond.right, c_ast.Constant):
                 var_name = node.cond.left.name
-                self.current_loops[var_name] = node
+                if node.cond.op == '<':
+                    start_node = self.variable_declarations[var_name]
+                    end_node = node.cond.right
+                elif node.cond.op == '>':
+                    start_node = node.cond.right
+                    end_node = self.variable_declarations[var_name]
+
+            elif isinstance(node.cond.right, c_ast.ID) and isinstance(node.cond.left, c_ast.Constant):
+                var_name = node.cond.right.name
+                if node.cond.op == '<':
+                    start_node = self.cond.left
+                    end_node = self.variable_declarations[var_name]
+                elif node.cond.op == '>':
+                    start_node = self.variable_declarations[var_name]
+                    end_node = node.cond.left
+
+        if var_name and start_node and end_node:
+            self.set_loop_state(var_name, start_node, end_node)
         
         self.generic_visit(node)
         # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
@@ -138,8 +154,21 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def get_array_state(self, name):
         array_state = self.array_declarations[name]
         return array_state['size_node'], array_state['multiplier']
+    
+    
+    def check_array_access(self, node):
+        array_name = node.lvalue.name.name
+        array_size_node, multiplier = self.get_array_state(array_name)
+        array_size = int(array_size_node.value) * multiplier
+        subscript_node = node.lvalue.subscript
+        print(self.array_declarations)
+        if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
+            _, end_node = self.get_loop_state(subscript_node.name)
+            if array_size < int(end_node.value):
+                self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
+                self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node.value})')
 
-
+        
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
         suggestion_code = generator.visit(self.current_function)
@@ -202,6 +231,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         start_offset = overflow['index']['start']
 
         if isinstance(loop_node.cond.right, c_ast.ID):
+            # TODO: maybe
             print("if for loop is with ID")
             pass
 
@@ -243,6 +273,11 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             loop_node.cond.right = original_cond_value
 
 
+    def suggest_loop_adjustment(self, loop_identifier, buffer_access_node):
+        start_node, end_node = self.get_loop_state(loop_identifier)
+        # TODO
+
+
     # When the index of a buffer is a value it means that is is accessed with a single value (variable or constant)
     def correct_array_access_by_value(self, node, overflow):
         if isinstance(node.lvalue.subscript, c_ast.Constant):
@@ -267,13 +302,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return
 
         var_name = visitor.variables[0]
-        loop_node = self.current_loops[var_name]
-
-        if isinstance(loop_node, c_ast.For):
-            self.suggest_for_loop_adjustment(node, loop_node, overflow, var_name)
-            
-        elif isinstance(loop_node, c_ast.While):
-            self.suggest_while_loop_adjustment(node, loop_node, overflow, var_name)
+        self.suggest_loop_adjustment(var_name, node)
 
 
 
