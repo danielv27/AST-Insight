@@ -4,7 +4,12 @@ from node_visitors.constant_evaluator import ConstantEvaluator
 from utils.sizeof import node_is_sizeof, resolve_sizeof_node
 from utils.strlen import find_array_decl_of_strlen
 
-class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
+
+# The Idea behind this Node Visitor is to extract the node that defines the size of an operation
+# Since in C sizeof() is commonly used to achieve this it is likely to not be a constant
+# How this is resolved is by looking for a constant value within the node of interest
+# and convert the value that sizeof resolved to as a multiplier of that constant
+class SizeNodeAndMultiplierExtractor(c_ast.NodeVisitor):
     def __init__(self, array_declarations):
         self.size_node = None
         self.multiplier = 1
@@ -31,8 +36,6 @@ class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
                 self.multiplier *= array_decl['multiplier']
 
         self.generic_visit(node)
-
-    
 
     def visit_BinaryOp(self, node):
         if isinstance(node.left, c_ast.Constant):

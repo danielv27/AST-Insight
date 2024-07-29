@@ -1,7 +1,7 @@
 from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.identifier_extractor import IdentifierExtractor
-from node_visitors.size_allocation_extractor import HeapAllocationSizeExtractor
+from node_visitors.size_node_and_multiplier_extractor import SizeNodeAndMultiplierExtractor
 from node_visitors.constant_evaluator import ConstantEvaluator
 from utils.log import log
 from math import ceil
@@ -26,16 +26,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_While(self, node):
         self.track_current_loop(node)
 
+    # TODO: should be pretty easy to remove overflows from here
     def visit_FuncCall(self, node):
-        relevant_overflows = self.getRelevantOverflows(node)
-        if relevant_overflows:
-            for overflow in relevant_overflows:
-                self.handle_memory_function(node, overflow)
+        self.handle_memory_function(node)
+        self.generic_visit(node)
 
     def visit_Decl(self, node):
-
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
+            size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
             size_extractor.visit(node.init)
 
             size_node, multiplier = size_extractor.get_result()
@@ -66,7 +64,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(node.rvalue, c_ast.FuncCall):
                 self.variable_declarations[node.lvalue.name] = find_array_decl_of_strlen(node.rvalue, self.array_declarations)
         
-        size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
+        size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)
 
         size_node, multiplier = size_extractor.get_result()
@@ -123,8 +121,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         return array_state['size_node'], array_state['multiplier']
 
 
-    def generate_suggestion(self, node, description, overflow):
-        overflow['handled'] = True
+    def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
         suggestion_code = generator.visit(self.current_function)
         self.suggestions.append({
@@ -141,7 +138,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         log(node.lvalue, f'Access out of bounds {array_name}[{index_value}], suggesting correction to last index ({array_size -1})')
         original_subscript = subscript.value
         node.lvalue.subscript.value = str(array_size - 1)
-        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]", overflow)
+        self.generate_suggestion(node, f"Correct array access '{array_name}[{index_value}]' to valid index access (0 to {array_size - 1}). e.g.:{array_name}[{array_size - 1}]")
         node.lvalue.subscript.value = original_subscript  
 
     def suggest_variable_adjustment(self, node, overflow):
@@ -155,7 +152,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         original_value = var_node.value
 
         var_node.value = str(overflow['size'] - 1)
-        self.generate_suggestion(var_node, f'Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. {overflow["size"] - 1}', overflow)
+        self.generate_suggestion(var_node, f'Change variable `{var_name}` to a valid index (between 0 and {overflow["size"] - 1}) e.g. {overflow["size"] - 1}')
         var_node.value = original_value   
 
     def suggest_buffer_allocation_adjustment(self, node, overflow):
@@ -177,7 +174,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         result = ceil(minimal_size / multiplier)
 
         array_size_node.value = str(ceil(minimal_size / multiplier))
-        self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow) 
+        self.generate_suggestion(array_size_node, f"Increase size of `{array_name}` to account for index access (atleast {result} units of {multiplier} bytes)") 
         array_size_node.value = original_size
 
     def suggest_for_loop_adjustment(self, node, loop_node, overflow, var_name):
@@ -197,7 +194,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
             loop_node.init.decls[0].init.value = str(0 - start_offset)
 
-            self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds", overflow)
+            self.generate_suggestion(loop_node, f"Adjust wrapping for loop to ensure '{var_name}' stays within bounds")
             loop_node.cond.right.value = original_cond_value
             loop_node.init.decls[0].init.value = original_init_value
         
@@ -214,7 +211,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             original_cond_value = loop_node.cond.right.value
             loop_node.cond.right = c_ast.Constant('int', str(size - start_offset))
 
-            self.generate_suggestion(loop_node, f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds", overflow)
+            self.generate_suggestion(loop_node, f"Correct variable decleations and wrapping while loop and to ensure '{var_name}' stays within bounds")
             var_decleration.value = original_var_value
             loop_node.cond.right = original_cond_value
 
@@ -264,11 +261,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.correct_array_access_by_range(node, overflow)
 
 
-    def handle_memory_function(self, node, overflow):
-        if isinstance(overflow['index'], Number):
-            minimal_size = overflow['index'] + 1
-        else:
-            minimal_size = overflow['index']['end'] + 1
+    def handle_memory_function(self, node):
+
         func_name = node.name.name
         if func_name in ['memset', 'memmove', 'memcpy', 'strcpy']:
             dest_node = node.args.exprs[0]
@@ -279,30 +273,29 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 dest_size_node, dest_multiplier = self.get_array_state(dest_node.name)
                 dest_size = int(dest_size_node.value) * dest_multiplier
 
-                print(dest_size_node, dest_multiplier)
 
                 if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
                     source_size_node, source_multiplier = self.get_array_state(source_node.name)
                     source_size = int(source_size_node.value) * source_multiplier
 
                     if source_size > dest_size:
-                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest_node.name}' to be at least {source_size}", overflow)
+                        self.generate_suggestion(dest_size_node, f"Adjust the size of the destination buffer '{dest_node.name}' to be at least {source_size}")
 
                 if size_node:
-                    size_extractor = HeapAllocationSizeExtractor(self.array_declarations)
+                    size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
                     size_extractor.visit(node)
 
                     size_node, multiplier = size_extractor.get_result()
 
 
-                    copy_size = int(size_node.value) * multiplier
+                    copy_size = int(size_node.value) * multiplier if size_node else None
 
-                    result = ceil(minimal_size / multiplier)
-
-                    print(copy_size, dest_size)
+                    result = ceil(dest_size / dest_multiplier)
 
                     if copy_size > dest_size:
-                        self.generate_suggestion(size_node, f"Adjust the copy size of the function {func_name} (argument 3) to be at most the size of the destination buffer '{dest_node.name}'", overflow)
+                        self.generate_suggestion(size_node, f"Reduce the number of bytes coppied in {func_name} ({size_node.value} units of {multiplier} bytes) to not be larger than the destination buffer '{dest_node.name}' ({dest_size_node.value} units of {dest_multiplier} bytes)")
+                        self.generate_suggestion(dest_size_node, f"Increase the size of the destination buffer in {func_name} ({dest_size_node.value} units of {dest_multiplier} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node.value} units of {multiplier} bytes)")
 
-                    if source_node and source_size < copy_size:
-                        self.generate_suggestion(dest_size_node, f"Increase size of `{dest_node.name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow)
+                    if not size_node and source_size > dest_size:
+                        self.generate_suggestion(dest_size_node, f"Increase size of the destination buffer `{dest_node.name}` ({dest_size_node.value} units of {dest_multiplier} bytes) to account for copy size (atleast {result} units of {multiplier} bytes)")
+                        self.generate_suggestion(source_size_node, f"Decrease the size of the source buffer `{source_node.name}` ({source_size_node.value} units of {source_multiplier} bytes) to account for copy size (atleast {result} units of {multiplier} bytes)")
