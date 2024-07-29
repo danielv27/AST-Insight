@@ -32,12 +32,12 @@ def analyze_from_code(code, juliet):
     try:
         temp_file_path, temp_dir_path = load_code_to_juliet(code, juliet)
         result, code = analyze_from_file(temp_file_path)
-    except:
-        print('Failed to run Infer')
-        return None, 500
+    except Exception as e:
+        print('Failed to run Infer', e)
+        return {'error': str(e)}, 500
 
     finally:
         shutil.rmtree(temp_dir_path)
-        
-    return jsonify(result), code
+    
+    return result, code
 

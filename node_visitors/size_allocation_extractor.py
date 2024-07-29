@@ -14,15 +14,25 @@ class HeapAllocationSizeExtractor(c_ast.NodeVisitor):
 
         func_name = node.name.name
 
+        if func_name in ['malloc', 'calloc']:
+            ConstantEvaluator().visit(node)
+            first_expr = node.args.exprs[0]
+            if isinstance(first_expr, c_ast.Constant):
+                self.size_node = first_expr
+                return
+            else: 
+                self.generic_visit(first_expr)
+
         if func_name == 'strlen':
             array_decl = find_array_decl_of_strlen(node, self.array_declarations)
-            print('in strlen array_decl', array_decl)
             if array_decl:
                 # This implementation assuems that strlen() is not used in the size argument which is not conventioal anyways
                 self.size_node = array_decl['size_node']
                 self.multiplier *= array_decl['multiplier']
 
         self.generic_visit(node)
+
+    
 
     def visit_BinaryOp(self, node):
         if isinstance(node.left, c_ast.Constant):
