@@ -156,8 +156,18 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
             _, end_node = self.get_loop_state(subscript_node.name)
             if array_size < int(end_node.value):
-                self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
+
+                original_array_node_value = array_size_node.value
+                array_size_node.value = end_node.value
                 self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node.value})')
+                array_size_node.value = original_array_node_value
+            
+                original_end_node_value = end_node.value
+                end_node.value = array_size_node.value
+                self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
+                end_node.value = original_end_node_value
+
+
 
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
             variable_name = subscript_node.name
@@ -171,6 +181,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         generator = c_generator.CGenerator()
         suggestion_code = generator.visit(self.current_function)
         self.suggestions.append({
+            'function_name': self.current_function_name(),
             'description': description,
             'code': suggestion_code,
             'line': node.coord.line - self.current_function.coord.line + 1
