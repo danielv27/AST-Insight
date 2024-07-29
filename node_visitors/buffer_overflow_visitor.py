@@ -60,8 +60,10 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return
         
         if isinstance(node.lvalue, c_ast.ID):
-            if isinstance(node.rvalue, c_ast.FuncCall):
+            if isinstance(node.rvalue, c_ast.FuncCall) and node.rvalue.name == 'strlen':
                 self.variable_declarations[node.lvalue.name] = find_array_decl_of_strlen(node.rvalue, self.array_declarations)
+            else:
+                self.variable_declarations[node.lvalue.name] = node.rvalue
         
         size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)

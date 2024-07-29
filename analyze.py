@@ -20,7 +20,7 @@ def analyze_from_code(code, juliet):
         temp_file_path, temp_dir_path = load_code_to_juliet(code, juliet)
         result, code = analyze_from_file(temp_file_path)
     except Exception as e:
-        print('Failed to run Infer', e)
+        print('An error occured', e)
         return {'error': str(e)}, 500
 
     finally:
