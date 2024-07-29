@@ -302,7 +302,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                     print(copy_size, dest_size)
 
                     if copy_size > dest_size:
-                        self.generate_suggestion(size_node, f"Adjust the size of the copy operation to be at most the size of the destination buffer '{dest_node.name}'", overflow)
+                        self.generate_suggestion(size_node, f"Adjust the copy size of the function {func_name} (argument 3) to be at most the size of the destination buffer '{dest_node.name}'", overflow)
 
                     if source_node and source_size < copy_size:
                         self.generate_suggestion(dest_size_node, f"Increase size of `{dest_node.name}` to account for index access (atleast {result} units of {multiplier} bytes)", overflow)
