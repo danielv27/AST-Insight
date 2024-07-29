@@ -99,7 +99,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def get_loop_state(self, var_name):
-        return self.current_loops[var_name]['start_node'], self.current_loops[var_name]['end_node']
+        return self.current_loops[var_name]['start_node'], self.current_loops[var_name]['end_node'] if var_name in self.current_loops else [None, None]
         
 
     def set_loop_state(self, var_name, start_node, end_node):
@@ -153,7 +153,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     
     def get_array_state(self, name):
         array_state = self.array_declarations[name]
-        return array_state['size_node'], array_state['multiplier']
+        return array_state['size_node'], array_state['multiplier'] if array_state else [None, None]
     
     
     def check_array_access(self, node):
@@ -161,24 +161,19 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         array_size_node, multiplier = self.get_array_state(array_name)
         array_size = int(array_size_node.value) * multiplier
         subscript_node = node.lvalue.subscript
-        print(self.array_declarations)
         if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
             _, end_node = self.get_loop_state(subscript_node.name)
             if array_size < int(end_node.value):
                 self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
                 self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node.value})')
 
-
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
             variable_name = subscript_node.name
             variable_size_node = self.variable_declarations[variable_name]
             access_value = int(variable_size_node.value)
-            print('access value', access_value)
             if access_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
                 self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {access_value + 1} units of 1 bytes)')
-            # pass
-
         
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
