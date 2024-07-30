@@ -157,7 +157,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         return array_state['size_node'], array_state['multiplier'] if array_state else [None, None]
     
     def evaluate(self, node):
-        print(node)
         if isinstance(node, Number):
             return node
         if isinstance(node, c_ast.Constant) and node.type == 'int':
