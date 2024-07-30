@@ -7,7 +7,7 @@ from utils.log import log
 from math import ceil
 from utils.sizeof import sizeof_mapping
 
-from utils.strlen import find_array_decl_of_strlen
+from utils.strlen import find_size_of_strlen, is_strlen_function
 
         
 class BufferOverflowVisitor(c_ast.NodeVisitor):
@@ -33,6 +33,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def visit_Decl(self, node):
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
+            # Constant evaluation is done within this visitor
             size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
             size_extractor.visit(node.init)
 
@@ -41,6 +42,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.set_array_state(node.name, size_node, multiplier)
 
         if isinstance(node.type, c_ast.ArrayDecl):
+            if node.init:
+                self.variable_declarations[node.name] = node.init
             node_type = node.type.type.type.names[0]
             multipier = sizeof_mapping[node_type] if sizeof_mapping[node_type] else 1
             # Simplifies consant expressions
@@ -50,9 +53,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         if isinstance(node.type, c_ast.TypeDecl):
             var_name = node.name
-            if isinstance(node.init, c_ast.FuncCall):
-                if node.init.name.name == 'strlen':
-                    self.variable_declarations[var_name] = find_array_decl_of_strlen(node.init, self.array_declarations)
+            if is_strlen_function(node.init):
+                    self.variable_declarations[var_name] = find_size_of_strlen(node.init, self.variable_declarations)
             else:
                 self.variable_declarations[var_name] = node.init
         
@@ -63,8 +65,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return
         
         if isinstance(node.lvalue, c_ast.ID):
-            if isinstance(node.rvalue, c_ast.FuncCall) and node.rvalue.name == 'strlen':
-                self.variable_declarations[node.lvalue.name] = find_array_decl_of_strlen(node.rvalue, self.array_declarations)
+            if is_strlen_function(node.rvalue):
+                self.variable_declarations[node.lvalue.name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
             else:
                 self.variable_declarations[node.lvalue.name] = node.rvalue
         
@@ -134,6 +136,9 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                     start_node = self.variable_declarations[var_name]
                     end_node = node.cond.left
 
+        if isinstance(end_node, c_ast.ID):
+            end_node = self.variable_declarations[end_node.name]
+
         if var_name and start_node and end_node:
             self.set_loop_state(var_name, start_node, end_node)
         
@@ -150,6 +155,19 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         array_state = self.array_declarations[name]
         return array_state['size_node'], array_state['multiplier'] if array_state else [None, None]
     
+    def evaluate(self, node):
+        if isinstance(node, Number):
+            return node
+        if isinstance(node, c_ast.Constant) and node.type == 'int':
+            return int(node.value)
+        if isinstance(node, c_ast.ID):
+            return self.evaluate(self.variable_declarations[node.name])
+        if isinstance(node, c_ast.BinaryOp):
+            match node.op:
+                case '+': return self.evaluate(node.left) + self.evaluate(node.right)
+                case '-': return self.evaluate(node.left) - self.evaluate(node.right)
+                case '*': return self.evaluate(node.left) * self.evaluate(node.right)
+                case '/': return self.evaluate(node.left) / self.evaluate(node.right)
 
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
@@ -163,22 +181,18 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def check_array_access(self, node):
         array_name = node.lvalue.name.name
-        array_size_node, multiplier = self.get_array_state(array_name)
-        array_size = int(array_size_node.value) * multiplier
+        array_size_node, _ = self.get_array_state(array_name)
+
+        array_size = int(array_size_node.value)
         subscript_node = node.lvalue.subscript
         if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
             _, end_node = self.get_loop_state(subscript_node.name)
-            if array_size < int(end_node.value):
 
-                original_array_node_value = array_size_node.value
-                array_size_node.value = end_node.value
-                self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node.value})')
-                array_size_node.value = original_array_node_value
-            
-                original_end_node_value = end_node.value
-                end_node.value = array_size_node.value
-                self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node.value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
-                end_node.value = original_end_node_value
+            end_node_value = self.evaluate(end_node)
+
+            if int(array_size_node.value) < end_node_value:
+                self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size}) to account for loop access ({end_node_value})')
+                self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node_value}) to stay within the bounds of the array `{array_name}` ({array_size} bytes)')
 
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
             variable_name = subscript_node.name

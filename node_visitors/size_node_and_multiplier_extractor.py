@@ -2,7 +2,7 @@ from pycparser import c_ast
 
 from node_visitors.constant_evaluator import ConstantEvaluator
 from utils.sizeof import node_is_sizeof, resolve_sizeof_node
-from utils.strlen import find_array_decl_of_strlen
+from utils.strlen import find_size_of_strlen
 
 
 # The Idea behind this Node Visitor is to extract the node that defines the size of an operation
@@ -29,7 +29,7 @@ class SizeNodeAndMultiplierExtractor(c_ast.NodeVisitor):
                 self.generic_visit(first_expr)
 
         if func_name == 'strlen':
-            array_decl = find_array_decl_of_strlen(node, self.array_declarations)
+            array_decl = find_size_of_strlen(node, self.array_declarations)
             if array_decl:
                 # This implementation assuems that strlen() is not used in the size argument which is not conventioal anyways
                 self.size_node = array_decl['size_node']
