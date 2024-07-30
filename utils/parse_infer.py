@@ -39,8 +39,8 @@ def run_infer(file_path):
         with open(report_file, 'r') as f:
             infer_output = json.load(f)
         return infer_output, None
-    except Exception as e:
-        return None, str(e)
+    except Exception as err:
+        return None, str(err)
 
 
 def extract_buffer_overflows(json_output):
