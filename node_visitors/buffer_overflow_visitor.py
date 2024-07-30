@@ -107,6 +107,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def track_current_loop(self, node):
         var_name = None
+        end_node = None
         if isinstance(node, c_ast.For):
             if isinstance(node.init, c_ast.Assignment):
                 var_name = node.init.lvalue.name
@@ -117,7 +118,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
             end_node = node.cond.right
             
-        elif isinstance(node, c_ast.While):
+        elif isinstance(node, c_ast.While) and isinstance(node.cond, c_ast.BinaryOp):
             if isinstance(node.cond.left, c_ast.ID) and isinstance(node.cond.right, c_ast.Constant):
                 var_name = node.cond.left.name
                 if node.cond.op == '<':
@@ -156,10 +157,13 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         return array_state['size_node'], array_state['multiplier'] if array_state else [None, None]
     
     def evaluate(self, node):
+        print(node)
         if isinstance(node, Number):
             return node
         if isinstance(node, c_ast.Constant) and node.type == 'int':
             return int(node.value)
+        if isinstance(node, c_ast.UnaryOp) and node.op == '-':
+            return self.evaluate(node.expr)
         if isinstance(node, c_ast.ID):
             return self.evaluate(self.variable_declarations[node.name])
         if isinstance(node, c_ast.BinaryOp):
@@ -197,7 +201,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
             variable_name = subscript_node.name
             variable_size_node = self.variable_declarations[variable_name]
-            access_value = int(variable_size_node.value)
+            access_value = self.evaluate(variable_size_node)
             if access_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
                 self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {access_value + 1} units of 1 bytes)')
