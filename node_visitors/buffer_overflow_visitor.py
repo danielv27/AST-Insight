@@ -17,6 +17,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.current_loops = {}
         self.variable_declarations = {}
         self.array_declarations = {}
+        self.variable_constrainsts = {}
 
     def visit_FuncDef(self, node):
         self.track_current_function(node)
@@ -27,12 +28,15 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_While(self, node):
         self.track_current_loop(node)
 
+    def visit_If(self, node):
+       state_before_cond = dict(self.variable_constrainsts)
+       self.track_current_condition(node.cond)
+       self.generic_visit(node)
+       self.variable_constrainsts = state_before_cond
+
     def visit_FuncCall(self, node):
         self.handle_memory_function(node)
         self.generic_visit(node)
-
-    def visit_If(self, node):
-        print('TODO: Implement boundery check tracking for using variables', node)
 
     def visit_Decl(self, node):
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
@@ -63,6 +67,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def visit_Assignment(self, node):
+        print(node, self.variable_constrainsts)
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
@@ -149,6 +154,68 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
         if var_name is not None:
             del self.current_loops[var_name]
+
+
+    # if is_upper_bound is set to false the constraint is the lower bound
+    # Mapped to an array [lower_bound, upper_bound]
+    def set_variable_constraint(self, name, value, is_upper_bound):
+        if not name in self.variable_constrainsts:
+            self.variable_constrainsts[name] = [None, None]
+        index = 1 if is_upper_bound else 0
+        self.variable_constrainsts[name][index] = value
+
+    def get_variable_constraints(self, name):
+        if name in self.variable_constrainsts:
+            return self.variable_constrainsts[name]
+        return None
+
+    def track_current_condition(self, cond):
+        constraint = None
+        print('cond is', cond)
+        if isinstance(cond, c_ast.ID):
+            # If the condition is an ID that means that value it truthy
+            self.set_variable_constraint(cond.name, 0, False)
+        if isinstance(cond, c_ast.BinaryOp):
+            if isinstance(cond.left, c_ast.ID):
+                constraint = self.evaluate(cond.right)
+                match cond.op:
+                    case '<':
+                        self.set_variable_constraint(cond.left.name, constraint, True)
+                    case '<=':
+                        self.set_variable_constraint(cond.left.name, constraint + 1, True)
+                    case '>':
+                        self.set_variable_constraint(cond.left.name, constraint, False)
+                    case '>=':
+                        self.set_variable_constraint(cond.left.name, constraint - 1, False)
+                    case '==':
+                        self.set_variable_constraint(cond.left.name, constraint, True)
+                        self.set_variable_constraint(cond.left.name, constraint, False)
+                
+            if isinstance(cond.right, c_ast.ID):
+                constraint = self.evaluate(cond.left)
+                match cond.op:
+                    case '<':
+                        self.set_variable_constraint(cond.left.name, constraint, False)
+                    case '<=':
+                        self.set_variable_constraint(cond.left.name, constraint - 1, False)
+                    case '>':
+                        self.set_variable_constraint(cond.left.name, constraint, True)
+                    case '>=':
+                        self.set_variable_constraint(cond.left.name, constraint + 1, True)
+                    case '==':
+                        self.set_variable_constraint(cond.left.name, constraint, True)
+                        self.set_variable_constraint(cond.left.name, constraint, False)
+
+            if isinstance(cond.left, c_ast.BinaryOp) and cond.op == '&&':
+                self.track_current_condition(cond.left)
+            if isinstance(cond.right, c_ast.BinaryOp) and cond.op == '&&':
+                self.track_current_condition(cond.right)
+
+            # Maybe TODO: if there is an or condition flip it to an and so it can be handled more easily
+
+        if constraint:
+            print("TODO: remove constraint")
+        # TODO: remove condition
 
     def set_array_state(self, name, size_node, multiplier):
         self.array_declarations[name] = {'size_node': size_node, 'multiplier': multiplier}
