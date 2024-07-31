@@ -9,7 +9,7 @@ from utils.sizeof import sizeof_mapping
 
 from utils.strlen import find_size_of_strlen, is_strlen_function
 
-        
+
 class BufferOverflowVisitor(c_ast.NodeVisitor):
     def __init__(self):
         self.suggestions = []
@@ -30,6 +30,9 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_FuncCall(self, node):
         self.handle_memory_function(node)
         self.generic_visit(node)
+
+    def visit_If(self, node):
+        print('TODO: Implement boundery check tracking for using variables', node)
 
     def visit_Decl(self, node):
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
@@ -57,19 +60,19 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                     self.variable_declarations[var_name] = find_size_of_strlen(node.init, self.variable_declarations)
             else:
                 self.variable_declarations[var_name] = node.init
-        
+
 
     def visit_Assignment(self, node):
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
-        
+
         if isinstance(node.lvalue, c_ast.ID):
             if is_strlen_function(node.rvalue):
                 self.variable_declarations[node.lvalue.name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
             else:
                 self.variable_declarations[node.lvalue.name] = node.rvalue
-        
+
         size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)
 
@@ -83,12 +86,11 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.lvalue, c_ast.ArrayRef):
             self.check_array_access(node)
 
-
     def current_function_name(self):
         if self.current_function is None:
             return None
         return self.current_function.decl.name
-    
+
     def track_current_function(self, node):
         self.current_function = node
         self.generic_visit(node)
@@ -97,7 +99,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def get_loop_state(self, var_name):
         return self.current_loops[var_name]['start_node'], self.current_loops[var_name]['end_node'] if var_name in self.current_loops else [None, None]
-        
+
 
     def set_loop_state(self, var_name, start_node, end_node):
         self.current_loops[var_name] = {
@@ -117,7 +119,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 start_node = node.init.decls[0].init
 
             end_node = node.cond.right
-            
+
         elif isinstance(node, c_ast.While) and isinstance(node.cond, c_ast.BinaryOp):
             if isinstance(node.cond.left, c_ast.ID) and isinstance(node.cond.right, c_ast.Constant):
                 var_name = node.cond.left.name
@@ -142,7 +144,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         if var_name and start_node and end_node:
             self.set_loop_state(var_name, start_node, end_node)
-        
+
         self.generic_visit(node)
         # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
         if var_name is not None:
@@ -151,11 +153,11 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def set_array_state(self, name, size_node, multiplier):
         self.array_declarations[name] = {'size_node': size_node, 'multiplier': multiplier}
 
-    
+
     def get_array_state(self, name):
         array_state = self.array_declarations[name]
         return array_state['size_node'], array_state['multiplier'] if array_state else [None, None]
-    
+
     def evaluate(self, node):
         if isinstance(node, Number):
             return node
@@ -204,7 +206,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if access_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
                 self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {access_value + 1} units of 1 bytes)')
-        
+
 
     def handle_memory_function(self, node):
 
