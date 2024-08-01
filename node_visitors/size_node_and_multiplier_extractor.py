@@ -20,7 +20,6 @@ class SizeNodeAndMultiplierExtractor(c_ast.NodeVisitor):
         func_name = node.name.name
 
         if func_name in ['malloc', 'calloc', 'alloca']:
-            ConstantEvaluator().visit(node)
             first_expr = node.args.exprs[0]
             if isinstance(first_expr, c_ast.Constant):
                 self.size_node = first_expr

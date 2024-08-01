@@ -21,6 +21,22 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.array_declarations = {}
         self.variable_constrainsts = {}
 
+    def evaluate(self, node):
+        if isinstance(node, Number):
+            return node
+        if isinstance(node, c_ast.Constant) and node.type == 'int':
+            return int(node.value)
+        if isinstance(node, c_ast.UnaryOp) and node.op == '-':
+            return self.evaluate(node.expr)
+        if isinstance(node, c_ast.ID):
+            return self.evaluate(self.variable_declarations[node.name])
+        if isinstance(node, c_ast.BinaryOp):
+            match node.op:
+                case '+': return self.evaluate(node.left) + self.evaluate(node.right)
+                case '-': return self.evaluate(node.left) - self.evaluate(node.right)
+                case '*': return self.evaluate(node.left) * self.evaluate(node.right)
+                case '/': return self.evaluate(node.left) / self.evaluate(node.right)
+
     def visit_FuncDef(self, node):
         self.track_current_function(node)
 
@@ -30,6 +46,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_While(self, node):
         self.track_current_loop(node)
 
+    # TODO later
     def visit_If(self, node):
        state_before_cond = dict(self.variable_constrainsts)
        self.track_current_condition(node.cond)
@@ -75,24 +92,26 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def visit_Assignment(self, node):
+        # If variable is assigned to another variable make them refer to the same size node
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
             self.array_declarations[node.lvalue.name] = self.array_declarations[node.rvalue.name]
             return
 
         if isinstance(node.lvalue, c_ast.ID):
             var_name = node.lvalue.name
-            if is_strlen_function(node.rvalue):
-                print('is_strlen_function visit_Assignment')
-                print(self.variable_declarations)
-                self.variable_declarations[var_name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
-            elif isinstance(node.rvalue, c_ast.FuncCall):
-                if var_name in self.variable_declarations:
-                    self.variable_declarations[var_name] = UNKNOWN
-                if var_name in self.array_declarations:
-                    self.set_array_state(var_name, UNKNOWN, 1)
-            else:
-                print('in visit_assignment assigning', node.lvalue.name, node.rvalue)
-                self.variable_declarations[node.lvalue.name] = node.rvalue
+            self.variable_declarations[var_name] = node.rvalue
+            # if is_strlen_function(node.rvalue):
+            #     print('is_strlen_function visit_Assignment')
+            #     print(self.variable_declarations)
+            #     self.variable_declarations[var_name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
+            # elif isinstance(node.rvalue, c_ast.FuncCall):
+            #     if var_name in self.variable_declarations:
+            #         self.variable_declarations[var_name] = UNKNOWN
+            #     if var_name in self.array_declarations:
+            #         self.set_array_state(var_name, UNKNOWN, 1)
+            # else:
+            #     print('in visit_assignment assigning', node.lvalue.name, node.rvalue)
+            #     self.variable_declarations[node.lvalue.name] = node.rvalue
 
         size_extractor = SizeNodeAndMultiplierExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)
@@ -247,21 +266,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         print('get_array_state found no result')
         return None, None
 
-    def evaluate(self, node):
-        if isinstance(node, Number):
-            return node
-        if isinstance(node, c_ast.Constant) and node.type == 'int':
-            return int(node.value)
-        if isinstance(node, c_ast.UnaryOp) and node.op == '-':
-            return self.evaluate(node.expr)
-        if isinstance(node, c_ast.ID):
-            return self.evaluate(self.variable_declarations[node.name])
-        if isinstance(node, c_ast.BinaryOp):
-            match node.op:
-                case '+': return self.evaluate(node.left) + self.evaluate(node.right)
-                case '-': return self.evaluate(node.left) - self.evaluate(node.right)
-                case '*': return self.evaluate(node.left) * self.evaluate(node.right)
-                case '/': return self.evaluate(node.left) / self.evaluate(node.right)
+
 
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
