@@ -28,6 +28,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node, c_ast.Constant) and node.type == 'int':
             return int(node.value)
         if isinstance(node, c_ast.UnaryOp) and node.op == '-':
+            # TODO: missing the -1, ensure its correct
             return self.evaluate(node.expr)
         if isinstance(node, c_ast.ID):
             return self.evaluate(self.variable_declarations[node.name])
