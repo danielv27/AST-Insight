@@ -19,6 +19,9 @@ sizeof_mapping = {
     'int64_t': 8
 }
 
+def node_is_negation(node):
+    return isinstance(node, c_ast.UnaryOp) and node.op == '-'
+
 
 def node_is_sizeof(node):
     return isinstance(node, c_ast.UnaryOp) and node.op == 'sizeof' 
