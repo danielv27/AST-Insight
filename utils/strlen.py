@@ -11,7 +11,10 @@ def is_strlen_function(node):
 
 def find_size_of_strlen(node: FuncCall, variable_declarations):
     arg = node.args.exprs[0]
-    if variable_declarations and isinstance(arg, ID) and variable_declarations[arg.name]:
-        value = variable_declarations[arg.name].value.split('"')[1]
-        print('value is', value)
-        return len(value)
+    if variable_declarations and isinstance(arg, ID) and arg.name in variable_declarations:
+        variable = variable_declarations[arg.name]
+        if isinstance(variable_declarations, c_ast.Constant):
+            value = variable_declarations[arg.name].value.split('"')[1]
+            return len(value)
+        return 0
+        

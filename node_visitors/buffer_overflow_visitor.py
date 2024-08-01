@@ -170,7 +170,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         self.generic_visit(node)
         # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
-        if var_name is not None:
+        if var_name in self.current_loops:
             del self.current_loops[var_name]
 
 
