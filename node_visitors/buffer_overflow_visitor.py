@@ -71,9 +71,13 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.generic_visit(node)
 
     def visit_Decl(self, node):
+        if isinstance(node.type, c_ast.FuncDecl):
+            # TODO: handle function args and remove when leaving
+            print('func decl', node)
         if node.init:
             self.variable_declarations[node.name] = node.init
-        self.handle_array_allocation(node)
+        if isinstance(node.type, c_ast.PtrDecl) or isinstance(node.type, c_ast.ArrayDecl):
+            self.handle_array_allocation(node)
 
  
     def visit_Assignment(self, node):
@@ -85,6 +89,9 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.lvalue, c_ast.ID):
             var_name = node.lvalue.name
             self.variable_declarations[var_name] = node.rvalue
+
+        if isinstance(node.lvalue, c_ast.UnaryOp) and node.lvalue.op == '*':
+            return
 
         self.handle_array_allocation(node)
 
@@ -167,6 +174,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         array_extractor.visit(node)
         if array_extractor.array_declared:
             name, size, multiplier = array_extractor.get_result()
+            print('in handle_array_allocation', name, size, multiplier)
             self.set_array_state(name, size, multiplier)    
 
 

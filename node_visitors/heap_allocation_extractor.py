@@ -30,6 +30,7 @@ class ArrayAllocationExtractor(c_ast.NodeVisitor):
 
     def visit_ArrayDecl(self, node):
         print('array allocation extractor in array_decl', node)
+        self.generic_visit(node)
 
     def visit_Decl(self, node):
         print('array allocation axtractor decl', node)
@@ -47,6 +48,7 @@ class ArrayAllocationExtractor(c_ast.NodeVisitor):
             data_type_size = sizeof_mapping[data_type] if data_type in sizeof_mapping else 1
             self.set_array_state(node.name, self.evaluate(node.type.dim) * data_type_size, data_type)
             pass
+        self.generic_visit(node)
     
     def visit_ID(self, node):
         if self.name is None:
