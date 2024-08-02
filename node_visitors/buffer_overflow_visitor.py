@@ -67,7 +67,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def visit_FuncCall(self, node):
         self.handle_memory_function(node)
-        self.generic_visit(node)
 
     def visit_Decl(self, node):
         if node.init:
@@ -144,7 +143,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         return self.current_function.decl.name
 
     def track_current_function(self, node):
-        print(node)
         self.current_function = node
         if node.decl.type.args:
             params = node.decl.type.args.params
@@ -357,6 +355,14 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def handle_memory_function(self, node):
         func_name = node.name.name
+
+        if func_name in ['fscanf']:
+            dest_node = node.args.exprs[2] if len(node.args.exprs) > 2 else None
+            if isinstance(dest_node, c_ast.UnaryOp) and dest_node.op == '&':
+                dest_node = dest_node.expr
+            if isinstance(dest_node, c_ast.ID):
+                self.variable_declarations[dest_node.name] = UNKNOWN
+
         if func_name in ['memset', 'memmove', 'memcpy', 'strcpy', 'wmemset']:
             dest_node = node.args.exprs[0] if len(node.args.exprs) > 0 else None
             source_node = node.args.exprs[1] if len(node.args.exprs) > 1 else None
@@ -402,5 +408,5 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                     if size_node_size > dest_size:
                         self.generate_suggestion(node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
                         self.generate_suggestion(node, f"Increase the size of the destination buffer in {func_name} ({dest_size // dest_multiplier} units of {self.evaluate(dest_multiplier)} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes")
-
+        self.generic_visit(node)
         print('exit mem function')

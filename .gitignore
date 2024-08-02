@@ -6,3 +6,5 @@ juliet/
 *.o
 __pycache__
 .vscode
+clang*
+*.plist
