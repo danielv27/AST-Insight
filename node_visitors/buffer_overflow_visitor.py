@@ -73,14 +73,9 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_Decl(self, node):
         if node.init:
             self.variable_declarations[node.name] = node.init
-        array_extractor = ArrayAllocationExtractor(self.evaluate, self.array_declarations)
-        array_extractor.visit(node)
-        if array_extractor.array_declared:
-            name, size, multiplier = array_extractor.get_result()
-            self.set_array_state(name, size, multiplier)
-        print('after decl', self.array_declarations)
+        self.handle_array_allocation(node)
 
-
+ 
     def visit_Assignment(self, node):
         # If variable is assigned to another variable make them refer to the same size node
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
@@ -91,14 +86,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             var_name = node.lvalue.name
             self.variable_declarations[var_name] = node.rvalue
 
-        array_extractor = ArrayAllocationExtractor(self.evaluate, self.array_declarations)
-        array_extractor.visit(node)
-        if array_extractor.array_declared:
-            name, size, multiplier = array_extractor.get_result()
-            self.set_array_state(name, size, multiplier)
-        print('after decl', self.array_declarations)
-
-
+        self.handle_array_allocation(node)
 
         if isinstance(node.lvalue, c_ast.ArrayRef):
             self.check_array_access(node, True)
@@ -171,6 +159,15 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         # Once the loop is done being visited, the tracking should be removed (no longer in the loop)
         if var_name in self.current_loops:
             del self.current_loops[var_name]
+
+
+
+    def handle_array_allocation(self, node):
+        array_extractor = ArrayAllocationExtractor(self.evaluate, self.array_declarations)
+        array_extractor.visit(node)
+        if array_extractor.array_declared:
+            name, size, multiplier = array_extractor.get_result()
+            self.set_array_state(name, size, multiplier)    
 
 
     # if is_upper_bound is set to false the constraint is the lower bound
@@ -333,7 +330,16 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
                 print('dest_size', dest_size)
 
-                if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
+                if size_node:
+                    size_node_size = self.evaluate(size_node)
+
+                    print(size_node_size, dest_size)
+
+                    if size_node_size > dest_size:
+                        self.generate_suggestion(node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
+                        self.generate_suggestion(node, f"Increase the size of the destination buffer in {func_name} ({dest_size // dest_multiplier} units of {self.evaluate(dest_multiplier)} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes")
+
+                elif source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
                     source_size_node, source_multiplier = self.get_array_state(source_node.name)
 
                     print(source_size_node)
@@ -345,13 +351,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                     if source_size > dest_size:
                         self.generate_suggestion(node, f"Increase the size of the destination buffer '{dest_node.name}' from {dest_size} bytes to be at least {source_size} bytes")
 
-                if size_node:
-                    size_node_size = self.evaluate(size_node)
 
-                    print(size_node_size, dest_size)
-
-                    if size_node_size > dest_size:
-                        self.generate_suggestion(node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
-                        self.generate_suggestion(node, f"Increase the size of the destination buffer in {func_name} ({dest_size // dest_multiplier} units of {self.evaluate(dest_multiplier)} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes")
 
         print('exit mem function')
