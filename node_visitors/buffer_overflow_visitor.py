@@ -23,13 +23,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.variable_constrainsts = {}
 
     def evaluate(self, node):
-        if isinstance(node, Number):
-            return node
         if isinstance(node, c_ast.Constant) and node.type == 'int':
             return int(node.value)
-        if isinstance(node, c_ast.UnaryOp) and node.op == '-':
-            # TODO: missing the -1, ensure its correct
-            return self.evaluate(node.expr)
         if isinstance(node, c_ast.ID):
             return self.evaluate(self.variable_declarations[node.name])
         if node_is_negation(node):
@@ -44,11 +39,15 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if is_strlen_function(node):
             return find_size_of_strlen(node, self.variable_declarations)
         if isinstance(node, c_ast.BinaryOp):
+            if node.left == UNKNOWN or node.right == UNKNOWN:
+                return UNKNOWN
             match node.op:
                 case '+': return self.evaluate(node.left) + self.evaluate(node.right)
                 case '-': return self.evaluate(node.left) - self.evaluate(node.right)
                 case '*': return self.evaluate(node.left) * self.evaluate(node.right)
                 case '/': return self.evaluate(node.left) / self.evaluate(node.right)
+        return node
+
 
     def visit_FuncDef(self, node):
         self.track_current_function(node)
@@ -145,9 +144,15 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         return self.current_function.decl.name
 
     def track_current_function(self, node):
+        print(node)
         self.current_function = node
+        if node.decl.type.args:
+            params = node.decl.type.args.params
+            for param in params:
+                self.variable_declarations[param.name] = UNKNOWN
         self.generic_visit(node)
         self.current_function = None
+        self.variable_declarations = {}
 
 
     def get_loop_state(self, var_name):
@@ -217,8 +222,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def get_variable_constraints(self, name):
         if name in self.variable_constrainsts:
-            return self.variable_constrainsts[name]
-        return None
+            return self.variable_constrainsts[name][0], self.variable_constrainsts[name][1] 
+        return None, None
 
     def track_current_condition(self, cond):
         constraint = None
@@ -297,25 +302,35 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         print('check array access array name:',array_name)
         array_size_node, multiplier = self.get_array_state(array_name)
         print('array_size_node', array_size_node)
-
-        # TODO later
-        if array_size_node == UNKNOWN:
-            access_value = self.evaluate(node.lvalue.subscript)
-            print('array_size_node is unknown')
-            return
         print('in check_array_access')
         print('evaluate(array_size_node)', self.evaluate(array_size_node))
         print('evaluate(multiplier)', self.evaluate(multiplier))
 
+        subscript_node = node.lvalue.subscript
+
+        print(subscript_node)
+
         array_size = self.evaluate(array_size_node)
         array_multiplier = self.evaluate(multiplier)
-        subscript_node = node.lvalue.subscript
+
+        if isinstance(subscript_node, c_ast.ID) and self.variable_declarations[subscript_node.name] == UNKNOWN:
+            variable_name = subscript_node.name
+            lower_bound, upper_bound = self.get_variable_constraints(variable_name)
+            if lower_bound == None and upper_bound == None:
+                self.generate_suggestion(node, f'No bound checks done on unknown parameter `{variable_name}`')
+            else:
+                if lower_bound == None or lower_bound < 0:
+                    self.generate_suggestion(node, f'`{variable_name}` might be negative')
+                if upper_bound == None or upper_bound >= array_size:
+                    self.generate_suggestion(node, f'`{variable_name}` might be bigger than max index {array_size - 1}')
+            return
+        
+        
         if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
 
             variable_name = subscript_node.name
-
-            _, end_node = self.get_loop_state(variable_name)
-
+            start_node, end_node = self.get_loop_state(variable_name)
+            start_node_value = self.evaluate(start_node)
             end_node_value = self.evaluate(end_node)
 
             print('end_node', end_node)
@@ -329,7 +344,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node_value}) to stay within the bounds of the array `{array_name}` (at most {array_size // array_multiplier})')
 
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
-           
+            variable_name = subscript_node.name
+
             variable_size_node = self.variable_declarations[variable_name]
 
             index_value = self.evaluate(variable_size_node)
