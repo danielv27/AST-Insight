@@ -1,5 +1,6 @@
 from colorama import init, Fore, Style
 import re
+from pycparser import c_ast
 
 
 # Initialize colorama
@@ -18,7 +19,7 @@ def log(node, message, level="error"):
         level_str = "Message"
 
     
-    coord_str = f"{Fore.CYAN}{node.coord}{Style.RESET_ALL}" if node.coord else ""
+    coord_str = f"{Fore.CYAN}{node.coord}{Style.RESET_ALL}" if isinstance(node, c_ast.Node) and node.coord else ""
     
     message = f"{level_str} {coord_str}: {message}"
     print(message)

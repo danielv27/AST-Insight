@@ -46,7 +46,7 @@ class ConstantEvaluator(c_ast.NodeVisitor):
                     return
                 result = left_value // right_value
 
-            return c_ast.Constant(type='int', value=str(result), coord=node.left.coord)
+            return c_ast.Constant(type='int', value=str(result))
         return node
         
 

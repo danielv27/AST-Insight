@@ -2,8 +2,9 @@ from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.data_type_extractor import DataTypeExtractor
 from node_visitors.identifier_extractor import IdentifierExtractor
-from node_visitors.heap_allocation_extractor import HeapAllocationExtractor
+from node_visitors.heap_allocation_extractor import ArrayAllocationExtractor
 from node_visitors.constant_evaluator import ConstantEvaluator
+from node_visitors.name_extractor import NameExtractor
 from utils.log import log
 from math import ceil
 from utils.sizeof import sizeof_mapping, node_is_sizeof, node_is_negation
@@ -27,13 +28,9 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             return node
         if isinstance(node, c_ast.Constant) and node.type == 'int':
             return int(node.value)
-        if isinstance(node, c_ast.UnaryOp) and node.op == '-':
-            # TODO: missing the -1, ensure its correct
-            return self.evaluate(node.expr)
         if isinstance(node, c_ast.ID):
             return self.evaluate(self.variable_declarations[node.name])
         if node_is_negation(node):
-            print('negative unary operator')
             return -1 * self.evaluate(node.expr)
         if node_is_sizeof(node):
             type_name = node.expr.type.type.names[0]
@@ -41,6 +38,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 return sizeof_mapping[type_name]
             print(f'NOTE: sizeof({type_name}) not implemented, defaulting to 1')
             return 1
+        if isinstance(node, c_ast.UnaryOp) and node.op == '&':
+            return self.evaluate(node.expr)
         if is_strlen_function(node):
             return find_size_of_strlen(node, self.variable_declarations)
         if isinstance(node, c_ast.BinaryOp):
@@ -49,6 +48,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 case '-': return self.evaluate(node.left) - self.evaluate(node.right)
                 case '*': return self.evaluate(node.left) * self.evaluate(node.right)
                 case '/': return self.evaluate(node.left) / self.evaluate(node.right)
+        log(node, f'Didnt match any node in evaluate on {node}')
 
     def visit_FuncDef(self, node):
         self.track_current_function(node)
@@ -73,34 +73,12 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_Decl(self, node):
         if node.init:
             self.variable_declarations[node.name] = node.init
-        data_type_extractor = DataTypeExtractor()
-        if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            
-            data_type_extractor.visit(node)
-            
-            size_extractor = HeapAllocationExtractor(self.array_declarations)
-            size_extractor.visit(node.init)
-
-            size_node, multiplier = size_extractor.get_result()
-            if size_node:
-                self.set_array_state(node.name, size_node, multiplier)
-        elif isinstance(node.type, c_ast.PtrDecl):
-            # If a pointer is declared without an initilization we treat it as an array of length 0
-            data_type_extractor.visit(node)
-            data_type = data_type_extractor.get_result()
-            data_type_multiplier = sizeof_mapping[data_type] if data_type in sizeof_mapping else 1
-            print('multiplier is:', data_type_multiplier)
-            self.set_array_state(node.name, 0, data_type_multiplier)
-
-        elif isinstance(node.type, c_ast.ArrayDecl):
-            data_type_extractor.visit(node)
-            data_type = data_type_extractor.get_result()
-            print('size_of_mapping', sizeof_mapping)
-            data_type_multipier = sizeof_mapping[data_type] if data_type in sizeof_mapping else 1
-            print('multipier', data_type_multipier)
-            self.set_array_state(node.name, node.type.dim, data_type_multipier)
-
-    
+        array_extractor = ArrayAllocationExtractor(self.evaluate, self.array_declarations)
+        array_extractor.visit(node)
+        if array_extractor.array_declared:
+            name, size, multiplier = array_extractor.get_result()
+            self.set_array_state(name, size, multiplier)
+        print('after decl', self.array_declarations)
 
 
     def visit_Assignment(self, node):
@@ -112,32 +90,20 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.lvalue, c_ast.ID):
             var_name = node.lvalue.name
             self.variable_declarations[var_name] = node.rvalue
-            # if is_strlen_function(node.rvalue):
-            #     print('is_strlen_function visit_Assignment')
-            #     print(self.variable_declarations)
-            #     self.variable_declarations[var_name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
-            # elif isinstance(node.rvalue, c_ast.FuncCall):
-            #     if var_name in self.variable_declarations:
-            #         self.variable_declarations[var_name] = UNKNOWN
-            #     if var_name in self.array_declarations:
-            #         self.set_array_state(var_name, UNKNOWN, 1)
-            # else:
-            #     print('in visit_assignment assigning', node.lvalue.name, node.rvalue)
-            #     self.variable_declarations[node.lvalue.name] = node.rvalue
 
-        size_extractor = HeapAllocationExtractor(self.array_declarations)
-        size_extractor.visit(node.rvalue)
+        array_extractor = ArrayAllocationExtractor(self.evaluate, self.array_declarations)
+        array_extractor.visit(node)
+        if array_extractor.array_declared:
+            name, size, multiplier = array_extractor.get_result()
+            self.set_array_state(name, size, multiplier)
+        print('after decl', self.array_declarations)
 
-        size_node, multiplier = size_extractor.get_result()
 
-        print('size node for', node.lvalue.name, size_node, multiplier)
-
-        # SizeNodeAndMultiplierExtractor will only set a size node when there is a size allocation inside the node
-        if size_node is not None:
-            self.set_array_state(node.lvalue.name, size_node, multiplier)
 
         if isinstance(node.lvalue, c_ast.ArrayRef):
-            self.check_array_access(node)
+            self.check_array_access(node, True)
+        if isinstance(node.rvalue, c_ast.ArrayRef):
+            self.check_array_access(node, False)
 
     def current_function_name(self):
         if self.current_function is None:
@@ -285,22 +251,24 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def generate_suggestion(self, node, description):
         generator = c_generator.CGenerator()
         suggestion_code = generator.visit(self.current_function)
+        line = node.coord.line - self.current_function.coord.line + 1 if isinstance(node, c_ast.Node) else None
         self.suggestions.append({
             'function_name': self.current_function_name(),
             'description': description,
             'code': suggestion_code,
-            'line': node.coord.line - self.current_function.coord.line + 1
+            'line': line
         })
 
-    def check_array_access(self, node):
-        array_name = node.lvalue.name.name
+    def check_array_access(self, node, left = True):
+        array_acces_node = node.lvalue if left else node.rvalue
+        array_name = array_acces_node.name.name
         print('check array access array name:',array_name)
         array_size_node, multiplier = self.get_array_state(array_name)
         print('array_size_node', array_size_node)
 
         # TODO later
         if array_size_node == UNKNOWN:
-            access_value = self.evaluate(node.lvalue.subscript)
+            access_value = self.evaluate(array_acces_node.subscript)
             print('array_size_node is unknown')
             return
         print('in check_array_access')
@@ -309,7 +277,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
         array_size = self.evaluate(array_size_node)
         array_multiplier = self.evaluate(multiplier)
-        subscript_node = node.lvalue.subscript
+        subscript_node = array_acces_node.subscript
         if isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.current_loops:
 
             variable_name = subscript_node.name
