@@ -236,13 +236,13 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
                 constraint = self.evaluate(cond.right)
                 match cond.op:
                     case '<':
-                        self.set_variable_constraint(cond.left.name, constraint, True)
+                        self.set_variable_constraint(cond.left.name, constraint - 1, True)
                     case '<=':
-                        self.set_variable_constraint(cond.left.name, constraint + 1, True)
+                        self.set_variable_constraint(cond.left.name, constraint, True)
                     case '>':
-                        self.set_variable_constraint(cond.left.name, constraint, False)
+                        self.set_variable_constraint(cond.left.name, constraint + 1, False)
                     case '>=':
-                        self.set_variable_constraint(cond.left.name, constraint - 1, False)
+                        self.set_variable_constraint(cond.left.name, constraint, False)
                     case '==':
                         self.set_variable_constraint(cond.left.name, constraint, True)
                         self.set_variable_constraint(cond.left.name, constraint, False)
@@ -319,6 +319,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if lower_bound == None and upper_bound == None:
                 self.generate_suggestion(node, f'No bound checks done on unknown parameter `{variable_name}`')
             else:
+                print('lower bound is', lower_bound, upper_bound)
                 if lower_bound == None or lower_bound < 0:
                     self.generate_suggestion(node, f'`{variable_name}` might be negative')
                 if upper_bound == None or upper_bound >= array_size:
