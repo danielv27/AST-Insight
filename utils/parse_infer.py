@@ -2,10 +2,13 @@ import sys, os, subprocess, json, re
 sys.path.extend(['.', '..'])
 import json
 
+# to run this tool you need to have the infer binary available in the project and set the path to it
+# Change this value if your path is different
+path_to_binary = 'infer-arm64/bin/infer'
 
 def run_infer(file_path):
     try:
-        analysis_process = subprocess.Popen(f'sudo infer-arm64/bin/infer run --bufferoverrun -- clang -c {file_path}', shell=True,
+        analysis_process = subprocess.Popen(f'sudo {path_to_binary} run --bufferoverrun -- clang -c {file_path}', shell=True,
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE)
         analysis_out, analysis_err = analysis_process.communicate()
