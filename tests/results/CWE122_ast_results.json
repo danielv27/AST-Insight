@@ -1,0 +1,4482 @@
+[
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_41.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_41.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_41.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_41.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_41.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_41.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_44.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_21.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_21.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_21.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_21.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_22_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_22b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_connect_socket_22_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_44.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_21.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_21.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_44.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_21.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_21.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_52c_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_52c.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_52c_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_44.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_41.c",
+        "function": "badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_41.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_51b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_51b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_51b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_65b_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_65b.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_65b_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_rand_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fgets_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_large_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_loop_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_54e_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_54e.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_listen_socket_54e_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_53d_badSink",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_53d.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_53d_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE129_fscanf_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_loop_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_loop_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_struct_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_11.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_11.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_11.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_11.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_34.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_17.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_34.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_22a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_22_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_22a.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_22a.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_13.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_13.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_15.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_15.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_22a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_22_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_22a.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_22a.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_15.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_15.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_09.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_09.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_03.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_03.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_05.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_05.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_05.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_05.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_01.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_01.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_07.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_07.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_14.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_14.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_18.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_31.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_12_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_12.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_12_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_12.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_18.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_16.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_16.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_10.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_10.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_06.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_06.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_06.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_06.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_42_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_42.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_42_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_42.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_04.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_04.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_08.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_08.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_21_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_21.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_21.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_02.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_02.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_02.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_02.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_08.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_08.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_22a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_22_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_22a.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_22a.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_15.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_15.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_13.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_13.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_13.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_13.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_17.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_34.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_17.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_11.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_11.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_07.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_07.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_61a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_61_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_61a.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_07.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_07.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_01.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_05.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_05.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_09.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_09.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_03.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_03.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_03.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_03.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_09.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_09.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_10.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_10.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_61a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_61_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_61a.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_10.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_10.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_16.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_61a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_61_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_61a.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_12_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_12.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_31.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_18.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_31.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_14.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_14.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_14.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_14.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_02.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_02.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_21_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_21.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_21.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_08.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_08.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_21_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_21.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_21.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_04.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_04.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_04.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_04.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_42_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_42.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_06.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memmove_06.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_char_memcpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_18.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_17.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_12_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_12.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_16.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_13.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_13.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_42_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_42.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_06.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_06.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_09.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_09.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_03.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_03.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_08.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_08.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_07.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_07.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_02.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_02.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_31.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_61a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_61_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_61a.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_34.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_14.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_14.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_11.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_11.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_15.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_15.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_10.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_10.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_22a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_22_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_22a.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_22a.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_05.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_05.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_21_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_21.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_21.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_04.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_04.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_01.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_61a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_61_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_61a.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_10_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_10.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_10.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_15.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_15.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_11.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_11.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_14_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_14.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_14.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_34.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_31_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_31.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_22a.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_22_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_22a.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_22a.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_01.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_04_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_04.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_04.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_21_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_21.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_21.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_44.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_05.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_05.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_11_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_13_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_13.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_13.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_16_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_16.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_34.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_34_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_12_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_12.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_15_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_18_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_18.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_17_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_17.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_41_goodG2BSink",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_02_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_02.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_02.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_05_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_08_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_08.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_08.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_07_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_07.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_07.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_01_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_03_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_03.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_03.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_06_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_06.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_06.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_09_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_09.c",
+        "function": "goodG2B1",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_src_char_cpy_09.c",
+        "function": "goodG2B2",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_42_bad",
+        "status": "true_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_CWE806_wchar_t_memmove_42.c",
+        "function": "goodG2B",
+        "status": "false_positive"
+    },
+    {
+        "file": "CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cpy_45.c",
+        "function": "goodG2BSink",
+        "status": "false_positive"
+    }
+]
