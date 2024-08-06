@@ -110,18 +110,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node.lvalue, c_ast.ID):
             var_name = node.lvalue.name
             self.variable_declarations[var_name] = node.rvalue
-            # if is_strlen_function(node.rvalue):
-            #     print('is_strlen_function visit_Assignment')
-            #     print(self.variable_declarations)
-            #     self.variable_declarations[var_name] = find_size_of_strlen(node.rvalue, self.variable_declarations)
-            # elif isinstance(node.rvalue, c_ast.FuncCall):
-            #     if var_name in self.variable_declarations:
-            #         self.variable_declarations[var_name] = UNKNOWN
-            #     if var_name in self.array_declarations:
-            #         self.set_array_state(var_name, UNKNOWN, 1)
-            # else:
-            #     print('in visit_assignment assigning', node.lvalue.name, node.rvalue)
-            #     self.variable_declarations[node.lvalue.name] = node.rvalue
 
         size_extractor = HeapAllocationExtractor(self.array_declarations)
         size_extractor.visit(node.rvalue)
@@ -151,6 +139,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         self.generic_visit(node)
         self.current_function = None
         self.variable_declarations = {}
+        self.array_declarations = {}
 
 
     def get_loop_state(self, var_name):

@@ -1,6 +1,7 @@
 import argparse
 import os
 import json
+import plistlib
 import re
 import shutil
 from pathlib import Path
@@ -9,6 +10,8 @@ from utils.env import load_existing_file_to_juliet
 from utils.parse_infer import get_metrics_from_infer_output, run_infer
 import subprocess
 from pycparser import c_ast
+
+# 
 
 # Paths to the test directories
 JULIET_TESTCASES_DIR = os.path.join(Path(__file__).parent.resolve(), 'juliet-test-suite-c/testcases')
@@ -153,31 +156,39 @@ def run_test_infer(test_dir, result_file, juliet_required = True):
     print(f"Results saved to {result_file}")
 
 
-# def run_test_clang(test_dir, result_file, juliet_required = True):
-#     results = []
-#     subdirs = sorted([d for d in os.listdir(test_dir) if os.path.isdir(os.path.join(test_dir, d))])
-#     for subdir in subdirs:
-#         subdir_path = os.path.join(test_dir, subdir)
-#         for file in os.listdir(subdir_path):
-#             if file.endswith(".c"):
-#                 test_path = os.path.join(subdir_path, file)
-#                 print(f"Running test: {test_path}")
 
-#                 temp_file_path, temp_dir_path = load_existing_file_to_juliet(test_path, juliet_required)
-                
-#                 # Run your analyze function on the test file
-#                 try:
-#                     run_clang_sa(temp_file_path)
+def extract_metrics_from_clang(report):
+    functions_checked = []
 
-    
-#                 finally:
-#                     # Cleanup the temporary directory
-#                     shutil.rmtree(temp_dir_path)
-#     #     # Save results to the specified file
-#     # with open(result_file, "w") as f:
-#     #     json.dump(results, f, indent=4)
-#     # print(f"Results saved to {result_file}")
+    for report_entry in report:
+        file_path = report_entry['file']['original_path']
+        checker_name = report_entry['checker_name']
+        message = report_entry['message']
+        line_number = report_entry['line']
 
+        # Check if the diagnostic is related to buffer overflow
+        if any(keyword in checker_name.lower() for keyword in ['buffer', 'overflow', 'bound']) or \
+           any(keyword in message.lower() for keyword in ['buffer', 'overflow', 'bound']):
+            function_name = extract_function_name_from_line_number(file_path, line_number)
+            if function_name:
+                if 'bad' in function_name:
+                    status = 'true_positive'
+                elif 'good' in function_name:
+                    status = 'false_positive'
+                else:
+                    continue
+                result = {
+                    "file": file_path,
+                    "function": function_name,
+                    "status": status,
+                    "info": message
+                }
+
+                if result not in functions_checked:
+                    functions_checked.append(result)
+    return functions_checked
+
+# https://github.com/Ericsson/codechecker/blob/master/docs/analyzer/checker_and_analyzer_configuration.md
 def run_test_clang(test_dir, result_file, juliet_required=True):
     results = []
     subdirs = sorted([d for d in os.listdir(test_dir) if os.path.isdir(os.path.join(test_dir, d))])
@@ -189,43 +200,65 @@ def run_test_clang(test_dir, result_file, juliet_required=True):
                 print(f"Running test: {test_path}")
 
                 temp_file_path, temp_dir_path = load_existing_file_to_juliet(test_path, juliet_required)
-                
+
                 try:
                     output_dir = os.path.join(temp_dir_path, 'scan-build-output')
                     os.makedirs(output_dir, exist_ok=True)
 
-                    
-                    # Run Clang Static Analyzer with specific checkers enabled
-                    result = subprocess.run([
-                        'clang-sa/bin/scan-build',
-                        'gcc', 
-                        '-c', temp_file_path,
-                        # '--load-plugin', 'alpha.security.MallocOverflow',
-                        # '--load-plugin', 'alpha.security.ArrayBound',
-                        # '--load-plugin', 'alpha.security.ArrayBoundV2',
-                        # '--load-plugin', 'alpha.security.MallocOverflow'
-                        '-Weverything'
+                    # Create a compilation database with absolute paths
+                    comp_db_path = os.path.join(temp_dir_path, 'compile_commands.json')
+                    comp_db_content = [
+                        {
+                            "directory": temp_dir_path,
+                            "command": f"clang -c {temp_file_path}",
+                            "file": temp_file_path
+                        }
+                    ]
+                    with open(comp_db_path, 'w') as comp_db_file:
+                        json.dump(comp_db_content, comp_db_file, indent=4)
 
+                    # Run CodeChecker analyze with explicit path and absolute paths
+                    analyze_result = subprocess.run([
+                        'CodeChecker',
+                        'analyze', comp_db_path,
+                        '--analyzers', 'clangsa',
+                        '--enable', 'security',
+                        '-o', output_dir,
+                    ], capture_output=True, text=True)
+                    
+
+                    result_json_path = os.path.join(output_dir, 'results.json')
+
+                    parse_result = subprocess.run([
+                        'CodeChecker', 'parse', output_dir
                     ], capture_output=True, text=True)
 
-                    # print('return code:', result.returncode)
-                    print('output:', result.stdout, 'No bugs found', 'No bugs found' in result.stdout)
-                    # print('error:', result.stderr)
+                    print(parse_result.stdout)
 
-                    
-                    # Capture the analysis results
-                    # for root, _, files in os.walk(output_dir):
-                    #     for report_file in files:
-                    #         if report_file.endswith('.plist'):
-                    #             report_file_path = os.path.join(root, report_file)
-                    #             with open(report_file_path, 'rb') as f:
-                    #                 report_data = plistlib.load(f)
-                    #                 results.append({
-                    #                     "file": file,
-                    #                     "report": report_data
-                    #                 })
+                    parse_result = subprocess.run([
+                        'CodeChecker', 'parse', output_dir, '-e', 'json', '-o', result_json_path
+                    ], capture_output=True, text=True)
+
+                    print('Parse output:', parse_result.stdout)
+                    if os.path.exists(result_json_path):
+                        with open(result_json_path, 'r') as result_json:
+                            result = json.load(result_json)
+                            if 'reports' in result:
+                                metrics = extract_metrics_from_clang(result['reports'])
+                                for metric in metrics:
+                                    results.append(metric)
+                                
+                            else:
+                                print(f"No issues found in {file}")
+                    else:
+                        print(f"Results file not found for {file}")
+
                 finally:
                     shutil.rmtree(temp_dir_path)
+
+    with open(result_file, 'w') as rf:
+        json.dump(results, rf, indent=4)
+    print(f"Results saved to {result_file}")
 
 
 def extract_metrics_from_cppcheck(file_path, err):
@@ -257,7 +290,7 @@ def extract_metrics_from_cppcheck(file_path, err):
                     functions_checked.append(result)
     return functions_checked
 
-        
+
 
 def run_test_cpp(test_dir, result_file, juliet_required=True):
     results = []
