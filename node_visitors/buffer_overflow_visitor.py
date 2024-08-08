@@ -1,11 +1,7 @@
 from numbers import Number
 from pycparser import c_ast, c_generator
 from node_visitors.data_type_extractor import DataTypeExtractor
-from node_visitors.identifier_extractor import IdentifierExtractor
 from node_visitors.heap_allocation_extractor import HeapAllocationExtractor
-from node_visitors.constant_evaluator import ConstantEvaluator
-from utils.log import log
-from math import ceil
 from utils.sizeof import sizeof_mapping, node_is_sizeof, node_is_negation
 
 from utils.strlen import find_size_of_strlen, is_strlen_function
@@ -58,7 +54,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def visit_While(self, node):
         self.track_current_loop(node)
 
-    # TODO later
     def visit_If(self, node):
        state_before_cond = dict(self.variable_constrainsts)
        self.track_current_condition(node.cond)
@@ -132,14 +127,16 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def track_current_function(self, node):
         self.current_function = node
+        prev_variables = dict(self.variable_declarations)
+        prev_arrays = dict(self.array_declarations)
         if node.decl.type.args:
             params = node.decl.type.args.params
             for param in params:
                 self.variable_declarations[param.name] = UNKNOWN
         self.generic_visit(node)
         self.current_function = None
-        self.variable_declarations = {}
-        self.array_declarations = {}
+        self.variable_declarations = prev_variables
+        self.array_declarations = prev_arrays
 
 
     def get_loop_state(self, var_name):

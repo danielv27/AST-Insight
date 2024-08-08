@@ -165,11 +165,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_cpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_41.c",
         "function": "badSink",
         "status": "true_positive"
@@ -300,11 +295,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_21.c",
         "function": "badSink",
         "status": "true_positive"
@@ -337,11 +327,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_53d.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fgets_53d_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -445,11 +430,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_31.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_31_bad",
         "status": "true_positive"
@@ -480,11 +460,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_connect_socket_53d.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE129_connect_socket_53d_badSink",
         "status": "true_positive"
@@ -492,11 +467,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_connect_socket_53d.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE129_connect_socket_53d_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memcpy_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -548,11 +518,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_10_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE131_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_listen_socket_54e.c",
@@ -815,11 +780,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_cpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_44.c",
         "function": "badSink",
         "status": "true_positive"
@@ -866,11 +826,6 @@
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE129_fscanf_21.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_cpy_45.c",
         "function": "goodG2BSink",
         "status": "false_positive"
     },
@@ -930,11 +885,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_14.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_14_bad",
         "status": "true_positive"
@@ -975,11 +925,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_10_bad",
         "status": "true_positive"
@@ -1010,11 +955,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_10_bad",
         "status": "true_positive"
@@ -1023,11 +963,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_05_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memmove_15.c",
@@ -1040,11 +975,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_alloca_loop_01.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_alloca_loop_01_bad",
         "status": "true_positive"
@@ -1053,16 +983,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_loop_18.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_loop_18_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_loop_01.c",
@@ -1530,11 +1450,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_alloca_loop_31.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_alloca_loop_31_bad",
         "status": "true_positive"
@@ -1553,11 +1468,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_15_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_11.c",
@@ -1583,11 +1493,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_01.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_01_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_loop_09.c",
@@ -1630,11 +1535,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_01.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_01_bad",
         "status": "true_positive"
@@ -1658,11 +1558,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_34.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_34_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_loop_04.c",
@@ -1705,16 +1600,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_alloca_memcpy_15_bad",
         "status": "true_positive"
@@ -1723,11 +1608,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_memcpy_05_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_char_declare_cpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_11.c",
@@ -1820,19 +1700,9 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_10_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_09.c",
@@ -1850,11 +1720,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_10_bad",
         "status": "true_positive"
@@ -1863,11 +1728,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_09.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_09_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_10.c",
@@ -2003,11 +1863,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_14.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_14_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_07.c",
@@ -2200,19 +2055,9 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_31.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_31_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_17.c",
@@ -2450,19 +2295,9 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_34.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_34_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memcpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_18.c",
@@ -2473,16 +2308,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_16.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_16_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_05.c",
@@ -2550,11 +2375,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_15_bad",
         "status": "true_positive"
@@ -2568,11 +2388,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_06.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_06_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_10.c",
@@ -2645,11 +2460,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_08.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_loop_08_bad",
         "status": "true_positive"
@@ -2662,11 +2472,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_loop_12.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -2688,11 +2493,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_02.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_02_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_11.c",
@@ -2820,11 +2620,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_alloca_memmove_15_bad",
         "status": "true_positive"
@@ -2833,11 +2628,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_06.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_loop_06_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE193_wchar_t_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_char_declare_memmove_15.c",
@@ -2938,11 +2728,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_alloca_loop_31.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_alloca_loop_31_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_06.c",
@@ -3170,11 +2955,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_04.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_04_bad",
         "status": "true_positive"
@@ -3223,11 +3003,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_05_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_loop_09.c",
@@ -3285,19 +3060,9 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_03.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_03_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_loop_07.c",
@@ -3328,11 +3093,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_05_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_11.c",
@@ -3420,11 +3180,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_10_bad",
         "status": "true_positive"
@@ -3433,11 +3188,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_11.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_11_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_14.c",
@@ -3540,11 +3290,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_loop_34.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_loop_34_bad",
         "status": "true_positive"
@@ -3567,11 +3312,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_loop_01.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_41_goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -3615,11 +3355,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_02.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_02_bad",
         "status": "true_positive"
@@ -3653,11 +3388,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_alloca_loop_16.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_alloca_loop_16_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_05.c",
@@ -3783,11 +3513,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_15_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_11.c",
@@ -3925,11 +3650,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_08.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int64_t_alloca_loop_08_bad",
         "status": "true_positive"
@@ -3973,11 +3693,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_08.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_int_declare_memmove_08_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_loop_16.c",
@@ -4370,11 +4085,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_16.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_16_bad",
         "status": "true_positive"
@@ -4455,11 +4165,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_10.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_10_bad",
         "status": "true_positive"
@@ -4468,11 +4173,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_alloca_loop_13.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_alloca_loop_13_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_loop_13.c",
@@ -4560,19 +4260,9 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_14.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_14_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_11.c",
@@ -4602,11 +4292,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_loop_15.c",
         "function": "goodG2B2",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_41_goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -4670,11 +4355,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_loop_03.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_loop_03_bad",
         "status": "true_positive"
@@ -4710,11 +4390,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_15_bad",
         "status": "true_positive"
@@ -4723,11 +4398,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_16.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_16_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_11.c",
@@ -4790,11 +4460,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_15.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_15_bad",
         "status": "true_positive"
@@ -4838,11 +4503,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_14.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_14_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_10.c",
@@ -4905,11 +4565,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_alloca_loop_02.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_alloca_loop_02_bad",
         "status": "true_positive"
@@ -4933,11 +4588,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_14.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_14_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_loop_10.c",
@@ -5140,11 +4790,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_13.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_alloca_memmove_13_bad",
         "status": "true_positive"
@@ -5178,11 +4823,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_03.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memmove_03_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE805_wchar_t_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE805_struct_declare_memmove_13.c",
@@ -5222,11 +4862,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memcpy_61a.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_44.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5315,11 +4950,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_34.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_34_bad",
         "status": "true_positive"
@@ -5365,26 +4995,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_31.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_31_bad",
         "status": "true_positive"
@@ -5405,16 +5015,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_42.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_42_bad",
         "status": "true_positive"
@@ -5422,16 +5022,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_42.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memmove_44.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5475,11 +5065,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_22a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_22_bad",
         "status": "true_positive"
@@ -5520,11 +5105,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_alloca_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_61a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_char_declare_memmove_61_bad",
         "status": "true_positive"
@@ -5555,11 +5135,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_22a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_22_bad",
         "status": "true_positive"
@@ -5572,16 +5147,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_22a.c",
         "function": "goodG2B2",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5602,11 +5167,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_42.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5670,11 +5230,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_22a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_22_bad",
         "status": "true_positive"
@@ -5687,11 +5242,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_22a.c",
         "function": "goodG2B2",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5715,11 +5265,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_34.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_34_bad",
         "status": "true_positive"
@@ -5727,11 +5272,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_34.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_44.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -5830,21 +5370,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_61a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memmove_61_bad",
         "status": "true_positive"
@@ -5875,11 +5400,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_alloca_memmove_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_22a.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__CWE806_wchar_t_declare_memcpy_22_bad",
         "status": "true_positive"
@@ -5903,16 +5423,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_17.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_17_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_04.c",
@@ -6115,11 +5625,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_44.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_17.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_17_bad",
         "status": "true_positive"
@@ -6260,16 +5765,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_18.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_18_bad",
         "status": "true_positive"
@@ -6300,11 +5795,6 @@
         "status": "true_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_05_bad",
         "status": "true_positive"
@@ -6313,11 +5803,6 @@
         "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_16.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_16_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_01.c",
@@ -6345,19 +5830,9 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_45.c",
-        "function": "goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_01.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__dest_char_declare_cpy_01_bad",
         "status": "true_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__src_char_alloca_cpy_41_goodG2BSink",
-        "status": "false_positive"
     },
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__dest_char_alloca_cpy_18.c",
@@ -6585,11 +6060,6 @@
         "status": "false_positive"
     },
     {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_41.c",
-        "function": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_41_goodG2BSink",
-        "status": "false_positive"
-    },
-    {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_05.c",
         "function": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_05_bad",
         "status": "true_positive"
@@ -6612,11 +6082,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_01.c",
         "function": "goodG2B",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_45.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
@@ -6687,11 +6152,6 @@
     {
         "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_04.c",
         "function": "goodG2B2",
-        "status": "false_positive"
-    },
-    {
-        "file": "CWE121_Stack_Based_Buffer_Overflow__src_char_declare_cpy_44.c",
-        "function": "goodG2BSink",
         "status": "false_positive"
     },
     {
