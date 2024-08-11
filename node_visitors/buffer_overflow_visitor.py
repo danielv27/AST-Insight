@@ -336,7 +336,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             index_value = self.evaluate(variable_size_node)
             if index_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
-                self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {access_value + 1} units of 1 bytes)')
+                self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {index_value + 1} units of 1 bytes)')
         print('exit check_array_access')
 
     def handle_memory_function(self, node):
