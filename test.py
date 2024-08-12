@@ -298,15 +298,18 @@ def run_test_cpp(test_dir, result_file, juliet_required=True):
     print(f"Results saved to {result_file}")
 
 def get_current_time_and_memory_usage():
-    time = time.time()
+    current_time = time.time()
     memory_used = memory_profiler.memory_usage()[0]
-    return time, memory_used
+    return current_time, memory_used
 
-# TODO: turn this into a function that write this to json
-def register_runtime_and_memory_usage(start_metrics, end_metrics):
+
+def register_runtime_and_memory_usage(start_metrics, end_metrics, tool):
     runtime = end_metrics[0] - start_metrics[0]
     memory_usage = end_metrics[1] - start_metrics[1]
-    return runtime, memory_usage
+    result_file = os.path.join(RESULTS_DIR, f"{tool}_runtime_and_memory.json")
+    with open(result_file, "w") as f:
+        json.dump({'runtime': runtime, 'memory_usage': memory_usage}, f, indent=4)
+    print(f"Runtime and memory usage saved to {result_file}")
 
 def main():
     parser = argparse.ArgumentParser(description="Run Juliet Test Suite benchmarks.")
@@ -340,9 +343,7 @@ def main():
 
         end_metrics = get_current_time_and_memory_usage()
 
-        runtime, memory_usage = register_runtime_and_memory_usage(start_metrics, end_metrics)
-
-        print('runtime result is:', runtime, 'memory usage result is:', memory_usage)
+        register_runtime_and_memory_usage(start_metrics, end_metrics, args.tool)
 
     else:
         print(f"Unknown tool: {args.tool}")
