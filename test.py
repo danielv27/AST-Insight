@@ -5,11 +5,12 @@ import plistlib
 import re
 import shutil
 from pathlib import Path
+import time
 from analyze import analyze_from_file
 from utils.env import load_existing_file_to_juliet
 from utils.parse_infer import get_metrics_from_infer_output, run_infer
 import subprocess
-from pycparser import c_ast
+import memory_profiler
 
 # 
 
@@ -20,6 +21,9 @@ CWE_122 = os.path.join(JULIET_TESTCASES_DIR, 'CWE122_Heap_Based_Buffer_Overflow'
 
 RESULTS_DIR = "./tests/results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
+
+def get_subdirs(path):
+    return sorted([d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))])
 
 def extract_function_name_from_line_number(file_path, line_number):
     with open(file_path, 'r') as file:
@@ -34,12 +38,6 @@ def extract_function_name_from_line_number(file_path, line_number):
             function_name = match.group(2)
     return function_name
 
-class TestCaseExtractor(c_ast.NodeVisitor):
-    pass
-
-# TODO: function that extracts all functions that end with _good or _bad using a node visitor
-def get_testcases_from_juliet():
-    pass
 
 def get_metrics_from_ast_insight_suggestions(file, suggestions):
     functions_checked = []
@@ -68,21 +66,15 @@ def get_metrics_from_ast_insight_suggestions(file, suggestions):
 
 def run_test_ast_insight(test_dir, result_file, juliet_required=True):
     results = []
-    subdirs = sorted([d for d in os.listdir(test_dir) if os.path.isdir(os.path.join(test_dir, d))])
+    subdirs = get_subdirs(test_dir)
     for subdir in subdirs:
         subdir_path = os.path.join(test_dir, subdir)
         for file in os.listdir(subdir_path):
             if file.endswith(".c"):
                 test_path = os.path.join(subdir_path, file)
-                # print(f"Running test: {test_path}")
-
                 temp_file_path, temp_dir_path = load_existing_file_to_juliet(test_path, juliet_required)
-                
-
-                # Run your analyze function on the test file
                 try:
                     suggestions, code = analyze_from_file(temp_file_path)
-                    
                     if code == 200:
                         metrics = get_metrics_from_ast_insight_suggestions(file, suggestions)
                         print('metrics generated are:', metrics)
@@ -93,25 +85,10 @@ def run_test_ast_insight(test_dir, result_file, juliet_required=True):
                             print(f"Test {test_path} detected vunerabilties: {suggestions}")
                         else:
                             print(f'Test {test_path}: No vulerabilities detected')
-                        
-                    # else:
-                    #     results[test_path] = {
-                    #         "error": f'Failed with status code {code}',
-                    #         "status": code
-                    #     }
-                        print(f"Test {test_path} failed without raising an exception with status code {code}")
                 except Exception as e:
-                    pass
-                    # results[test_path] = {
-                    #     "error": str(e),
-                    #     "status": 500
-                    # }
                     print(f"Test {test_path} failed with status code 500, error: {str(e)}")
                 finally:
-                    # Cleanup the temporary directory
                     shutil.rmtree(temp_dir_path)
-
-    # Save results to the specified file
     with open(result_file, "w") as f:
         json.dump(results, f, indent=4)
     print(f"Results saved to {result_file}")
@@ -137,20 +114,8 @@ def run_test_infer(test_dir, result_file, juliet_required = True):
                         for metric in metrics:
                             results.append(metric)
                         print('current results:', results)
-                    # else:
-                        # results = {
-                        #     "error": str(error),
-                        #     "status": 500
-                        # }
-                # except Exception as e:
-                #     results[test_path] = {
-                #         "error": str(e),
-                #         'status': 500
-                #     }
                 finally:
-                    # Cleanup the temporary directory
                     shutil.rmtree(temp_dir_path)
-        # Save results to the specified file
     with open(result_file, "w") as f:
         json.dump(results, f, indent=4)
     print(f"Results saved to {result_file}")
@@ -332,6 +297,17 @@ def run_test_cpp(test_dir, result_file, juliet_required=True):
         json.dump(results, f, indent=4)
     print(f"Results saved to {result_file}")
 
+def get_current_time_and_memory_usage():
+    time = time.time()
+    memory_used = memory_profiler.memory_usage()[0]
+    return time, memory_used
+
+# TODO: turn this into a function that write this to json
+def register_runtime_and_memory_usage(start_metrics, end_metrics):
+    runtime = end_metrics[0] - start_metrics[0]
+    memory_usage = end_metrics[1] - start_metrics[1]
+    return runtime, memory_usage
+
 def main():
     parser = argparse.ArgumentParser(description="Run Juliet Test Suite benchmarks.")
     parser.add_argument(
@@ -351,13 +327,22 @@ def main():
     }
 
     if args.tool in tool_map:
-
+        
+        start_metrics = get_current_time_and_memory_usage()
+        
+        
         print(f'Running test {args.tool}')
         result_file = os.path.join(RESULTS_DIR, f"CWE121_{args.tool}_results.json")
         tool_map[args.tool](CWE_121, result_file)
 
         result_file = os.path.join(RESULTS_DIR, f"CWE122_{args.tool}_results.json")
         tool_map[args.tool](CWE_122, result_file)
+
+        end_metrics = get_current_time_and_memory_usage()
+
+        runtime, memory_usage = register_runtime_and_memory_usage(start_metrics, end_metrics)
+
+        print('runtime result is:', runtime, 'memory usage result is:', memory_usage)
 
     else:
         print(f"Unknown tool: {args.tool}")
