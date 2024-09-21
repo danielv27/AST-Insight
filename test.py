@@ -66,6 +66,7 @@ def get_metrics_from_ast_insight_suggestions(file, suggestions):
 
 def run_test_ast_insight(test_dir, result_file, juliet_required=True):
     results = []
+    failed = []
     subdirs = get_subdirs(test_dir)
     for subdir in subdirs:
         subdir_path = os.path.join(test_dir, subdir)
@@ -85,10 +86,18 @@ def run_test_ast_insight(test_dir, result_file, juliet_required=True):
                             print(f"Test {test_path} detected vunerabilties: {suggestions}")
                         else:
                             print(f'Test {test_path}: No vulerabilities detected')
+                            failed.append({'file_path': test_path, 'error': ''})
                 except Exception as e:
                     print(f"Test {test_path} failed with status code 500, error: {str(e)}")
+                    failed.append({'file_path': test_path, 'error': str(e)})
                 finally:
                     shutil.rmtree(temp_dir_path)
+
+    # Test cases that have no results are dumped for further implementation
+    error_file = os.path.join(RESULTS_DIR, "ast_insight_dump.json")
+    with open(error_file, "w") as f:
+        json.dump(error_file, f, indent=4)
+
     with open(result_file, "w") as f:
         json.dump(results, f, indent=4)
     print(f"Results saved to {result_file}")
