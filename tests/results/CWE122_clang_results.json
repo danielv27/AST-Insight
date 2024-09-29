@@ -1,0 +1,3212 @@
+[
+    {
+        "file": "/tmp/tmpzsb3j04v/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpkosvaf8r/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplacpbzsx/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcgxs1d2o/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz1e6vjlr/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5628ps2s/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpf5v5hk2i/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1jdvcj_y/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpiy740f8r/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7l8jfkjj/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpshg84wza/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqmnway9u/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1ef_mo7b/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpds27bc62/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8m4qhv70/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5e3jf0ok/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0blg09oa/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp78sflae9/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp41v5piru/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpiysmdpiw/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptm2rn7n2/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxvvft969/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr40yot5k/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpv6k9i0ov/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprpeq9a3i/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprwooh381/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppo1dh2in/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphl63o2da/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5yzhh67d/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpb56s3xih/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpiseo4g1y/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2bl5mcmu/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdkwcoqbm/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpaelmd33i/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2h6n_jp0/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxbo3qlfi/CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__char_type_overrun_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp15pfajcz/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsv6oo53s/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_14_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpt6qxych7/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl9uxyzk0/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_31_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp8yg2u2hw/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5uw435vh/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_10_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpvmrln6f0/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpjm_p3s5a/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpauin1agb/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj2blrl6n/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_04_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpkcw0aobj/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcf7fzou8/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_21_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpolwzrp_9/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_32_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp6jpyy6i3/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp87gqab40/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_17_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpc1cd186u/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_13_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpm57eib6n/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfbls63jk/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0cv68fu1/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_03_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp4av92exu/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_09_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpjwu7ut__/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4qbmkkw7/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpf72hm1w1/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_07_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmptrwz_q3g/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_16_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpzrruw1an/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5jgw_v_p/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_18_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpoahge8bs/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_12_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp4ahrp29m/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq_13vptl/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6kori85y/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_08_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpoc72ere0/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_02_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpeubp3o1a/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk3yjywtq/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_42_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpjbm5gjbt/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_06_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp2md1ncry/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk_62cyg5/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9qsvibt5/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_15_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp_69qowbz/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp57_owrgd/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3554dbva/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_11_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpbmtn7ypv/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7loqcc32/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwyfo624u/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_01_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpcyfq0aqq/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_05_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpdmwxddw2/CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpecogzpja/CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_loop_41_badSink",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpe3vl5_ju/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmm20k9hp/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptdb4bgwg/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpjomdo4_o/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_10_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5smun0ki/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6wecom3n/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpyumq671a/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_14_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6wbdy6d5/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz5id8r4b/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_31_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp22jaw_dn/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpez46w5h5/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp42kcfr8x/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_04_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp000oln89/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0ey2bva8/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_21_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphj284dvz/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzhvpla4a/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8y4f8qi_/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk6645wvp/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmga5zjtq/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_13_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7179je12/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp28tc6d0b/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7rrmfme5/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_ckzp4ww/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_32_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmsn8t7zr/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_17_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmph5bcuqbq/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpn5g665z_/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprjmbz4sx/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuz3p5me_/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj7yfryu5/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_07_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpopb07b__/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpaew5mahu/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfjx2helh/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_09_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptr9brccv/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpvda5sm3o/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_03_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwb0oszta/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpezmhssjx/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_12_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphiabgxw8/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpat_0h63o/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_18_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplp1uj9am/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpb5w3kfdj/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpi4rj88z5/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_62vu0a3/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_16_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpepa7dxfg/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcr21vinx/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_42_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7jblzyc_/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp89zn3iy2/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpui3ywat0/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsn1hhlvn/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_06_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8dou3k3e/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_02_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8ylrbgzh/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzrmjg33v/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_08_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp38c265iq/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphisj0571/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdkomuep2/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9vd36vz8/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp38i61hu3/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz9ij5v1l/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmps27a64c6/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_11_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj403lluo/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_15_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7nu2ju4j/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp78d6qp_l/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_05_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4tc098mr/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgmgtnzej/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzbwdulx2/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_41_badSink",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3vkp6jp0/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0_ly58db/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqop9o4u0/CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__CWE131_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj1nnzty1/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1n7nsqhn/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpoq78dpho/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_02_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp042cor8r/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_32_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmph8avnimb/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpn9gty70r/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpptfjdape/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_42_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpvhgvlb41/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpbsvo15ni/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3zg0ngbx/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_08_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpm2ig655v/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpveeh_h82/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1jfkspop/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_17_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpv7dhw_w0/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6i7fullo/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_06_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl62nqw59/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfsa6u6f1/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwxvd60b1/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_42_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0zop85kh/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_08_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1fv1dw99/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfeorcyo7/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcxovnwiw/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_13_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp01budow4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_02_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqhfasrso/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk8zvavf9/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7hpa9gdw/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmph3k_lu_9/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_06_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl0rvfbi8/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsc0ye55y/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4m81svzx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_18_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgr3x_9ul/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_09_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqltvc9_q/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0k43sovd/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_03_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5s9029u4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_12_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpge_5vg94/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpucf12741/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6xwwa67q/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3tfwqhk6/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_16_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphg3oks_b/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp42sklaeg/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_12_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp78gnvcpk/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmposemmv08/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptk8yv07y/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp59zrxmth/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcr8ghqas/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_18_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_hn6mdtw/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzjkzg8s9/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuycmeoxh/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_07_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpv4piegbw/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_16_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsgd654bn/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpt5zl5ke6/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7j4evzle/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_05_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpctngkyp5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4fxwnccv/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp757tp0ei/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_14_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk4o_ivz4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl03_l7wb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj_qho3vc/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxa9r0oa_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_31_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppqfjvg1o/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_01_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplbeg08mf/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxkbusq__/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_41_badSink",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxkbusq__/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_41_goodG2BSink",
+        "status": "false_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0rrdcyvz/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2k51si6b/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpce34kwjk/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqqxw6a8h/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_45.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_45_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgguon43z/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplkkyyz88/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmps3gr1892/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_05_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpg7bussk8/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1o5y3wfm/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq75dwhxf/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2awu9qg0/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_41_badSink",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj4z2er9m/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp29x2eyr8/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_01_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpa08r5gmb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_10_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpc7xu2yws/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppjl05334/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmkpiq23u/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl7ks10ye/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8kop22so/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_15_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxkd9xs4o/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpifve23zi/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpe14vq2y5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp56mdsot1/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwc9ciq4a/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpw2md2uqs/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_11_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp928zgm5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_15_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8zrl115v/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_04_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpy938fctz/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsny3_zz_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz66ofyjm/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2ahl3yc6/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_21_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqlub00z6/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_11_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp79zbwfgl/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdi5lk5or/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuv18vlvi/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpd8w9eu3h/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppa7e2bj4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_04_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5n0sqy4x/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_15_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0_tt7w1d/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpecpg80z5/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpaiec0ifn/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqkh5buoy/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_21_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprxy5jrh3/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqj3qvubx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpf5etlscx/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4cmph7d6/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_04_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpibogtb6f/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfiyyn690/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppke2conu/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_44.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_44_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpc2dykugu/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_21_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp6gd5sbv/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpi0gkzlyp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_11_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgc_dtskx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2ef3s8wf/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnvb3kjz9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnr4bl_um/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprl3i4jig/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprxljd_s7/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_14_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptq6gh5k1/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmps1oexybj/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpi7gitzuc/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_10_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1ndzajdc/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_31_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnsq5kzoz/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6jvm9j8f/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_01_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpga4qbc3w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpyczcg4_2/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr8ojh46w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp45igmsoi/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2haghgvq/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_03vrx7t/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_4wu05y4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpvwr2iskl/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_14_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwzxvaxb3/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuniqu9v9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_05_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp94j4w3sx/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl4sjqi9s/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_41_badSink",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz73jnej2/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6ffrqzqg/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnq32e7tm/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_31_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfb8g5mc1/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_10_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwenhcqsb/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfybist3t/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_09_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq97lw5eh/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpe4xfu2rd/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqx6_tdnm/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_03_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpysoz952e/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphafspd67/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpbsxhji7q/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphvac031r/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9lp5aeki/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_16_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp7o2nhmo/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_07_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpeqf7ziu9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_12_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptfq8gzno/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpvveob7un/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_03_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp73jysbcv/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_09_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp33iyxx9q/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_18_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9n_admhp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgp9lqnun/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdvidrq0a/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_07_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq0u9pnsj/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphbejwnub/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_l3l_jb3/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpu0ieq_u2/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_02_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphf_el467/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_32_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3u2hkrre/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_13_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp24i6pl5p/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpogg48m05/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_08_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpji40p3u9/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2w247ge0/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2jw1g1h3/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_17_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp62eilyh3/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp99ceywkc/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmrxey5wg/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpw5uzfgl5/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplnxt9qro/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_vqoeosp/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpovor3d4e/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_42_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcg052i71/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4cxuph2r/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_ncpy_13_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqxa_l0lo/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_32_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmphxm7iqe_/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsh50daaj/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE193_wchar_t_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp44ly0972/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpagb7o90w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp3e9djpq/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncpy_06_bad",
+        "status": "true_positive",
+        "info": "String copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5v9du0ci/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_ncat_17_bad",
+        "status": "true_positive",
+        "info": "String concatenation function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk1b7577m/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppxov39te/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8ykgs_lx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpclsbphwc/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr07hbz0y/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpx41aomkb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgdjcl01a/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6_wtt2cl/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpo3gyotb0/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpm_ljj6u7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq80l_lp7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9f5c5r7x/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_cosl9o0/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6ws6ph6g/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpal7ql3w5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_53ee9rs/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpe7x18a1u/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6fxf8p_m/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_87j_317/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8aywt_mu/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzaaj9ir4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2f8afi4g/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnpf_p3ic/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsr3sb033/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxnchtc5e/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprsd25h2q/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmph8dphqxd/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpml4sbhr5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1p9wjxe9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr39r3u9e/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxfoou0kb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8miy6xmi/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptjz1vc0l/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzba55dav/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpc_9ior4d/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5vwcf6vr/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_gqb4cck/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpt49kutn5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp33tunqyi/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprq2qz_0u/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5lvzhlx2/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl03qexm_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpx8_rae5s/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdhfo85q_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_l3xxy_r/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpqe10z3o5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpx15c4hve/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpjryx39a7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpawi7ghz7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzvthtmqj/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfjr7kqtk/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp595sv0fz/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7_8vkr8a/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnyewjt53/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2k0e1f0d/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp8j22rps_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmputo4nnkl/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpzheev3wa/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz64sg_9k/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmps1wux_mn/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp1lqlgjha/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpve84fu_r/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpi6pa0n0a/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnvrx1vxg/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpf_6af1sh/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpwauy1vt0/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpw0vfq2km/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpw8227251/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7pgrxi_p/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpyhuwmoqp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2i7wy5r7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpjb5nlxst/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpey3v98oq/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpoyzuugmg/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpa_4o35a_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7nuwr97j/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp62k8s0xn/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp734ir9_u/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpooojzx__/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnvmu_0yj/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptauedp90/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpl85vx29w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp0d7kedme/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2k00hx1d/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9r1eiacp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpegwa0no1/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5q6gk8_y/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcc09h51k/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpfgmzzp4a/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpb9y61i79/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcpu1r337/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgk6qjsi9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr8miyhkx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdhmni08w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp4jn9spj/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4w2ud_2c/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4clj_x25/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2_mbzjoi/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpa8qt_khf/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpbdpe4733/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsu7rpoke/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_df4m__z/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpeyrik_4w/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpaaz3z6kw/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpbt2htbj6/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmplc5og7it/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpc_qxnihe/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpkrocmx5t/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpb7cmw0ao/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp9st6hce5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2s2ww96d/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7w1x3s_r/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpz294i9nd/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpr8etxbz7/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int64_t_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7vct9raz/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memcpy_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpph6d0wdb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_06_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmplslxv4cy/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_42_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpy6hhn9qp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp20ewvr0o/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_42.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_42_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp73hj4z55/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_dklbqzb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcmu4jg3s/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_08_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpn8cm0440/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_02_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpw6ey6md_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp7ri4wj13/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_9ciku0n/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_18_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpdrdpqix2/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_12_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp6nyzxho9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_16_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp6mzbq8hz/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2nlcknf9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4gj7qpn1/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_41_badSink",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmptjt87hxx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_05_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp0ppug8vp/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_41.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_41_badSink",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpf9gn2hxz/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_01_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpjqpaxqa6/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp57xxjx61/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_11_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpkc70_5r3/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp32trmjk_/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgxsn_ce1/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_15_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpqo2iwb2v/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4_f300vg/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_21_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp3hy889dd/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_21.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_21_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuhhsphhr/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_04_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmppmdo3_g4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_10_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp71j7ixnk/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpuxbx73kn/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmptn_t93ya/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_31_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpxvqssxx4/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_31.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_31_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp22uilid9/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_14_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpd7zmbysx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_07_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp_f3y9sgm/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpcbl1f4nb/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6x5oyi06/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpsqzsbo6m/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_03_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp84pz7tj8/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_09_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp4q_ijz5u/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpw557gsbf/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_13_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpvjtbvae5/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_32_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdch0jx93/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_17_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmp536u3g9u/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpc__6nwqx/CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_32.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__c_CWE805_wchar_t_ncpy_32_bad",
+        "status": "true_positive",
+        "info": "Access out-of-bound array element (buffer overflow)"
+    },
+    {
+        "file": "/tmp/tmpm2_rz8y1/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpyakdqlrg/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpjao8yn6g/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpybsnw7wj/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpdbsq_4wk/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpmr4ht9cv/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpu7fjfiph/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_l7pe7p5/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpudaboe9z/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_17.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_17_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp4fgcyhi4/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_04.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_04_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpgp8q45pl/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_13.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_13_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpkubrb82m/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_10.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_10_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpucvsn8ck/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_03.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_03_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpxfhbh5kq/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_09.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_09_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp_y7k7llm/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_07.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_07_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp809v6j3c/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_14.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_14_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp68b130ae/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpj1wogs5w/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6kpp31z1/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3w_6y1cl/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmprcl2xlqf/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpkgzyw6ki/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp5ftq16_t/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk7qaykp0/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpe8q78abf/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp2a9v9qf8/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3_yyl2po/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_06.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_06_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpq2vo6bdt/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_15.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_15_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpikval4ru/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_11.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_11_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpp8ny5i1c/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_02.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_02_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp6oq78n_9/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_08.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_08_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpvpgm7ec7/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_01.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_01_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmppo66oqyt/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_12.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_12_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpk651tddk/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_18.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_18_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmp3dyqow03/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_16.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memmove_16_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    },
+    {
+        "file": "/tmp/tmpnnmvtjxq/CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_05.c",
+        "function": "CWE122_Heap_Based_Buffer_Overflow__wchar_t_type_overrun_memcpy_05_bad",
+        "status": "true_positive",
+        "info": "Memory copy function overflows the destination buffer"
+    }
+]
