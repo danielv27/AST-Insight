@@ -1,9 +1,6 @@
 from pycparser import c_ast
-
-from node_visitors.constant_evaluator import ConstantEvaluator
-from utils.sizeof import node_is_sizeof, resolve_sizeof_node
-from utils.strlen import find_size_of_strlen
-
+from node_visitors.data_type_extractor import DataTypeExtractor
+from utils.sizeof import sizeof_mapping
 
 # The Idea behind this Node Visitor is to extract the node that defines the size of an operation
 # Since in C sizeof() is commonly used to achieve this it is likely to not be a constant
@@ -28,13 +25,7 @@ class HeapAllocationExtractor(c_ast.NodeVisitor):
         return self.size_node, self.multiplier
     
     
-from pycparser import c_ast
 
-from node_visitors.constant_evaluator import ConstantEvaluator
-from node_visitors.data_type_extractor import DataTypeExtractor
-from utils.sizeof import node_is_sizeof, resolve_sizeof_node
-from utils.strlen import find_size_of_strlen
-from utils.sizeof import sizeof_mapping
 
 
 # The Idea behind this Node Visitor is to extract the node that defines the size of an operation

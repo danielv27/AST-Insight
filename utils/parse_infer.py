@@ -2,10 +2,13 @@ import sys, os, subprocess, json, re
 sys.path.extend(['.', '..'])
 import json
 
+# to run this tool you need to have the infer binary available in the project and set the path to it
+# Change this value if your path is different
+path_to_binary = 'infer-arm64/bin/infer'
 
 def run_infer(file_path):
     try:
-        analysis_process = subprocess.Popen(f'sudo infer-arm64/bin/infer run --bufferoverrun -- clang -c {file_path}', shell=True,
+        analysis_process = subprocess.Popen(f'sudo {path_to_binary} run --bufferoverrun -- clang -c {file_path}', shell=True,
                                             stdout=subprocess.PIPE,
                                             stderr=subprocess.PIPE)
         analysis_out, analysis_err = analysis_process.communicate()
@@ -41,8 +44,50 @@ def run_infer(file_path):
         return infer_output, None
     except Exception as err:
         return None, str(err)
+    
+
+def get_metrics_from_infer_output(file, output):
+    functions_checked = []
+    for entry in output:
+        if 'BUFFER_OVERRUN' in entry['bug_type']:
+            print('BUFFER_OVERRUN entry is', entry)
+            function_name = entry['procedure']
+            if 'bad' in function_name:
+                status = "true_positive"
+            elif 'good' in function_name:
+                status = "false_positive"
+            else:
+                continue  # Skip utility functions
+            
+            result = {
+                "file": file,
+                "function": function_name,
+                "status": status
+            }
+            if result not in functions_checked:
+                functions_checked.append(result)
+    return functions_checked
 
 
+
+
+# Clang Static Analyzer
+# def run_clang_sa(file_path):
+#     path_to_clang = 'clang-sa/bin/scan-build'
+#     analysis_process = subprocess.Popen(f'{path_to_clang} clang -c {file_path}', shell=True,
+#                                         stdout=subprocess.PIPE,
+#                                         stderr=subprocess.PIPE)
+#     analysis_out, analysis_err = analysis_process.communicate()
+#     analysis_errcode = analysis_process.returncode
+
+#     analysis_process.wait()
+
+#     if analysis_errcode != 0:
+#         error_message = f"Infer analysis encountered an error: {analysis_err.decode('UTF-8')}"
+#         return None, error_message
+#     print('--------------------','analyisis output:',analysis_out,'-----------------------')
+
+# old infer function
 def extract_buffer_overflows(json_output):
     buffer_overflows = []
     for issue in json_output:
