@@ -24,7 +24,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if isinstance(node, c_ast.ID):
             return self.evaluate(self.variable_declarations[node.name])
         if node_is_negation(node):
-            print('negative unary operator')
             return -1 * self.evaluate(node.expr)
         if node_is_sizeof(node):
             type_name = node.expr.type.type.names[0]
@@ -82,15 +81,12 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             data_type_extractor.visit(node)
             data_type = data_type_extractor.get_result()
             data_type_multiplier = sizeof_mapping[data_type] if data_type in sizeof_mapping else 1
-            print('multiplier is:', data_type_multiplier)
             self.set_array_state(node.name, 0, data_type_multiplier)
 
         elif isinstance(node.type, c_ast.ArrayDecl):
             data_type_extractor.visit(node)
             data_type = data_type_extractor.get_result()
-            print('size_of_mapping', sizeof_mapping)
             data_type_multipier = sizeof_mapping[data_type] if data_type in sizeof_mapping else 1
-            print('multipier', data_type_multipier)
             self.set_array_state(node.name, node.type.dim, data_type_multipier)
 
     
@@ -110,8 +106,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         size_extractor.visit(node.rvalue)
 
         size_node, multiplier = size_extractor.get_result()
-
-        print('size node for', node.lvalue.name, size_node, multiplier)
 
         # SizeNodeAndMultiplierExtractor will only set a size node when there is a size allocation inside the node
         if size_node is not None:
@@ -152,7 +146,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
     def track_current_loop(self, node):
         var_name = None
         end_node = None
-        print('in track_current_loop')
         if isinstance(node, c_ast.For):
             if isinstance(node.init, c_ast.Assignment):
                 var_name = node.init.lvalue.name
@@ -211,7 +204,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def track_current_condition(self, cond):
         constraint = None
-        print('cond is', cond)
         if isinstance(cond, c_ast.ID):
             # If the condition is an ID that means that value it truthy
             self.set_variable_constraint(cond.name, 0, False)
@@ -251,22 +243,16 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if isinstance(cond.right, c_ast.BinaryOp) and cond.op == '&&':
                 self.track_current_condition(cond.right)
 
-            # Maybe TODO: if there is an or condition flip it to an and so it can be handled more easily
 
-        if constraint:
-            print("TODO: remove constraint")
-        # TODO: remove condition
 
     def set_array_state(self, name, size_node, multiplier):
         self.array_declarations[name] = {'size_node': size_node, 'multiplier': multiplier}
 
 
     def get_array_state(self, name):
-        print('arrays', self.array_declarations)
         if name in self.array_declarations:
             array_state = self.array_declarations[name]
             return array_state['size_node'], array_state['multiplier']
-        print('get_array_state found no result')
         return None, None
 
 
@@ -283,17 +269,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
     def check_array_access(self, node):
         array_name = node.lvalue.name.name
-        print('check array access array name:',array_name)
         array_size_node, multiplier = self.get_array_state(array_name)
-        print('array_size_node', array_size_node)
-        print('in check_array_access')
-        print('evaluate(array_size_node)', self.evaluate(array_size_node))
-        print('evaluate(multiplier)', self.evaluate(multiplier))
-
         subscript_node = node.lvalue.subscript
-
-        print(subscript_node)
-
         array_size = self.evaluate(array_size_node)
         array_multiplier = self.evaluate(multiplier)
 
@@ -303,7 +280,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if lower_bound == None and upper_bound == None:
                 self.generate_suggestion(node, f'No bound checks done on unknown parameter `{variable_name}`')
             else:
-                print('lower bound is', lower_bound, upper_bound)
                 if lower_bound == None or lower_bound < 0:
                     self.generate_suggestion(node, f'`{variable_name}` might be negative')
                 if upper_bound == None or upper_bound >= array_size:
@@ -318,12 +294,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             start_node_value = self.evaluate(start_node)
             end_node_value = self.evaluate(end_node)
 
-            print('end_node', end_node)
-            print(self.variable_declarations)
-
-            print(end_node_value)
-            print(array_size)
-            print(array_multiplier)
             if array_size // array_multiplier < end_node_value:
                 self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size // array_multiplier}) to account for loop access (atleast {end_node_value})')
                 self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node_value}) to stay within the bounds of the array `{array_name}` (at most {array_size // array_multiplier})')
@@ -337,7 +307,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             if index_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
                 self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {index_value + 1} units of 1 bytes)')
-        print('exit check_array_access')
 
     def handle_memory_function(self, node):
         func_name = node.name.name
@@ -359,40 +328,22 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
                 if not dest_size_node:
                     return
-                print('in handle_memory_function')
-                print('dest_size_node',dest_size_node)
-
-                print('dest_size_node', dest_size_node)
-                print('dest_multipler', dest_multiplier)
-
 
                 if(dest_size_node == UNKNOWN):
-                    # TODO: if variable is read from user input or passed as an argument it is an unknown. This is to target the exposed attack surface of the program
                     return
 
                 dest_size = self.evaluate(dest_size_node) * self.evaluate(dest_multiplier)
 
-                print('dest_size', dest_size)
-
                 if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
                     source_size_node, source_multiplier = self.get_array_state(source_node.name)
-
-                    print(source_size_node)
-
                     source_size = self.evaluate(source_size_node) * self.evaluate(source_multiplier)
-
-                    print('source_size', source_size)
-
                     if source_size > dest_size:
                         self.generate_suggestion(node, f"Increase the size of the destination buffer '{dest_node.name}' from {dest_size} bytes to be at least {source_size} bytes")
 
                 if size_node:
                     size_node_size = self.evaluate(size_node)
 
-                    print(size_node_size, dest_size)
-
                     if size_node_size > dest_size:
                         self.generate_suggestion(node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
                         self.generate_suggestion(node, f"Increase the size of the destination buffer in {func_name} ({dest_size // dest_multiplier} units of {self.evaluate(dest_multiplier)} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes")
         self.generic_visit(node)
-        print('exit mem function')
