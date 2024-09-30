@@ -45,7 +45,17 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
 
     def visit_FuncDef(self, node):
-        self.track_current_function(node)
+        self.current_function = node
+        prev_variables = dict(self.variable_declarations)
+        prev_arrays = dict(self.array_declarations)
+        if node.decl.type.args:
+            params = node.decl.type.args.params
+            for param in params:
+                self.variable_declarations[param.name] = UNKNOWN
+        self.generic_visit(node)
+        self.current_function = None
+        self.variable_declarations = prev_variables
+        self.array_declarations = prev_arrays
 
     def visit_For(self, node):
         self.track_current_loop(node)
@@ -90,8 +100,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             self.set_array_state(node.name, node.type.dim, data_type_multipier)
 
     
-
-
     def visit_Assignment(self, node):
         # If variable is assigned to another variable make them refer to the same size node
         if isinstance(node.lvalue, c_ast.ID) and isinstance(node.rvalue, c_ast.ID) and self.array_declarations[node.rvalue.name]:
@@ -118,20 +126,6 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
         if self.current_function is None:
             return None
         return self.current_function.decl.name
-
-    def track_current_function(self, node):
-        self.current_function = node
-        prev_variables = dict(self.variable_declarations)
-        prev_arrays = dict(self.array_declarations)
-        if node.decl.type.args:
-            params = node.decl.type.args.params
-            for param in params:
-                self.variable_declarations[param.name] = UNKNOWN
-        self.generic_visit(node)
-        self.current_function = None
-        self.variable_declarations = prev_variables
-        self.array_declarations = prev_arrays
-
 
     def get_loop_state(self, var_name):
         return self.current_loops[var_name]['start_node'], self.current_loops[var_name]['end_node'] if var_name in self.current_loops else [None, None]
