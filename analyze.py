@@ -7,7 +7,6 @@ from flask import jsonify
 from utils.format import preprocess_code
 from utils.env import load_code_to_juliet, load_existing_file_to_juliet
 import shutil
-import pprint
 
 def analyze_from_file(file_path):
     ast = parse_ast(file_path)

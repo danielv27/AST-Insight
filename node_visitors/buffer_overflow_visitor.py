@@ -77,12 +77,8 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             self.variable_declarations[node.name] = node.init
         data_type_extractor = DataTypeExtractor()
         if isinstance(node.type, c_ast.PtrDecl) and node.init:
-            
-            data_type_extractor.visit(node)
-            
             size_extractor = HeapAllocationExtractor(self.array_declarations)
             size_extractor.visit(node.init)
-
             size_node, multiplier = size_extractor.get_result()
             if size_node:
                 self.set_array_state(node.name, size_node, multiplier)
