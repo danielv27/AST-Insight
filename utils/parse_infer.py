@@ -19,6 +19,7 @@ def run_infer(file_path):
             return None, error_message
 
         analysis_process.wait()
+        print(analysis_out)
 
         report_process = subprocess.Popen('sudo infer-arm64/bin/infer report --format json', shell=True,
                                           stdout=subprocess.PIPE,

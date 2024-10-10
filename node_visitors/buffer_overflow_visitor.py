@@ -296,7 +296,7 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             index_value = self.evaluate(variable_size_node)
             if index_value > array_size:
                 self.generate_suggestion(variable_size_node, f'Change variable `{variable_name}` to a valid index (between 0 and {array_size - 1}) e.g. {array_size - 1}')
-                self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {index_value + 1} units of 1 bytes)')
+                self.generate_suggestion(array_size_node, f'Increase size of `{array_name}` to account for index access (atleast {index_value + 1})')
 
     def handle_memory_function(self, node):
         func_name = node.name.name
@@ -324,16 +324,17 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
 
                 dest_size = self.evaluate(dest_size_node) * self.evaluate(dest_multiplier)
 
-                if source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
-                    source_size_node, source_multiplier = self.get_array_state(source_node.name)
-                    source_size = self.evaluate(source_size_node) * self.evaluate(source_multiplier)
-                    if source_size > dest_size:
-                        self.generate_suggestion(node, f"Increase the size of the destination buffer '{dest_node.name}' from {dest_size} bytes to be at least {source_size} bytes")
-
                 if size_node:
                     size_node_size = self.evaluate(size_node)
 
                     if size_node_size > dest_size:
-                        self.generate_suggestion(node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
-                        self.generate_suggestion(node, f"Increase the size of the destination buffer in {func_name} ({dest_size // dest_multiplier} units of {self.evaluate(dest_multiplier)} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes")
+                        self.generate_suggestion(size_node, f"Reduce the number of bytes coppied in {func_name} ({size_node_size} bytes to not be larger than the destination buffer '{dest_node.name}' ({dest_size} bytes)")
+                        self.generate_suggestion(dest_size_node, f"Increase the size of the destination buffer in {func_name} ({dest_size} bytes) to be able to hold coppied size '{dest_node.name}' ({size_node_size} bytes)")
+
+                elif source_node and isinstance(source_node, c_ast.ID) and source_node.name in self.array_declarations:
+                    source_size_node, source_multiplier = self.get_array_state(source_node.name)
+                    source_size = self.evaluate(source_size_node) * self.evaluate(source_multiplier)
+                    if source_size > dest_size:
+                        self.generate_suggestion(dest_size_node, f"Increase the size of the destination buffer '{dest_node.name}' from {dest_size} bytes to be at least {source_size} bytes")
+
         self.generic_visit(node)
