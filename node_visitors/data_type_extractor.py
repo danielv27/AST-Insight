@@ -5,7 +5,6 @@ class DataTypeExtractor(c_ast.NodeVisitor):
         self.data_type = None
     
     def visit_TypeDecl(self, node):
-        print('in extractor', node.type.names[0])
         self.data_type = node.type.names[0]
 
     def get_result(self):
