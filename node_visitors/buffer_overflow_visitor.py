@@ -285,8 +285,17 @@ class BufferOverflowVisitor(c_ast.NodeVisitor):
             end_node_value = self.evaluate(end_node)
 
             if array_size // array_multiplier < end_node_value:
+                if isinstance(array_size_node, c_ast.Constant):
+                    array_size_node.value = str(end_node_value)
                 self.generate_suggestion(array_size_node, f'Increase size of array `{array_name}`({array_size // array_multiplier}) to account for loop access (atleast {end_node_value})')
+                if isinstance(array_size_node, c_ast.Constant):
+                    array_size_node.value = str(array_size)
+                
+                if isinstance(end_node, c_ast.Constant):
+                    end_node.value = str(array_size // array_multiplier)
                 self.generate_suggestion(end_node, f'Decrease loop upper bound ({end_node_value}) to stay within the bounds of the array `{array_name}` (at most {array_size // array_multiplier})')
+                if isinstance(end_node, c_ast.Constant):
+                    end_node.value = str(end_node_value)
 
         elif isinstance(subscript_node, c_ast.ID) and subscript_node.name in self.variable_declarations:
             variable_name = subscript_node.name
