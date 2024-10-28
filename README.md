@@ -33,7 +33,7 @@ Other configurations should be passed as other parameters although as of now the
 
 An interactive frontend application was written in Vue.js to work witht this API. Click [here](https://github.com/danielv27/AST-Insight-Frontend) to access it. 
 
-### CLI TOOL
+### CLI Tool
 To run the analysis through the CLI run:
 ```bash
 python3 analyze.py <path-to-file>
