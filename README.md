@@ -1,13 +1,12 @@
 # AST Insight
 
-AST Insight is a tool designed to detect and provide suggestions for correcting buffer overflow vulnerabilities in C programs. It combines static code analysis using Facebook's Infer tool with Abstract Syntax Tree (AST) parsing to enhance the detection and correction of vulnerabilities. This dual approach enables AST Insight to provide more precise and actionable suggestions for mitigating the detected vulnerabilities.
+AST Insight is a tool designed to detect buffer overflow (BOF) vulnerabilities in C programs and provide suggestions for correcting them. It utilizes an Abstract Syntax Tree (AST) along with reasoning-based approach to provide a solution that
+is flexible, modular, and easy to reason about.
 
 ## Features
 
-- **Detection of Buffer Overflows:** Leverages Facebook Infer to detect potential buffer overflow vulnerabilities in C code.
-- **AST Parsing:** Uses Abstract Syntax Tree (AST) parsing to keep track of variable declarations, allocations, and usage within the code.
-- **Detailed Suggestions:** Provides detailed and multiple suggestions for mitigating detected vulnerabilities, including adjustments to buffer sizes and loop conditions.
-- **Support for Complex Allocations:** Handles complex memory allocation expressions, including those involving casts and `sizeof` operations.
+- **Context Tracking:** Uses Abstract Syntax Tree (AST) parsing to keep track of variable declarations, allocations, and usage within the code.
+- **Detailed Suggestions:** Provides detailed and multiple suggestions for mitigating detected vulnerabilities, including context-specific information to aid in detection and learnability
 
 ## Installation
 
@@ -17,20 +16,30 @@ AST Insight is a tool designed to detect and provide suggestions for correcting 
     cd ast-insight
     ```
 
-2. **Install dependencies:**
+2. **Install Pycparser:**
     ```bash
-    pip install -r requirements.txt
+    pip install pycparser
     ```
-
-3. **Set up Infer:**
-    - Download and install Facebook Infer from [Infer's official site](https://fbinfer.com/).
-    - Ensure that the `infer` binary is accessible in your `PATH`.
-
 ## Usage
-
+AST Insight can be run either as a server (Flask) or as a CLI tool
 ### Running the Server
-
 To start the server, run:
-
 ```bash
 python server.py
+```
+Once running, The server will accept POST requests to the `/analyze` endpoint. Code to be analyzed should be passed as a string to the `code` parameter.
+
+Other configurations should be passed as other parameters although as of now the only configuration available is the Juliet flag which includes expected Juliet Test Suite headers to run benchmarks.
+
+An interactive frontend application was written in Vue.js to work witht this API. Click [here](https://github.com/danielv27/AST-Insight-Frontend) to access it. 
+
+### CLI TOOL
+To run the analysis through the CLI run:
+```bash
+python3 analyze.py <path-to-file>
+```
+
+
+
+
+
